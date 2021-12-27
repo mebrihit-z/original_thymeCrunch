@@ -76,6 +76,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\hrhow\OneDrive\Documents\GitRepos\p2RecApp\recApp (1)\recApp"/>
+			<item value="C:\Users\hrhow\OneDrive\Documents\GitRepos\p2RecApp\recApp (1)"/>
 			<item value="C:\Users\hrhow\Downloads\recApp (1)"/>
 		</list>
 	</section>
