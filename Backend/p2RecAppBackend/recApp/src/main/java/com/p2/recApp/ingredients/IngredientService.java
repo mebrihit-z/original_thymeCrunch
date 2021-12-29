@@ -1,9 +1,11 @@
-package com.p2.recApp.users;
+package com.p2.recApp.ingredients;
 
-import java.util.Optional;
+import org.springframework.stereotype.Service;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import com.p2.recApp.users.UserRepository;
+
+import lombok.AllArgsConstructor;
+
 /*************************************Works Cited*********************************************
  * Title: "Java Tutorial - Complete User Login and Registration Backend + Email Verification"
  * Author: Nelson (amigoscode)
@@ -12,13 +14,11 @@ import org.springframework.transaction.annotation.Transactional;
  * Availability: https://youtu.be/QwQuro7ekvc
  *********************************************************************************************/
 
-@Repository
-@Transactional(readOnly= true)
-public interface UserRepository {
+//need to come back to this, not sure we need this 
+@Service
+@AllArgsConstructor
+public class IngredientService {
 	
-	Optional<User> findByEmail(String email);
-	Optional<User> findByUsername(String username);
-	Optional<User> findByPassword(String password);
-	
+	private final IngredientRepository ingredientRepository = null;
 
 }
