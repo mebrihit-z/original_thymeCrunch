@@ -17,6 +17,8 @@ import org.springframework.transaction.annotation.Transactional;
 public interface UserRepository {
 	
 	Optional<User> findByEmail(String email);
+	
+	//might need to change
 	Optional<User> findByUsername(String username);
 	Optional<User> findByPassword(String password);
 	

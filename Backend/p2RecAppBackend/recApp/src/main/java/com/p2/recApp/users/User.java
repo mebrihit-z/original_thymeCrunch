@@ -54,7 +54,7 @@ public class User implements UserDetails{
 			generator= "user_sequence"
 			)
 	
-	
+	//come back with @Columns
 	private Long userID;
 	private String firstname;
 	private String lastname;
@@ -63,6 +63,8 @@ public class User implements UserDetails{
 	private String password;
 	private String profile_pic;
 	private String fav_rec;
+	
+	//this has to do with security and login in the tutorial JAVA complete backend 
 	private Boolean locked;
 	private Boolean enabled;
 	@Enumerated(EnumType.STRING)

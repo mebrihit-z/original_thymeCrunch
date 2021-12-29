@@ -42,6 +42,8 @@ public class Ingredient  {
 			strategy = GenerationType.SEQUENCE, 
 			generator= "user_sequence"
 			)
+	
+	//come back and annotate with hibernate syntax
 	private int ingID;
 	private String ing_name;
 	private String rec;
