@@ -13,14 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
  * Code Version: Java 15
  * Availability: https://youtu.be/QwQuro7ekvc
  *********************************************************************************************/
-
+//tutorial calls this AppUserRespository AND AppUserService
 @Repository
 @Transactional(readOnly= true)
 public interface UserRepository extends JpaRepository<User, Integer>{
 	
 	Optional<User> findByEmail(String email);
-	
-	//might need to change
 	Optional<User> findByUsername(String username);
 	Optional<User> findByPassword(String password);
 	List<User> findAll();

@@ -84,9 +84,9 @@ public class User implements UserDetails{
 	
 	//this has to do with security and login in the tutorial JAVA complete backend 
 	@Column(name="locked")
-	private Boolean locked;
+	private Boolean locked = false;
 	@Column(name="enabled")
-	private Boolean enabled;
+	private Boolean enabled = false;
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name="userRole")
@@ -100,8 +100,6 @@ public class User implements UserDetails{
 				String password,
 				String profile_pic,
 				String fav_rec,
-				Boolean locked,
-				Boolean enabled,
 				UserRole userRole) {
 		super();
 		this.firstname = firstname;
@@ -111,8 +109,6 @@ public class User implements UserDetails{
 		this.password = password;
 		this.profile_pic = profile_pic;
 		this.fav_rec = fav_rec;
-		this.locked = locked;
-		this.enabled = enabled;
 		this.userRole = userRole;
 	}
 
@@ -189,6 +185,10 @@ public class User implements UserDetails{
 				&& Objects.equals(userID, other.userID) 
 				&& userRole == other.userRole
 				&& Objects.equals(username, other.username);
+	}
+
+	public User(String firstname, String lastname, String email, String username, String password, UserRole user) {
+		
 	}
 
 }

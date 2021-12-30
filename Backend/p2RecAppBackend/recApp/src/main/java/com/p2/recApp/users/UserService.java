@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -22,7 +23,7 @@ import lombok.AllArgsConstructor;
 
 public class UserService implements UserDetailsService {
 	
-	
+	private  BCryptPasswordEncoder bCryptPasswordEncoder;
 	private final UserRepository userRepository;
 	private final static String USER_NOT_FOUND_MSG = 
 			"user with email %s not found";
@@ -36,12 +37,32 @@ public class UserService implements UserDetailsService {
 								));
 	}
 	
+	public String signUpUser(User user) {
+		
+		boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
+		
+		if(userExists) {
+			throw new IllegalStateException("email taken");
+		}
+		
+		String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
+		
+		user.setPassword(encodedPassword);
+		
+		userRepository.save(user);
+		
+		//TODO: send confirmation token 
+		
+		return "";
+	}
+	
 	@Autowired
 	public UserService(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
 	
 	List <User> getUserProfiles(){
+		
 		return userRepository.findAll();
 	}
 	
