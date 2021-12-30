@@ -1,5 +1,8 @@
 package com.p2.recApp.users;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -15,11 +18,12 @@ import lombok.AllArgsConstructor;
  *********************************************************************************************/
 
 @Service
-@AllArgsConstructor
+
 
 public class UserService implements UserDetailsService {
 	
-	private final UserRepository userRepository = null;
+	
+	private final UserRepository userRepository;
 	private final static String USER_NOT_FOUND_MSG = 
 			"user with email %s not found";
 	@Override
@@ -31,5 +35,15 @@ public class UserService implements UserDetailsService {
 								String.format(USER_NOT_FOUND_MSG, email)
 								));
 	}
+	
+	@Autowired
+	public UserService(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+	
+	List <User> getUserProfiles(){
+		return userRepository.findAll();
+	}
+	
 
 }

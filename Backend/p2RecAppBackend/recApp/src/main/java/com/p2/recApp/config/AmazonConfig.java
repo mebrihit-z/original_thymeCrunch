@@ -1,5 +1,6 @@
 package com.p2.recApp.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.amazonaws.auth.AWSCredentials;
@@ -11,7 +12,8 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 @Configuration
 public class AmazonConfig {
 	
-	public AmazonS3 S3() {
+	@Bean
+	public AmazonS3 s3() {
 		
 		AWSCredentials awsCredentials = new BasicAWSCredentials(
 				 "AKIA27X2IFHHZFWHBJX4", 

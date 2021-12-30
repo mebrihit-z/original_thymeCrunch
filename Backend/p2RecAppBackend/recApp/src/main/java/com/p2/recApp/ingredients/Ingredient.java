@@ -1,9 +1,11 @@
 package com.p2.recApp.ingredients;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 import org.springframework.data.annotation.Id;
 
@@ -30,24 +32,30 @@ import lombok.ToString;
 
 
 @Entity
+@Table(name="ingredients")
 public class Ingredient  {
 
-	@Id
+	
 	@SequenceGenerator(
 			name="ing_sequence",
 			sequenceName = "ing_sequence",
 			allocationSize = 1
 			)
+	
 	@GeneratedValue(
 			strategy = GenerationType.SEQUENCE, 
-			generator= "user_sequence"
+			generator= "ing_sequence"
 			)
-	
-	//come back and annotate with hibernate syntax
+	@Id
+	@Column (name= "ingID")
 	private int ingID;
+	@Column(name= "ing_name")
 	private String ing_name;
+	@Column(name= "rec")
 	private String rec;
+	@Column(name= "ing_type")
 	private String ing_type;
+	@Column(name= "meal_type")
 	private String meal_type;
 	
 	

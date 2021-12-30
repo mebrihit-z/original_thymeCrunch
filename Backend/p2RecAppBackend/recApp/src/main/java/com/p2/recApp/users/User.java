@@ -2,6 +2,7 @@ package com.p2.recApp.users;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -33,7 +34,6 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
@@ -61,6 +61,8 @@ public class User implements UserDetails{
 	private String email;
 	private String username;
 	private String password;
+	
+	//s3 key
 	private String profile_pic;
 	private String fav_rec;
 	
@@ -138,6 +140,35 @@ public class User implements UserDetails{
 	public boolean isEnabled() {
 		
 		return enabled;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(email, enabled, fav_rec, firstname, lastname, locked, password, profile_pic, userID,
+				userRole, username);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		return 
+				Objects.equals(email, other.email)
+				&& Objects.equals(enabled, other.enabled)
+				&& Objects.equals(fav_rec, other.fav_rec) 
+				&& Objects.equals(firstname, other.firstname)
+				&& Objects.equals(lastname, other.lastname) 
+				&& Objects.equals(locked, other.locked)
+				&& Objects.equals(password, other.password) 
+				&& Objects.equals(profile_pic, other.profile_pic)
+				&& Objects.equals(userID, other.userID) 
+				&& userRole == other.userRole
+				&& Objects.equals(username, other.username);
 	}
 
 }

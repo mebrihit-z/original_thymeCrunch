@@ -1,7 +1,9 @@
 package com.p2.recApp.users;
 
+import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 /*************************************Works Cited*********************************************
@@ -14,13 +16,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional(readOnly= true)
-public interface UserRepository {
+public interface UserRepository extends JpaRepository{
 	
 	Optional<User> findByEmail(String email);
 	
 	//might need to change
 	Optional<User> findByUsername(String username);
 	Optional<User> findByPassword(String password);
+	List<User> findAll();
+
+	
 	
 
 }
