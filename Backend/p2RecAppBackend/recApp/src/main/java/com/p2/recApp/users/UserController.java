@@ -23,6 +23,8 @@ public class UserController {
 	public List<User> getUserProfiles(){
 		return userService.getUserProfiles();
 		
+		//do the request body thing
+		
 	}
 	
 	

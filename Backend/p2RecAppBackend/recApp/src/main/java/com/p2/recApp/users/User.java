@@ -3,6 +3,7 @@ package com.p2.recApp.users;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;
+import java.util.Optional;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,9 +15,9 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
+//import org.springframework.security.core.userdetails.UserDetails;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -42,11 +43,13 @@ import lombok.ToString;
 
 @Entity
 @Table(name="users")
-public class User implements UserDetails{
+public class User /*implements UserDetails*/{
 	
 //	this sets a PK on the ID, sets up a sequence and says it
 //	increases by 1 and gives it to the generated value
 	
+	
+
 	@Id
 	@SequenceGenerator(
 			name="user_sequence",
@@ -107,56 +110,64 @@ public class User implements UserDetails{
 		this.email = email;
 		this.username = username;
 		this.password = password;
-		this.profile_pic = profile_pic;
+		this.profile_pic =profile_pic;
 		this.fav_rec = fav_rec;
 		this.userRole = userRole;
 	}
 
 	//this is just a basic role, could implement more in the future
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
-		return Collections.singletonList(authority);
+//	@Override
+//	public Collection<? extends GrantedAuthority> getAuthorities() {
+//		SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
+//		return Collections.singletonList(authority);
+//	}
+//
+//	@Override
+//	public String getPassword() {
+//		
+//		return password;
+//	}
+//
+//	@Override
+//	public String getUsername() {
+//		
+//		return username;
+//	}
+	
+	public Optional<String> getProfile_pic() {
+		return Optional.ofNullable(profile_pic);
 	}
 
-	@Override
-	public String getPassword() {
-		
-		return password;
-	}
-
-	@Override
-	public String getUsername() {
-		
-		return username;
+	public void setProfile_pic(String profile_pic) {
+		this.profile_pic = profile_pic;
 	}
 	
-	//this is just if the user could delete their account
-	@Override
-	public boolean isAccountNonExpired() {
-		
-		return true;
-	}
-
-	
-	@Override
-	public boolean isAccountNonLocked() {
-		
-		return !locked;
-	}
-
-	//another check for the account
-	@Override
-	public boolean isCredentialsNonExpired() {
-		
-		return true;
-	}
-
-	@Override
-	public boolean isEnabled() {
-		
-		return enabled;
-	}
+//	//this is just if the user could delete their account
+//	@Override
+//	public boolean isAccountNonExpired() {
+//		
+//		return true;
+//	}
+//
+//	
+//	@Override
+//	public boolean isAccountNonLocked() {
+//		
+//		return !locked;
+//	}
+//
+//	//another check for the account
+//	@Override
+//	public boolean isCredentialsNonExpired() {
+//		
+//		return true;
+//	}
+//
+//	@Override
+//	public boolean isEnabled() {
+//		
+//		return enabled;
+//	}
 
 	@Override
 	public int hashCode() {

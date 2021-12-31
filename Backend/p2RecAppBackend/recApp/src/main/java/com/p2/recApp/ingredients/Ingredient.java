@@ -24,13 +24,13 @@
 // * Code Version: Java 15
 // * Availability: https://youtu.be/QwQuro7ekvc
 // *********************************************************************************************/
-//
-//@Getter
-//@Setter
-//@EqualsAndHashCode
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@ToString
+////
+//////@Getter
+//////@Setter
+//////@EqualsAndHashCode
+//////@AllArgsConstructor
+//////@NoArgsConstructor
+//////@ToString
 //
 //
 //@Entity
@@ -39,17 +39,16 @@
 //public class Ingredient  {
 //
 //	@Id
-//	@GeneratedValue(strategy= GenerationType.IDENTITY)
-////	@Column (name= "ing_ID")
-////	@GeneratedValue(
-////			strategy = GenerationType.SEQUENCE, 
-////			generator= "ing_sequence"
-////			)
 ////	@SequenceGenerator(
 ////			name="ing_sequence",
 ////			sequenceName = "ing_sequence",
 ////			allocationSize = 1
 ////			)
+////	@GeneratedValue(
+////			strategy = GenerationType.SEQUENCE, 
+////			generator= "ing_sequence"
+////			)
+////	
 //	private Integer ingID;
 //	
 //	@Column(name= "ing_name")
