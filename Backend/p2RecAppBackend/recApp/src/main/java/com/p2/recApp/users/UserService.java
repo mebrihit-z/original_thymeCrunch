@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.userdetails.UsernameNotFoundException;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.AllArgsConstructor;
 /*************************************Works Cited*********************************************
@@ -16,6 +17,12 @@ import lombok.AllArgsConstructor;
  * Date: 1/17/21 (Accessed 12/29/21)
  * Code Version: Java 15
  * Availability: https://youtu.be/QwQuro7ekvc
+ * 
+ * Title: "Spring Boot Tutorial | Spring Boot Full Stack with React.js | Full Course | 2021"
+ * Author: Nelson (amigoscode)
+ * Date: 3/28/20 (Accessed 12/29/21)
+ * Code Version: Java 15
+ * Availability: https://youtu.be/i-hoSg8iRG0
  *********************************************************************************************/
 
 @Service
@@ -37,35 +44,47 @@ public class UserService/* implements UserDetailsService*/ {
 	//								));
 	//}
 
-private final UserRepository userRepository;
-public String signUpUser(User user) {
+	private final UserRepository userRepository;
+	public String signUpUser(User user) {
 
-	boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
+		boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
 
-	if(userExists) {
-		throw new IllegalStateException("email taken");
+		if(userExists) {
+			throw new IllegalStateException("email taken");
+		}
+
+		//	String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
+
+		//	user.setPassword(encodedPassword);
+
+		userRepository.save(user);
+
+		//TODO: send confirmation token 
+
+		return "";
 	}
 
-//	String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
+	@Autowired
+	public UserService(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
 
-//	user.setPassword(encodedPassword);
+	List <User> getUserProfiles(){
 
-	userRepository.save(user);
+		return userRepository.findAll();
+	}
 
-	//TODO: send confirmation token 
+	public void uploadUserProfileImage(Integer userID, MultipartFile file) {
+		
+		//1. if image is not empty
+		//2. if file is an image
+		//3.if user exists in db
+		//4. get metadata from file if any exists
+		//5. store image in s3 and update db (profile_pic) with s3 image link
+	
 
-	return "";
-}
 
-@Autowired
-public UserService(UserRepository userRepository) {
-	this.userRepository = userRepository;
-}
-
-List <User> getUserProfiles(){
-
-	return userRepository.findAll();
-}
+	}
 
 
 }

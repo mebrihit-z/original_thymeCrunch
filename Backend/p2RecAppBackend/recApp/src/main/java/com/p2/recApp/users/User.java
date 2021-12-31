@@ -67,7 +67,7 @@ public class User /*implements UserDetails*/{
 	@Column(name="firstname")
 	private String firstname;
 	
-	@Column(name="lasttname")
+	@Column(name="lastname")
 	private String lastname;
 	
 	@Column(name="email")
@@ -92,7 +92,7 @@ public class User /*implements UserDetails*/{
 	private Boolean enabled = false;
 	
 	@Enumerated(EnumType.STRING)
-	@Column(name="userRole")
+	@Column(name="user_role")
 	private UserRole userRole;
 	
 	//constructor with everything but ID
