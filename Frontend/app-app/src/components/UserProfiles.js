@@ -22,7 +22,11 @@ export const UserProfiles = ()=> {
     return userProfiles.map((user, index) =>{
         return (
             <div key={index}>
-                {/*TODO: profile image*/}
+                {user.userID ? (
+                    <img 
+                        src={"http://localhost:9090/api/v1/users/${user.userID}/image/download"}
+                    />
+                ):null}
                <br/>
                <br/>
                 <h1>{user.firstname} {user.lastname}</h1>

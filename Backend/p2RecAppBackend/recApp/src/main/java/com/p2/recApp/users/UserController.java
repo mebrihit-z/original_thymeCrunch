@@ -1,6 +1,8 @@
 package com.p2.recApp.users;
 
 import java.util.List;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -41,6 +43,7 @@ public class UserController {
 		
 	}
 	
+	//this throws an error with the conversion of json to an integer, but doesn't crash the program 
 	@PostMapping(
 			path = "{userID}/image/upload",
 			consumes = MediaType.MULTIPART_FORM_DATA_VALUE, 
@@ -48,10 +51,16 @@ public class UserController {
 			)
 	public void uploadUserProfileImage(@PathVariable("userID") Integer userID,
 									   @RequestParam("file") MultipartFile file) {
-		
+
+//		Integer userID = Integer.parseUnsignedInt(userIDS);
 		userService.uploadUserProfileImage(userID, file);
 		
 	}
+	
+	 @GetMapping("{userID}/image/download")
+	    public byte[] downloadUserProfileImage(@PathVariable("userID") Integer userID) {
+	        return userService.downloadUserProfileImage(userID);
+	    }
 	
 	
 }

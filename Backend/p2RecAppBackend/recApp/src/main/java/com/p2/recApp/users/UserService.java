@@ -1,7 +1,14 @@
 package com.p2.recApp.users;
 
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.UUID;
 
+import static org.apache.http.entity.ContentType.*;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.userdetails.UserDetails;
 //import org.springframework.security.core.userdetails.UserDetailsService;
@@ -9,6 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.p2.recApp.bucket.BucketName;
+import com.p2.recApp.filestore.FileStore;
 
 import lombok.AllArgsConstructor;
 /*************************************Works Cited*********************************************
@@ -44,7 +54,10 @@ public class UserService/* implements UserDetailsService*/ {
 	//								));
 	//}
 
+	private final FileStore fileStore;
 	private final UserRepository userRepository;
+	private Integer userID;
+	
 	public String signUpUser(User user) {
 
 		boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
@@ -65,7 +78,8 @@ public class UserService/* implements UserDetailsService*/ {
 	}
 
 	@Autowired
-	public UserService(UserRepository userRepository) {
+	public UserService(UserRepository userRepository, FileStore fileStore) {
+		this.fileStore = fileStore;
 		this.userRepository = userRepository;
 	}
 
@@ -74,17 +88,77 @@ public class UserService/* implements UserDetailsService*/ {
 		return userRepository.findAll();
 	}
 
-	public void uploadUserProfileImage(Integer userID, MultipartFile file) {
-		
-		//1. if image is not empty
-		//2. if file is an image
-		//3.if user exists in db
-		//4. get metadata from file if any exists
-		//5. store image in s3 and update db (profile_pic) with s3 image link
+	void uploadUserProfileImage(Integer userID, MultipartFile file) {
+        // 1. Check if image is not empty
+        isFileEmpty(file);
+        // 2. If file is an image
+        isImage(file);
+
+        // 3. The user exists in our database
+        User user = getUserProfileOrThrow(userID);
+
+        // 4. Grab some metadata from file if any
+        Map<String, String> metadata = extractMetadata(file);
+
+        // 5. Store the image in s3 and update database (userProfileImageLink) with s3 image link
+        String path = String.format("%s/%s", BucketName.PROFILE_IMAGE.getBucketName(), user.getUserID());
+        String filename = String.format("%s-%s", file.getOriginalFilename(), UUID.randomUUID());
+
+        try {
+            fileStore.save(path, filename, Optional.of(metadata), file.getInputStream());
+            user.setProfile_pic(filename);
+        } catch (IOException e) {
+            throw new IllegalStateException(e);
+        }
+
+    }
 	
+	  byte[] downloadUserProfileImage(Integer userID) {
+	        User user = getUserProfileOrThrow(userID);
+
+	        String path = String.format("%s/%s",
+	                BucketName.PROFILE_IMAGE.getBucketName(),
+	                user.getUserID());
+
+	        return user.getProfile_pic()
+	                .map(key -> fileStore.download(path, key))
+	                .orElse(new byte[0]);
+
+	    }
+		
+		
+		private Map<String, String> extractMetadata(MultipartFile file) {
+	        Map<String, String> metadata = new HashMap<>();
+	        metadata.put("Content-Type", file.getContentType());
+	        metadata.put("Content-Length", String.valueOf(file.getSize()));
+	        return metadata;
+	    }
+		
+		//throws an exception about string to integer
+		  private User getUserProfileOrThrow(Integer userID) {
+		        return userRepository
+		                .findById(userID)
+		                .stream()
+		                .filter(userProfile -> userProfile.getUserID().equals(userID))
+		                .findFirst()
+		                .orElseThrow(() -> new IllegalStateException(String.format("User profile %s not found", userID)));
+		    }
+		  private void isImage(MultipartFile file) {
+		        if (!Arrays.asList(
+		                IMAGE_JPEG.getMimeType(),
+		                IMAGE_PNG.getMimeType(),
+		                IMAGE_GIF.getMimeType()).contains(file.getContentType())) {
+		            throw new IllegalStateException("File must be an image [" + file.getContentType() + "]");
+		        }
+		    }
+
+		    private void isFileEmpty(MultipartFile file) {
+		        if (file.isEmpty()) {
+		            throw new IllegalStateException("Cannot upload empty file [ " + file.getSize() + "]");
+		        }
+		    }
 
 
-	}
-
+	
 
 }

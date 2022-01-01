@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -62,7 +63,8 @@ public class User /*implements UserDetails*/{
 			strategy = GenerationType.SEQUENCE, 
 			generator= "user_sequence"
 			)
-	private Integer userID;
+	
+	private UUID userID;
 	
 	@Column(name="firstname")
 	private String firstname;
@@ -114,6 +116,10 @@ public class User /*implements UserDetails*/{
 		this.fav_rec = fav_rec;
 		this.userRole = userRole;
 	}
+	
+	 public UUID getUserID() {
+	        return userID;
+	    }
 
 	//this is just a basic role, could implement more in the future
 //	@Override
@@ -199,6 +205,11 @@ public class User /*implements UserDetails*/{
 	}
 
 	public User(String firstname, String lastname, String email, String username, String password, UserRole user) {
+		
+	}
+
+	public void setUserProfileImageLink(String filename) {
+		// TODO Auto-generated method stub
 		
 	}
 

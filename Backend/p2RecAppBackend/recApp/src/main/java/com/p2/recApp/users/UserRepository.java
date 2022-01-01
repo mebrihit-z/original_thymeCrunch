@@ -18,10 +18,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(readOnly= true)
 public interface UserRepository extends JpaRepository<User, Integer>{
 	
-	Optional<User> findByEmail(String email);
-	Optional<User> findByUsername(String username);
-	Optional<User> findByPassword(String password);
+//	Optional<User> findByEmail(String email);
+//	Optional<User> findByUsername(String username);
+//	Optional<User> findByPassword(String password); 
+	
+//	User findById(Integer userID);
 	List<User> findAll();
+	Optional<User> findByEmail(String email);
+	Optional<User> findById(Integer userID);
 	
 
 	
