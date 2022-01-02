@@ -6,7 +6,7 @@ import '../App.css';
 function VideoSection() {
     return (
         <div>
-            <video src="/videos/video.mp4" autoPlay loop muted/>
+            <video src="videos/video.mp4" autoPlay loop muted/>
             <h1>ThymeCrunch</h1>
             <p>No thyme for complicated recipies? No Worries, We'll make it easy!</p>
             <div className='video-btns'>
