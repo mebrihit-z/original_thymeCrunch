@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React, {useState, useEffect}from "react"
 import { UserProfiles } from './components/UserProfiles';
 import {Navbar} from './components/Navbar';
+import Home  from './components/pages/Home'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
     
       <Routes>
         <Route path ="users" element ={<UserProfiles/>}/>
-        <Route path ="/" element={<Navbar/>}/>
+        <Route path ="/" exact component={Home}/>
 
       </Routes>
     </Router>

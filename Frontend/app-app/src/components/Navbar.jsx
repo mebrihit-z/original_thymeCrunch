@@ -1,4 +1,4 @@
-import React, {useState}from 'react';
+import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
 import {Button} from './Button';
@@ -25,6 +25,11 @@ export function Navbar() {
         }
     };
 
+    
+    useEffect(()=> {
+        showButton();
+    },[]);
+
     window.addEventListener('resize', showButton);
 
 
@@ -34,7 +39,7 @@ export function Navbar() {
             <div className="navbar-container">
                 
                 {/* this is for a logo to return home, but this breaks the program atm */}
-                 {/* <link to="/" className='navbarLogo'>
+                 {/* <link to="/" className='navbarLogo' onClick={closeMobileMenu}>
                   ThymeCrunch  
                 </link> */}
                 
