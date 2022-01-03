@@ -64,7 +64,7 @@ public class User /*implements UserDetails*/{
 			generator= "user_sequence"
 			)
 	
-	private UUID userID;
+	private Integer userID;
 	
 	@Column(name="firstname")
 	private String firstname;
@@ -117,7 +117,7 @@ public class User /*implements UserDetails*/{
 		this.userRole = userRole;
 	}
 	
-	 public UUID getUserID() {
+	 public Integer getUserID() {
 	        return userID;
 	    }
 

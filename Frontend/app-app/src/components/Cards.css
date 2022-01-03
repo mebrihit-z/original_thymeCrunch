@@ -7,7 +7,7 @@
  *********************************************************************************/
 .cards {
     padding: 4rem;
-    background: #fff;
+    background: rgb(143, 219, 209);
   }
   
   h1 {
@@ -35,7 +35,7 @@
   .cards__item {
     display: flex;
     flex: 1;
-    margin: 0 1rem;
+    margin: 1rem;
     border-radius: 10px;
   }
   
@@ -72,7 +72,7 @@
     max-width: calc((100%) - 60px);
     font-size: 12px;
     font-weight: 700;
-    color: #fff;
+    color: rgb(120, 204, 172);
     background-color: #1ff4b4;
     box-sizing: border-box;
   }

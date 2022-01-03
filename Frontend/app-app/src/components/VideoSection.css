@@ -2,9 +2,18 @@ video{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    position: fixed;
-    z-index: -1;
+    position: fixed 100%;
+    z-index: -4;
 
+}
+
+#textOverlay{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: 1;
+    
+    
 }
 
 .video-container{
@@ -17,6 +26,7 @@ video{
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
     object-fit: contain;
+   
 
 }
 
@@ -24,6 +34,7 @@ video{
     color: #fff;
     font-size: 100px;
     margin-top: -100px;
+     
 }
 
 .video-container >p{
@@ -70,6 +81,14 @@ video{
 
     .btn{
         width: 100%;
+    }
+
+    #videoH1{
+        color: #fff;
+    }
+
+    #videoP{
+        color: #fff;
     }
     
 }

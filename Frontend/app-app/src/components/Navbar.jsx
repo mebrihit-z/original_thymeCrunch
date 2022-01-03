@@ -64,7 +64,7 @@ export function Navbar() {
                     </li>
                     <li className='nav-item'>
                         <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                           SignUp
+                           Login
                         </Link>
                     </li>
                     <li className='nav-item'>

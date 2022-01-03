@@ -51,6 +51,8 @@ public class UserController {
 			)
 	public void uploadUserProfileImage(@PathVariable("userID") Integer userID,
 									   @RequestParam("file") MultipartFile file) {
+		
+		System.out.println(userID);
 
 //		Integer userID = Integer.parseUnsignedInt(userIDS);
 		userService.uploadUserProfileImage(userID, file);
