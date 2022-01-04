@@ -35,7 +35,7 @@ public class IngredientService {
 		return ingredientRepository.findByRecipe(recipe);
 	}
 	public Optional<Ingredient> getByMealType(){
-		return ingredientRepository.findByMealType(mealType );
+		return ingredientRepository.findByMealType(mealType);
 		
 	}
 	

@@ -19,9 +19,9 @@ import com.p2.recApp.users.User;
 @Repository
 @Transactional(readOnly= true)
 public interface IngredientRepository extends JpaRepository<Ingredient, Integer>{
-	Optional<Ingredient> findByID(String ingID);
-	Optional<Ingredient> findByRecipe(String rec);
-	Optional<Ingredient> findByMealType(String meal_type);
+	Optional<Ingredient> findByID(Integer ingID);
+	Optional<Ingredient> findByRecipe(String recipe);
+	Optional<Ingredient> findByMealType(String mealType);
 
 	
 }

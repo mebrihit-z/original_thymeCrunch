@@ -56,7 +56,7 @@ public class UserService/* implements UserDetailsService*/ {
 
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
-	private Integer userID;
+	
 	
 	public String signUpUser(User user) {
 
