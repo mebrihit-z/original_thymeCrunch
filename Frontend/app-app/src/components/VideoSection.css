@@ -10,8 +10,9 @@ video{
 #textOverlay{
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 32%;
     z-index: 1;
+    color:#fff;
     
     
 }
@@ -40,7 +41,7 @@ video{
 .video-container >p{
     color: #fff;
     font-size: 32px;
-    margin-top: 8px;
+    margin-top: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -89,6 +90,11 @@ video{
 
     #videoP{
         color: #fff;
+        
+    }
+    
+    #thyme{
+        color:rgb(57, 192, 147)
     }
     
 }

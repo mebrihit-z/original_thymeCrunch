@@ -33,10 +33,10 @@
   }
   
   .cards__item {
-    display: flex;
+    position: relative;
     flex: 1;
     margin: 1rem;
-    border-radius: 10px;
+    border: #252e48;
   }
   
   .cards__item__link {
@@ -52,9 +52,9 @@
   }
   
   .cards__item__pic-wrap {
-    position: relative;
-    width: 100%;
-    padding-top: 67%;
+    display:block;
+    width: 5%;
+    padding-top: 20%;
     overflow: hidden;
   }
   
@@ -74,7 +74,7 @@
     font-weight: 700;
     color: rgb(120, 204, 172);
     background-color: #1ff4b4;
-    box-sizing: border-box;
+    box-sizing: cover;
   }
   
   .cards__item__img {
@@ -84,11 +84,11 @@
     bottom: 0;
     left: 0;
     display: block;
-    width: 100%;
+    width: 70%;
     max-width: 100%;
-    height: 100%;
+    height: 70%;
     max-height: 100%;
-    object-fit: cover;
+    object-fit:contain;
     transition: all 0.2s linear;
   }
   

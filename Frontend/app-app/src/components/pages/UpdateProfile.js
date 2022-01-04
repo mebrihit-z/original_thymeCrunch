@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Navbar from '../Navbar'
 function UpdateProfile() {
     return (
-        <div>
-            
-        </div>
+        <>
+        <Navbar/>
+        </>
     )
 }
 
