@@ -13,58 +13,73 @@ import './Cards.css';
 function Card() {
     return (
         <div className='cards'>
-            <h1>Recipes</h1>
+            <h1 id="h1">Recipes</h1>
             <div id="main-re">
 
                 <div id="bigDiv1">
-                    <div id="submain">
-                        <div id="bottom">Breakfast</div>
-                    </div>
+                    <a className="hov" href="/breakfast">
+                        <div id="submain">
+                            <div id="bottom">Breakfast</div>
+                        </div>
+                    </a>
+                    
                     <div id="pdiv">
                     <p>Start your day with a healthy breakfast</p>
                     </div>
                 </div>
 
                 <div id="bigDiv2">
-                    <div id="submain">
-                        <div id="bottom">Lunch</div>
-                    </div>
+                    <a className="hover" href="/lunch">
+                        <div id="submain">
+                            <div id="bottom">Lunch</div>
+                        </div>
+                    </a>
+                    
                     <div id="pdiv">
                     <p>Power through with a delicious lunch</p>
                     </div>
                 </div>
 
                 <div id="bigDiv3">
+                    <a className="hover" href="/dinner">
                     <div id="submain">
                         <div id="bottom">Dinner</div>
                     </div>
+                    </a>
                     <div id="pdiv">
                     <p>Beat the clock with a speedy dinner</p>
                     </div>
                 </div>
 
                 <div id="bigDiv4">
-                    <div id="submain">
-                        <div id="bottom">Desserts</div>
-                    </div>
+                    <a className="hover" href="/desserts">
+                        <div id="submain">
+                            <div id="bottom">Desserts</div>
+                        </div>
+                    </a>
                     <div id="pdiv">
                     <p>Indulge your sweet tooth with yummy treats desserts</p>
                     </div>
                 </div>
 
                 <div id="bigDiv5">
-                    <div id="submain">
-                        <div id="bottom">Snacks</div>
-                    </div>
+                    <a className="hover" href="/snacks">
+                        <div id="submain">
+                            <div id="bottom">Snacks</div>
+                        </div>
+                    </a>
+                    
                     <div id="pdiv">
                     <p id="pdiv">Refresh with a pick-me-up snacks</p>
                     </div>
                 </div>
 
                 <div id="bigDiv6">
-                    <div id="submain">
-                        <div id="bottom">Beverage</div>
-                    </div>
+                    <a className="hover" href="/beverage">
+                        <div id="submain">
+                            <div id="bottom">Beverage</div>
+                        </div>
+                    </a>
                     <div id="pdiv">
                     <p>Refresh your self with some beverage</p>
                     </div>

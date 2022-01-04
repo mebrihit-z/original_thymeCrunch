@@ -98,11 +98,11 @@ input[type="text"], input[type="password"]{
   font-size: 18px;
   font-weight: 400;
 }
-a{
+.loga{
   text-decoration: none;
   color: #fff;
 }
 
-a:hover{
+.loga:hover{
   color: #39dc79;
 }
