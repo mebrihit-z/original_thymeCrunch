@@ -38,7 +38,7 @@ import lombok.ToString;
 @Access(value= AccessType.FIELD)
 public class Ingredient  {
 
-	@Id
+	
 //	@SequenceGenerator(
 //			name="ing_sequence",
 //			sequenceName = "ing_sequence",
@@ -48,20 +48,22 @@ public class Ingredient  {
 //			strategy = GenerationType.SEQUENCE, 
 //			generator= "ing_sequence"
 //			)
-//	
+	
+	@Id
+	@Column(name="ingID")
 	private Integer ingID;
 	
 	@Column(name= "ing_name")
-	private String ing_name;
+	private String ingName;
 	
 	@Column(name= "rec")
-	private String rec;
+	private String recipe;
 	
 	@Column(name= "ing_type")
-	private String ing_type;
+	private String ingType;
 	
 	@Column(name= "meal_type")
-	private String meal_type;
+	private String mealType;
 	
 	
 

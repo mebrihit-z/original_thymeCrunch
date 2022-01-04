@@ -60,10 +60,7 @@ public class UserService {
 	
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
-	private Integer userID;
-	private final static String USER_NOT_FOUND_MSG = 
-			"user with email %s not found";
-	private final ConfirmationTokenService confirmationTokenService;
+	
 	
 	public String signUpUser(User user) {
 
@@ -107,6 +104,17 @@ public class UserService {
 	List <User> getUserProfiles(){
 
 		return userRepository.findAll();
+	}
+	
+	public void addUser(
+			String firstname,
+			String lastname,
+			String emial,
+			String username,
+			String password,
+			String profile_pic,
+			String fav_rec) {
+		
 	}
 
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
