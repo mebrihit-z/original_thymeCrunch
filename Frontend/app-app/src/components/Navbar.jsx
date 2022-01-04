@@ -58,17 +58,17 @@ export function Navbar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/recipies' className='nav-links' onClick={closeMobileMenu}>
+                        <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/Login' className='nav-links' onClick={closeMobileMenu}>
+                        <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                        <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
                            Logout
                         </Link>
                     </li>

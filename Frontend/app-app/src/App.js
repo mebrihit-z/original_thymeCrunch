@@ -8,7 +8,6 @@ import { UserProfiles } from './components/pages/UserProfiles';
 import {Navbar} from './components/Navbar';
 import Home  from './components/pages/Home';
 import Login from './components/pages/Login';
-import Register from './components/pages/Register';
 import UpdateProfile from './components/pages/UpdateProfile';
 import Desserts from './components/pages/Desserts';
 import Snacks from './components/pages/Snacks';
@@ -16,6 +15,8 @@ import Breakfast from './components/pages/Breakfast';
 import Lunch from './components/pages/Lunch';
 import Dinner from './components/pages/Dinner'
 import Logout from './components/pages/Logout';
+import Recipes from './components/pages/Recipes';
+import SignUp from './components/pages/SignUp';
 
 function App() {
   return (
@@ -29,15 +30,16 @@ function App() {
         <Route path ="/login" element={<Login/>}/>
         {/* <Route path ="/profile/{id]" element={<Profile/>}/>
         {/* THESE NEED TO BE DEFINED WITH API CALLS AND LOGIC */}
-        {/* <Route path ="/profile/{id]" element={<Profile/>}/>
+        {/* <Route path ="/profile/{id]" element={<Profile/>}/> */}
         <Route path ="/login" element={<Login/>}/>
-        <Route path ="/recipies" element={<Recipies/>}/>
+        <Route path ="/recipes" element={<Recipes/>}/>
         <Route path ="/update" element={<UpdateProfile/>}/>
-        <Route path ="/dessert" element={<Desert/>}/>
+        <Route path ="/dessert" element={<Desserts/>}/>
         <Route path ="/snacks" element={<Snacks/>}/>
         <Route path ="/breakfast" element={<Breakfast/>}/>
         <Route path ="/lunch" element={<Lunch/>}/>
-        <Route path ="/dinner" element={<Dinner/>}/> */}
+        <Route path ="/dinner" element={<Dinner/>}/>
+        <Route path ="/sign-up" element={<SignUp/>}/>
 
       </Routes>
     </Router>

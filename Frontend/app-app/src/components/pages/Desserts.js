@@ -1,10 +1,11 @@
-import React from 'react'
-
+import React from 'react';
+import Navbar from '../Navbar';
+import '../../App.css';
 function Desserts() {
     return (
-        <div>
-            
-        </div>
+        <>
+        <Navbar/>
+        </>
     )
 }
 

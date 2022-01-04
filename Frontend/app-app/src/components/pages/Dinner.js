@@ -1,10 +1,11 @@
-import React from 'react'
-
+import React from 'react';
+import Navbar from '../Navbar';
+import '../../App.css';
 function Dinner() {
     return (
-        <div>
-            
-        </div>
+        <>
+        <Navbar/>
+        </>
     )
 }
 

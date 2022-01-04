@@ -1,10 +1,14 @@
 import React from 'react'
+import Navbar from '../Navbar'
 
 function Logout() {
     return (
-        <div>
-            
-        </div>
+       <>
+       <Navbar/>
+       <div>
+           <p>This is logout</p>
+       </div>
+       </>
     )
 }
 

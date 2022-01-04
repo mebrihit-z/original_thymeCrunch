@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../Navbar';
+import '../../App.css';
 
 import '../../App.css';
 import UserProfiles  from './UserProfiles';
@@ -9,13 +11,9 @@ import Navbar from '../Navbar';
 function Profile() {
     return (
         <>
-            <Navbar/>
-            <div>
-                <p>This is Profile page.</p>
-            </div>
+        <Navbar/>
         </>
-        
-    );
+    )
 }
 
 export default Profile;

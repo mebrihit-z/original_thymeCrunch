@@ -11,8 +11,8 @@ export default function Login() {
     return(
         <>
           <Navbar/>
-          <div className="main">
-            <div className="sub-main">
+          <div className="main1">
+            <div className="sub-main1">
               <div>
                 <div className="imgs">
                   <div className="container-image">
@@ -22,7 +22,7 @@ export default function Login() {
                 </div>
                 <div>
                   <div>
-                  <h1>Login Page</h1>
+                  <h1 id="t1">Login Page</h1>
                   </div>
                  <div className="form">
                  <div className="first-input">
@@ -34,8 +34,8 @@ export default function Login() {
                     <input type="password" placeholder="Enter your password" className="password"/>
                   </div>
                  </div>
-                  <div className="login-button">
-                    <button>Login</button>
+                  <div className="login-button1">
+                    <button id="button1">Login</button>
                   </div>
                   <p className="link">
                     <a href="#">Forgot Password ?</a> Or <a href="/sign-up">Sign Up</a>
