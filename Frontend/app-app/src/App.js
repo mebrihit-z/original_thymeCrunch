@@ -26,6 +26,8 @@ function App() {
       <Routes>
         <Route path ="/" element={<Home/>}/>
         <Route path ="users" element ={<UserProfiles/>}/>
+        <Route path ="/login" element={<Login/>}/>
+        {/* <Route path ="/profile/{id]" element={<Profile/>}/>
         {/* THESE NEED TO BE DEFINED WITH API CALLS AND LOGIC */}
         {/* <Route path ="/profile/{id]" element={<Profile/>}/>
         <Route path ="/login" element={<Login/>}/>
