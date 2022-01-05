@@ -56,7 +56,7 @@ public class UserService/* implements UserDetailsService*/ {
 
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
-	private Integer userID;
+	
 	
 	public String signUpUser(User user) {
 
@@ -87,6 +87,17 @@ public class UserService/* implements UserDetailsService*/ {
 
 		return userRepository.findAll();
 	}
+	
+//	public void addUser(
+//			String firstname,
+//			String lastname,
+//			String emial,
+//			String username,
+//			String password,
+//			String profile_pic,
+//			String fav_rec) {
+//		
+//	}
 
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
         // 1. Check if image is not empty

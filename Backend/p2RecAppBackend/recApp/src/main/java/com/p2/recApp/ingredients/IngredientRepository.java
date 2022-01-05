@@ -1,5 +1,6 @@
 //package com.p2.recApp.ingredients;
 //
+//import java.util.List;
 //import java.util.Optional;
 //
 //import org.springframework.data.jpa.repository.JpaRepository;
@@ -17,9 +18,10 @@
 // *********************************************************************************************/
 //@Repository
 //@Transactional(readOnly= true)
-//public interface IngredientRepository extends JpaRepository<User, Integer>{
-//	Optional<Ingredient> findByID(String ingID);
-//	Optional<Ingredient> findByRecipe(String rec);
-//	Optional<Ingredient> findByMealType(String meal_type);
+//public interface IngredientRepository extends JpaRepository<Ingredient, Integer>{
+//	Optional<Ingredient> findByID(Integer ingID);
+//	Optional<Ingredient> findByRecipe(String recipe);
+//	Optional<Ingredient> findByMealType(String mealType);
 //
+//	
 //}
