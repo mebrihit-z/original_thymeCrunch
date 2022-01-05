@@ -33,7 +33,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 //			String emial,
 //			String username,
 //			String password);
-	
+//	
 	
 
 }

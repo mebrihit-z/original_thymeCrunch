@@ -56,6 +56,11 @@ public class UserService/* implements UserDetailsService*/ {
 
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
+	private String username;
+	private String password;
+	private String email;
+	private String firstname;
+	private String lastname;
 	
 	
 	public String signUpUser(User user) {
@@ -74,7 +79,32 @@ public class UserService/* implements UserDetailsService*/ {
 
 		//TODO: send confirmation token 
 
-		return "";
+		return "user added!";
+	}
+	
+	public String updateUser(User user) {
+		
+		boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
+
+		if(!userExists) {
+			throw new IllegalStateException("user doesn't exist");
+		}
+		
+		String username = this.username;
+		String password = this.password;
+		String email = this.email;
+		String firstname = this.firstname;
+		String lastname = this.lastname;
+		
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setEmail(email);
+		user.setFirstname(firstname);
+		user.setLastname(lastname);
+		
+		userRepository.save(user);
+		
+		return "user updated!";
 	}
 
 	@Autowired
@@ -88,18 +118,6 @@ public class UserService/* implements UserDetailsService*/ {
 		return userRepository.findAll();
 	}
 	
-	public void addUser(
-			String firstname,
-			String lastname,
-			String emial,
-			String username,
-			String password,
-			String profile_pic,
-			String fav_rec) {
-		
-		
-		
-	}
 
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
         // 1. Check if image is not empty
