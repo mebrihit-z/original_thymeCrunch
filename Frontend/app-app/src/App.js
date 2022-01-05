@@ -19,6 +19,7 @@ import Recipes from './components/pages/Recipes';
 import SignUp from './components/pages/SignUp';
 import PasswordRecovery from './components/pages/PasswordRecovery';
 
+
 function App() {
   return (
     
@@ -41,7 +42,7 @@ function App() {
         <Route path ="/sign-up" element={<SignUp/>}/>
 
         <Route path ="/passwordrecovery" element={<PasswordRecovery/>}/>
-
+        {/* <PasswordRecovery /> */}
       </Routes>
     </Router>
     </>

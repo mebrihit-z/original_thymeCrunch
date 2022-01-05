@@ -20,8 +20,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.p2.recApp.bucket.BucketName;
 import com.p2.recApp.filestore.FileStore;
-import com.p2.recApp.registration.token.ConfirmationToken;
-import com.p2.recApp.registration.token.ConfirmationTokenService;
 
 import lombok.AllArgsConstructor;
 /*************************************Works Cited*********************************************
@@ -39,66 +37,16 @@ import lombok.AllArgsConstructor;
  *********************************************************************************************/
 
 @Service
-@AllArgsConstructor
 public class UserService {
-
-	//	private  BCryptPasswordEncoder bCryptPasswordEncoder;
-	//	
-	//	private final static String USER_NOT_FOUND_MSG = 
-	//			"user with email %s not found";
-	//	@Override
-	//	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-	//		// TODO Auto-generated method stub
-	//		return userRepository.findByEmail(email)
-	//				.orElseThrow(
-	//						() -> new UsernameNotFoundException(
-	//								String.format(USER_NOT_FOUND_MSG, email)
-	//								));
-	//}
-
-	
 	
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
 	
 	
-	public String signUpUser(User user) {
-
-		boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
-
-		if(userExists) {
-			throw new IllegalStateException("email taken");
-		}
-
-		//	String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
-
-		//	user.setPassword(encodedPassword);
-
-		userRepository.save(user);
-
-		//TODO: send confirmation token 
-
-		String token = UUID.randomUUID().toString();
-		ConfirmationToken cofirmationToken = new ConfirmationToken(
-				token,
-				LocalDateTime.now(),
-				LocalDateTime.now().plusMinutes(15),
-				user
-		);
-		
-		confirmationTokenService.saveConfirmationToken(cofirmationToken);
-
-//		TODO: SEND EMAIL
-		
-		
-		return token;
-	}
-	
 	@Autowired
 	public UserService(UserRepository userRepository, FileStore fileStore) {
 		this.fileStore = fileStore;
 		this.userRepository = userRepository;
-		this.confirmationTokenService = null;
 	}
 
 	List <User> getUserProfiles(){
@@ -106,6 +54,7 @@ public class UserService {
 		return userRepository.findAll();
 	}
 	
+	/*
 	public void addUser(
 			String firstname,
 			String lastname,
@@ -116,7 +65,7 @@ public class UserService {
 			String fav_rec) {
 		
 	}
-
+	 */
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
         // 1. Check if image is not empty
         isFileEmpty(file);
@@ -186,12 +135,6 @@ public class UserService {
 		            throw new IllegalStateException("Cannot upload empty file [ " + file.getSize() + "]");
 		        }
 		    }
-
-		    public int enableUser(String email) {
-		        return userRepository.enableUser(email);
-		    }
-
-
 	
 
 }
