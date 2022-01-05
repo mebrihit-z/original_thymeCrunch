@@ -9,14 +9,15 @@ import {Navbar} from './components/Navbar';
 import Home  from './components/pages/Home';
 import Login from './components/pages/Login';
 import UpdateProfile from './components/pages/UpdateProfile';
-import Desserts from './components/pages/Desserts';
-import Snacks from './components/pages/Snacks';
-import Breakfast from './components/pages/Breakfast';
-import Lunch from './components/pages/Lunch';
-import Dinner from './components/pages/Dinner'
+import Desserts from './components/pages/meals/Desserts';
+import Snacks from './components/pages/meals/Snacks'
+import Breakfast from './components/pages/meals/Breakfast';
+import Lunch from './components/pages/meals/Lunch';
+import Dinner from './components/pages/meals/Dinner';
 import Logout from './components/pages/Logout';
 import Recipes from './components/pages/Recipes';
 import SignUp from './components/pages/SignUp';
+import Beverages from './components/pages/meals/Beverages';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path ="/breakfast" element={<Breakfast/>}/>
         <Route path ="/lunch" element={<Lunch/>}/>
         <Route path ="/dinner" element={<Dinner/>}/>
+        <Route path ="/beverages" element={<Beverages/>}/>
         <Route path ="/sign-up" element={<SignUp/>}/>
         <Route path ="/logout" element={<Logout/>}/>
 

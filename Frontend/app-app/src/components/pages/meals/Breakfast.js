@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Navbar'
+import Navbar from '../../Navbar'
 
 function Breakfast() {
     return (
@@ -7,7 +7,9 @@ function Breakfast() {
         <Navbar/>
 
         <div>
-            API CALL HERE
+           Fluffy Buttermilk Pancakes
+           Aboslutely Avocado Toast
+           Wholesome Whole Food Oat Granola
         </div>
         </>
     )
