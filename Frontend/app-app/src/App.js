@@ -4,7 +4,7 @@ import Test from './components/Test';
 import axios from "axios";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React, {useState, useEffect}from "react"
-import { UserProfiles } from './components/pages/UserProfiles';
+import Users from './components/Users';
 import {Navbar} from './components/Navbar';
 import Home  from './components/pages/Home';
 import Login from './components/pages/Login';
@@ -26,7 +26,7 @@ function App() {
     
       <Routes>
         <Route path ="/" element={<Home/>}/>
-        <Route path ="users" element ={<UserProfiles/>}/>
+        <Route path ="users" element ={<Users/>}/>
         {/* THESE NEED TO BE DEFINED WITH API CALLS AND LOGIC */}
         {/* <Route path ="/profile/{id]" element={<Profile/>}/> */}
         <Route path ="/login" element={<Login/>}/>
@@ -38,6 +38,7 @@ function App() {
         <Route path ="/lunch" element={<Lunch/>}/>
         <Route path ="/dinner" element={<Dinner/>}/>
         <Route path ="/sign-up" element={<SignUp/>}/>
+        <Route path ="/logout" element={<Logout/>}/>
 
       </Routes>
     </Router>

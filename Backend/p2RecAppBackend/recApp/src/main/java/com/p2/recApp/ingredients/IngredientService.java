@@ -3,6 +3,7 @@ package com.p2.recApp.ingredients;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.p2.recApp.ingredients.IngredientRepository;
@@ -19,7 +20,7 @@ import lombok.AllArgsConstructor;
 
 //need to come back to this, not sure we need this 
 @Service
-@AllArgsConstructor
+
 public class IngredientService {
 	
 	private final IngredientRepository ingredientRepository;
@@ -27,10 +28,45 @@ public class IngredientService {
 	private String mealType;
 	private Integer ingID;
 	
+	
+	@Autowired
+	public IngredientService(IngredientRepository ingredientRepository) {
+		super();
+		this.ingredientRepository = ingredientRepository;
+	}
+
 	public List<Ingredient> getAllIng() {
 		return ingredientRepository.findAll();
 		}
 	
+	public String getRecipe() {
+		return recipe;
+	}
+
+	public void setRecipe(String recipe) {
+		this.recipe = recipe;
+	}
+
+	public String getMealType() {
+		return mealType;
+	}
+
+	public void setMealType(String mealType) {
+		this.mealType = mealType;
+	}
+
+	public Integer getID() {
+		return ingID;
+	}
+
+	public void setID(Integer ingID) {
+		this.ingID = ingID;
+	}
+
+	public IngredientRepository getIngredientRepository() {
+		return ingredientRepository;
+	}
+
 	public Optional<Ingredient> getByRec() {
 		return ingredientRepository.findByRecipe(recipe);
 	}

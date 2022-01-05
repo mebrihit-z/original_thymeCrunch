@@ -27,4 +27,4 @@ function LogoutVideo() {
     )
 }
 
-export default LogoutVideo
+export default LogoutVideo;

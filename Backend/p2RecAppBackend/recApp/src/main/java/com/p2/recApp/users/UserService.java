@@ -97,6 +97,8 @@ public class UserService/* implements UserDetailsService*/ {
 			String profile_pic,
 			String fav_rec) {
 		
+		
+		
 	}
 
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
@@ -107,17 +109,23 @@ public class UserService/* implements UserDetailsService*/ {
 
         // 3. The user exists in our database
         User user = getUserProfileOrThrow(userID);
-
+        
         // 4. Grab some metadata from file if any
         Map<String, String> metadata = extractMetadata(file);
 
         // 5. Store the image in s3 and update database (userProfileImageLink) with s3 image link
         String path = String.format("%s/%s", BucketName.PROFILE_IMAGE.getBucketName(), user.getUserID());
         String filename = String.format("%s-%s", file.getOriginalFilename(), UUID.randomUUID());
-
+        
         try {
+        	
             fileStore.save(path, filename, Optional.of(metadata), file.getInputStream());
             user.setProfile_pic(filename);
+           System.out.println(filename);
+           System.out.println(path);
+          ;
+          System.out.println(user.getProfile_pic());
+          
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
@@ -130,7 +138,9 @@ public class UserService/* implements UserDetailsService*/ {
 	        String path = String.format("%s/%s",
 	                BucketName.PROFILE_IMAGE.getBucketName(),
 	                user.getUserID());
-
+	        System.out.println(user);
+	        System.out.println(path);
+	        System.out.println(user.getProfile_pic());
 	        return user.getProfile_pic()
 	                .map(key -> fileStore.download(path, key))
 	                .orElse(new byte[0]);
@@ -149,9 +159,6 @@ public class UserService/* implements UserDetailsService*/ {
 		  private User getUserProfileOrThrow(Integer userID) {
 		        return userRepository
 		                .findById(userID)
-		                .stream()
-		                .filter(userProfile -> userProfile.getUserID().equals(userID))
-		                .findFirst()
 		                .orElseThrow(() -> new IllegalStateException(String.format("User profile %s not found", userID)));
 		    }
 		  private void isImage(MultipartFile file) {

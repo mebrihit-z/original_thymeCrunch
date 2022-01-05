@@ -28,12 +28,12 @@ public class IngredientController {
 		return ingredientService.getAllIng();
 	}
 	
-	@GetMapping
+	@GetMapping("/{meal-type}")
 	public Optional<Ingredient> getByMealType(){
 		return ingredientService.getByMealType();
 	}
 	
-	@GetMapping
+	@GetMapping("/{rec}")
 	public Optional<Ingredient> getByRec(){
 		return ingredientService.getByRec();
 	}

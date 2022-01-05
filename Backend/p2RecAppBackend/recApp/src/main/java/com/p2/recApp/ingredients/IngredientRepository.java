@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.p2.recApp.users.User;
+
 
 /*************************************Works Cited*********************************************
  * Title: "Java Tutorial - Complete User Login and Registration Backend + Email Verification"
@@ -19,7 +19,7 @@ import com.p2.recApp.users.User;
 @Repository
 @Transactional(readOnly= true)
 public interface IngredientRepository extends JpaRepository<Ingredient, Integer>{
-	Optional<Ingredient> findByID(Integer ingID);
+	Optional<Ingredient> findById(Integer ingID);
 	Optional<Ingredient> findByRecipe(String recipe);
 	Optional<Ingredient> findByMealType(String mealType);
 

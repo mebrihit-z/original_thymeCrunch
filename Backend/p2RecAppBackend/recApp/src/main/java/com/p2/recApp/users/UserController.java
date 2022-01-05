@@ -1,8 +1,6 @@
 package com.p2.recApp.users;
 
 import java.util.List;
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -61,6 +59,7 @@ public class UserController {
 	
 	 @GetMapping("{userID}/image/download")
 	    public byte[] downloadUserProfileImage(@PathVariable("userID") Integer userID) {
+		 	System.out.println("hello from download");
 	        return userService.downloadUserProfileImage(userID);
 	    }
 	
