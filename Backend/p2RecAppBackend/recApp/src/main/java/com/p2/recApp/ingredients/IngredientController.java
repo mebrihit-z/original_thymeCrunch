@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,16 +29,17 @@ public class IngredientController {
 		return ingredientService.getAllIng();
 	}
 	
-	@GetMapping("/{meal-type}")
-	public Optional<Ingredient> getByMealType(){
-		return ingredientService.getByMealType();
+	@GetMapping("/{recipe}")
+	public List<Ingredient> getByRec(@PathVariable("recipe") String recipe){
+		return ingredientService.getByRec(recipe);
 	}
-	//hard code this
 	
-	@GetMapping("/bento")
-	public Optional<Ingredient> getByRec(){
-		return ingredientService.getByRec();
+	@GetMapping("/all-recipes")
+	public List<Ingredient> getAllRec(@PathVariable("recipe") String recipe){
+		return ingredientService.getByRec(recipe);
 	}
+	
+	//hard code this
 	
 
 }

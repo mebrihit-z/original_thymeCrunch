@@ -9,7 +9,8 @@ export const PancakesIng = ()=> {
     const [pancakesIng, setPancakesIng] = useState([]);
 
     const fetchPancakesIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/breakfast/pancakes").then(res =>{
+        var recipe ="pancakes";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setPancakesIng(res.data);
         });

@@ -47,9 +47,15 @@ function Card() {
                         
                          <CardItem 
                         src='images/snack.jpg'
-                        text="Refresh with a pick-me-up"
+                        text="Recharge with a snack"
                         label= "Snacks"
                         path="/snacks"
+                        />
+                        <CardItem 
+                        src='images/drink.jpg'
+                        text="Refresh with a pick-me-up"
+                        label= "Beverages"
+                        path="/beverages"
                         />
                     </ul>
                 </div>

@@ -10,7 +10,8 @@ export const SaladIng = ()=> {
     const [saladIng, setSaladIng] = useState([]);
 
     const fetchSaladIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/lunch/salad").then(res =>{
+        var recipe ="salad";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setSaladIng(res.data);
         });

@@ -9,7 +9,8 @@ export const LatteIng = ()=> {
     const [latteIng, setLatteIng] = useState([]);
 
     const fetchLatteIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/beverages/espresso").then(res =>{
+        var recipe = "latte";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setLatteIng(res.data);
         });

@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(readOnly= true)
 public interface IngredientRepository extends JpaRepository<Ingredient, Integer>{
 	Optional<Ingredient> findById(Integer ingID);
-	Optional<Ingredient> findByRecipe(String recipe);
+	List<Ingredient> findByRecipe(String recipe);
 	Optional<Ingredient> findByMealType(String mealType);
 
 	

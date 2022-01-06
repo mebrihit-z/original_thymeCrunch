@@ -9,7 +9,8 @@ export const PastaIng = ()=> {
     const [pastaIng, setPastaIng] = useState([]);
 
     const fetchPastaIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/dinner/pasta").then(res =>{
+        var recipe ="pasta";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setPastaIng(res.data);
         });

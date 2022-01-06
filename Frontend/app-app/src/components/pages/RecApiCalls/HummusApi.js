@@ -9,7 +9,8 @@ export const HummusIng = ()=> {
     const [hummusIng, setHummusIng] = useState([]);
 
     const fetchHummusIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/snacks/hummus").then(res =>{
+        var recipe = "hummus";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setHummusIng(res.data);
         });

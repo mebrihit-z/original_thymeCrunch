@@ -9,7 +9,8 @@ export const OrangeJuiceIng = ()=> {
     const [orangeJuiceIng, setOrangeJuiceIng] = useState([]);
 
     const fetchOrangeJuiceIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/beverages/orange-juice").then(res =>{
+        var recipe = "orange_juice";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setOrangeJuiceIng(res.data);
         });

@@ -9,7 +9,8 @@ export const PunchIng = ()=> {
     const [punchIng, setPunchIng] = useState([]);
 
     const fetchPunchIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/beverages/punch").then(res =>{
+        var recipe = "punch";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setPunchIng(res.data);
         });
