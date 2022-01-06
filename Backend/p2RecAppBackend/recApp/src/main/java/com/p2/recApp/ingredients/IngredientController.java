@@ -32,8 +32,9 @@ public class IngredientController {
 	public Optional<Ingredient> getByMealType(){
 		return ingredientService.getByMealType();
 	}
+	//hard code this
 	
-	@GetMapping("/{rec}")
+	@GetMapping("/bento")
 	public Optional<Ingredient> getByRec(){
 		return ingredientService.getByRec();
 	}

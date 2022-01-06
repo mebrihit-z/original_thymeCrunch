@@ -1,11 +1,12 @@
-import React from 'react'
+import axios from "axios";
+import React, {useState, useEffect, useCallback}from "react"
+import Navbar from "../Navbar";
+import '../UserProfiles.css'
 
-function Curry() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default Curry
+function Curry (){
+    <>
+    <Navbar/>
+     <CurryApi/>   
+    </>
+    
+}export default Curry;

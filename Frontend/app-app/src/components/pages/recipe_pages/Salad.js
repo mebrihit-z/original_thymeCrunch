@@ -1,11 +1,13 @@
-import React from 'react'
+import axios from "axios";
+import React, {useState, useEffect, useCallback}from "react"
+import Navbar from "../Navbar";
+import '../UserProfiles.css'
 
-function Salad() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+function Salad (){
+    <>
+    <Navbar/>
+    <SaladApi/>
+    </>
+        
 
-export default Salad
+}export default Salad;
