@@ -16,4 +16,5 @@ function Bento (){
         
 
     
-}export default Bento;
+}
+export default Bento;
