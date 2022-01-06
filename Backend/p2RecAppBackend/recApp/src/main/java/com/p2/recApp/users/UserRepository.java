@@ -17,40 +17,20 @@ import org.springframework.transaction.annotation.Transactional;
  *********************************************************************************************/
 //tutorial calls this AppUserRespository AND AppUserService
 @Repository
-@Transactional(readOnly= true)
+@Transactional()
 public interface UserRepository extends JpaRepository<User, Integer>{
 	
 	
 	Optional<User> findByEmail(String email);
 	Optional<User> findById(Integer userID);
+	
 //	Optional<User> addUser(
 //			String firstname,
 //			String lastname,
 //			String emial,
 //			String username,
 //			String password);
+//	
 	
-//	Optional<User> updateUser(
-//			String firstname,
-//			String lastname,
-//			String emial,
-//			String username,
-//			String password,
-//			String profile_pic, 
-//			String fav_rec);
-	Optional<User> findByUsername(String username);
-	Optional<User> findByPassword(String password);
-	Optional<User> findByUserID(Integer userID);
 
-	
-	//might need to change
-	Optional<User> findByUsername(String username);
-	Optional<User> findByPassword(String password);
-	List<User> findAll();
-//Q
-	@Transactional
-    @Modifying
-    @Query("UPDATE User a " +
-            "SET a.enabled = TRUE WHERE a.email = ?1")
-    int enableUser(String email);
 }
