@@ -31,14 +31,18 @@ function PasswordRecovery() {
     return (
         <>
         <Navbar/>
-            <div>
+        <body>
+            <div class="container">
                 <form onSubmit={(e) => submit(e)}>
+                    <h1 >Did you loose something?</h1>
+                    <h3>Enter your email below and we will send you your password.</h3>
                     <label>Email:</label>
                     <input onChange={(e)=>handle(e)} id="email" value={data.email} placeholder="email" type="text" required></input>
                     <br/>
                     <button>Submit</button>
                 </form>
             </div>
+        </body>
         </>
     )
 }

@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Test from './components/Test';
-import axios from "axios";
+//import Test from './components/Test';
+//import axios from "axios";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React, {useState, useEffect}from "react"
 import { UserProfiles } from './components/pages/UserProfiles';
-import {Navbar} from './components/Navbar';
+//import {Navbar} from './components/Navbar';
 import Home  from './components/pages/Home';
 import Login from './components/pages/Login';
 import UpdateProfile from './components/pages/UpdateProfile';
@@ -17,7 +17,7 @@ import Dinner from './components/pages/Dinner'
 import Logout from './components/pages/Logout';
 import Recipes from './components/pages/Recipes';
 import SignUp from './components/pages/SignUp';
-import LoginForm from './components/LoginForm';
+//import LoginForm from './components/LoginForm';
 import PasswordRecovery from './components/pages/PasswordRecovery';
 
 function App() {
