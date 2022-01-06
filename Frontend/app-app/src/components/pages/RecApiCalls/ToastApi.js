@@ -8,7 +8,7 @@ export const ToastIng = ()=> {
 
     const [toastIng, setToastIng] = useState([]);
 
-    const fetchCurryIng = ()=>{
+    const fetchToastIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/breakfast/avocado-toast").then(res =>{
             console.log(res);
             setToastIng(res.data);

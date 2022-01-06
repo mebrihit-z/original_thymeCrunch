@@ -8,7 +8,7 @@ export const PastaIng = ()=> {
 
     const [pastaIng, setPastaIng] = useState([]);
 
-    const fetchCurryIng = ()=>{
+    const fetchPastaIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/dinner/pasta").then(res =>{
             console.log(res);
             setPastaIng(res.data);

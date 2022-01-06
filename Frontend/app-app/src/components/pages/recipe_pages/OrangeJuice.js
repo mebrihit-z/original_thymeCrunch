@@ -1,8 +1,7 @@
-import axios from "axios";
-import React, {useState, useEffect, useCallback}from "react"
+import React from "react"
 import Navbar from "../../Navbar";
 import '../../UserProfiles.css';
-import { OrangeJuiceIng } from '../RecApiCalls/OjApi';
+import { OrangeJuiceIng } from '../RecApiCalls/OrangeJuiceApi';
 
 function OrangeJuice (){
     return(

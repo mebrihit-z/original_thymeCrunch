@@ -17,39 +17,24 @@ function SnacksCard() {
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__item">
+
                          <CardItem 
-                        src='images/fruit1.jpg'
+                        src='images/celery.jpg'
                         text="Sweet and Simple Celery Boats"
                         label= "Celery Boats"
                         path="/celery-boats"
                         />
                          <CardItem 
-                        src='images/cupcake.jpg'
+                        src='images/hummus.jpg'
                         text="Hungry for Hummus"
                         label= "Hummus"
                         path="/hummus"
                         />
                          <CardItem 
-                        src='images/hummus.jpg'
+                        src='images/fruit.jpg'
                         text="Fresh Fruit Stars"
                         label= "Fruit"
                         path="/fruit-stars"
-                        />
-                    </ul>
-                    <ul className="cards__item">
-                        <CardItem 
-                        src='/Frontend/app-app/public/images/breakfast-2.jpg
-                        '
-                        text="Indulge your sweet tooth with yummy treats"
-                        label= "Desserts"
-                        path="/desserts"
-                        />
-                        
-                         <CardItem 
-                        src='images/snack.jpg'
-                        text="Refresh with a pick-me-up"
-                        label= "Snacks"
-                        path="/snacks"
                         />
                     </ul>
                 </div>

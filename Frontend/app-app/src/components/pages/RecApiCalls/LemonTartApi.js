@@ -8,7 +8,7 @@ import '../../UserProfiles.css';
 
     const [lemonTartIng, setLemonTartIng] = useState([]);
 
-    const fetchCurryIng = ()=>{
+    const fetchLemonTartIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/dessert/lemon-tart").then(res =>{
             console.log(res);
             setLemonTartIng(res.data);

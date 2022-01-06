@@ -8,7 +8,7 @@ export const HamburgerIng = ()=> {
 
     const [hamburgerIng, setHamburgerIng] = useState([]);
 
-    const fetchCurryIng = ()=>{
+    const fetchHamburgerIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/dinner/hamburger").then(res =>{
             console.log(res);
             setHamburgerIng(res.data);

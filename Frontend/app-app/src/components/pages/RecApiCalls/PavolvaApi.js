@@ -22,7 +22,7 @@ export const PavlovaIng = ()=> {
         fetchPavlovaIng();
     }, [] );
 
-    return pavlovang.map((ingredient, index) =>{
+    return pavlovaIng.map((ingredient, index) =>{
         return (
             <div key={index}>
                 <p>User ID: {ingredient.ingName}</p>

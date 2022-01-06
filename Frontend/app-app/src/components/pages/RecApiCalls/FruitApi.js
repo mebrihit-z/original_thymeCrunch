@@ -8,7 +8,7 @@ export const FruitIng = ()=> {
 
     const [fruitIng, setFruitIng] = useState([]);
 
-    const fetchCurryIng = ()=>{
+    const fetchFruitIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/snacks/fruit-stars").then(res =>{
             console.log(res);
             setFruitIng(res.data);

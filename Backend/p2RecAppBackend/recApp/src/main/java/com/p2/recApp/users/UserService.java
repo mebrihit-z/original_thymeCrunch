@@ -40,19 +40,7 @@ import lombok.AllArgsConstructor;
 
 public class UserService/* implements UserDetailsService*/ {
 
-	//	private  BCryptPasswordEncoder bCryptPasswordEncoder;
-	//	
-	//	private final static String USER_NOT_FOUND_MSG = 
-	//			"user with email %s not found";
-	//	@Override
-	//	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-	//		// TODO Auto-generated method stub
-	//		return userRepository.findByEmail(email)
-	//				.orElseThrow(
-	//						() -> new UsernameNotFoundException(
-	//								String.format(USER_NOT_FOUND_MSG, email)
-	//								));
-	//}
+
 
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
@@ -61,6 +49,7 @@ public class UserService/* implements UserDetailsService*/ {
 	private String email;
 	private String firstname;
 	private String lastname;
+	private String profile_pic;
 	
 	
 	public String signUpUser(User user) {
@@ -71,13 +60,10 @@ public class UserService/* implements UserDetailsService*/ {
 			throw new IllegalStateException("email taken");
 		}
 
-		//	String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
-
-		//	user.setPassword(encodedPassword);
-
+		
 		userRepository.save(user);
 
-		//TODO: send confirmation token 
+		
 
 		return "user added!";
 	}
@@ -95,6 +81,7 @@ public class UserService/* implements UserDetailsService*/ {
 		String email = this.email;
 		String firstname = this.firstname;
 		String lastname = this.lastname;
+		String profile_pic = this.profile_pic;
 		
 		user.setUsername(username);
 		user.setPassword(password);
@@ -139,6 +126,8 @@ public class UserService/* implements UserDetailsService*/ {
         	
             fileStore.save(path, filename, Optional.of(metadata), file.getInputStream());
             user.setProfile_pic(filename);
+            userRepository.save(user);
+            
            System.out.println(filename);
            System.out.println(path);
           ;

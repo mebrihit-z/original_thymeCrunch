@@ -1,38 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
-import Test from './components/Test';
-import axios from "axios";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import React, {useState, useEffect}from "react"
+
+//Utilities
 import Users from './components/Users';
-import {Navbar} from './components/Navbar';
 import Home  from './components/pages/Home';
 import Login from './components/pages/Login';
+import Logout from './components/pages/Logout';
+import SignUp from './components/pages/SignUp';
 import UpdateProfile from './components/pages/UpdateProfile';
+
+//MealTypes
 import Desserts from './components/pages/meals/Desserts';
 import Snacks from './components/pages/meals/Snacks'
 import Breakfast from './components/pages/meals/Breakfast';
 import Lunch from './components/pages/meals/Lunch';
 import Dinner from './components/pages/meals/Dinner';
-import Logout from './components/pages/Logout';
-import Recipes from './components/pages/Recipes';
-import SignUp from './components/pages/SignUp';
 import Beverages from './components/pages/meals/Beverages';
+
+//Recipies
+import Recipes from './components/pages/Recipes';
+
+/*breakfast*/
 import Pancakes from './components/pages/recipe_pages/Pancakes';
 import Granola from './components/pages/recipe_pages/Granola';
 import Toast from './components/pages/recipe_pages/Toast';
-import Bento from './components/pages/recipe_pages/Bento';
+
+/*Lunch*/
 import Salad from './components/pages/recipe_pages/Salad';
 import Curry from './components/pages/recipe_pages/Curry';
+import Bento from './components/pages/recipe_pages/Bento';
+
+/*Dinner*/
 import Hamburger from './components/pages/recipe_pages/Hamburger';
 import Pasta from './components/pages/recipe_pages/Pasta';
 import PadThai from './components/pages/recipe_pages/PadThai';
+
+/*Snacks*/
 import CeleryBoat from './components/pages/recipe_pages/CeleryBoat';
 import Fruit from './components/pages/recipe_pages/Fruit';
 import Hummus from './components/pages/recipe_pages/Hummus';
+
+/*Desserts*/
 import LemonTart from './components/pages/recipe_pages/LemonTart';
 import Gelato from './components/pages/recipe_pages/Gelato';
 import Pavlova from './components/pages/recipe_pages/Pavlova';
+
+/*Beverages*/
 import Latte from './components/pages/recipe_pages/Latte';
 import BobaTea from './components/pages/recipe_pages/BobaTea';
 import OrangeJuice from './components/pages/recipe_pages/OrangeJuice';
