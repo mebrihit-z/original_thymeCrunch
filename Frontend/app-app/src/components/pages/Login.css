@@ -3,7 +3,6 @@
   display: flex; 
   padding-top: 90px;
   padding-bottom: 90px;
-  /* background-image: url(./images/dark.PNG);  */
   background-image: url("./images/reciBack.jpg"); 
   background-size: contain;
 }
@@ -18,7 +17,7 @@
   left:50%;
   padding-top: 30px;
   border-radius: 60px; 
-  /*box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);*/
+ 
 
 }
 .imgs{

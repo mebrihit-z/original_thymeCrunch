@@ -21,59 +21,72 @@ import LoginForm from './components/LoginForm';
 
 function App() {
 
-  const adminUser ={
-    email: "admin@admin.com",
-    password: "admin123"
-  }
+  // const adminUser ={
+  //   email: "admin@admin.com",
+  //   password: "admin123"
+  // }
 
-  //const LOGIN_URL = 'http://localhost:9090//users/';
+  // //const LOGIN_URL = 'http://localhost:9090//users/';
 
-  const [user, setUser] = useState({username: "", email: ""})
-  const [error, setError] = useState("");
+  // const [user, setUser] = useState({name: "", email: ""})
+  // const [error, setError] = useState("");
  
-  const Login = (details) =>{
-    console.log(details);
-  }
+  // const LoginFnc = details =>{
+  //  // console.log(details);
+  //   if(details.email == adminUser.email && details.password == adminUser.password ){
+  //    // console.log("Logged in");
+  //     setUser({
+  //       name:details.name,
+  //       email: details.email
+  //     })
+  //   }else{
+  //     //console.log("Details do not match!")
+  //     setError("Details do not match!")
+  //   }
+  // }
   
-  const Logout = () =>{
-    console.log("Logout");
-  }
+  // const Logout = () =>{
+  //   setUser({
+  //     name:"",
+  //     email: ""
+  //   })
+  // }
 
   return (
-    <div className='App'>
-      {(user.email != "") ? (
-        <div div className='Welcome'>
-          <h2>Welcome, <span>{user.name}</span></h2>
-          <button>Logout</button>
-        </div>
-      ):(
-        <LoginForm/>
-      )}
-    </div>
+    // <div className='App'>
+    //   {(user.email != "") ? (
+    //     <div div className='Welcome'>
+    //       <h2>Welcome, <span>{user.name}</span></h2>
+    //       <button onClick={Logout}>Logout</button>
+    //     </div>
+    //   ):(
+    //     <LoginForm LoginFnc={LoginFnc} error={error}/>
+    //   )}
+    // </div>
     
-    // <>
-    // <Router>
+    <>
+    <Router>
     
-    //   <Routes>
-    //     <Route path ="/" element={<Home/>}/>
-    //     <Route path ="users" element ={<UserProfiles/>}/>
-    //     <Route path ="/login" element={<Login/>}/>
-    //     {/* <Route path ="/profile/{id]" element={<Profile/>}/>
-    //     {/* THESE NEED TO BE DEFINED WITH API CALLS AND LOGIC */}
-    //     {/* <Route path ="/profile/{id]" element={<Profile/>}/> */}
-    //     <Route path ="/login" element={<Login/>}/>
-    //     <Route path ="/recipes" element={<Recipes/>}/>
-    //     <Route path ="/update" element={<UpdateProfile/>}/>
-    //     <Route path ="/dessert" element={<Desserts/>}/>
-    //     <Route path ="/snacks" element={<Snacks/>}/>
-    //     <Route path ="/breakfast" element={<Breakfast/>}/>
-    //     <Route path ="/lunch" element={<Lunch/>}/>
-    //     <Route path ="/dinner" element={<Dinner/>}/>
-    //     <Route path ="/sign-up" element={<SignUp/>}/>
+      <Routes>
+        <Route path ="/" element={<Home/>}/>
+        <Route path ="users" element ={<UserProfiles/>}/>
+        <Route path ="/login" element={<Login/>}/>
+        {/* <Route path ="/profile/{id]" element={<Profile/>}/>
+        {/* THESE NEED TO BE DEFINED WITH API CALLS AND LOGIC */}
+        {/* <Route path ="/profile/{id]" element={<Profile/>}/> */}
+        <Route path ="/login" element={<Login/>}/>
+        <Route path ="/recipes" element={<Recipes/>}/>
+        <Route path ="/update" element={<UpdateProfile/>}/>
+        <Route path ="/dessert" element={<Desserts/>}/>
+        <Route path ="/snacks" element={<Snacks/>}/>
+        <Route path ="/breakfast" element={<Breakfast/>}/>
+        <Route path ="/lunch" element={<Lunch/>}/>
+        <Route path ="/dinner" element={<Dinner/>}/>
+        <Route path ="/sign-up" element={<SignUp/>}/>
 
-    //   </Routes>
-    // </Router>
-    // </>
+      </Routes>
+    </Router>
+    </>
    
   );
 }
