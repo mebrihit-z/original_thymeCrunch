@@ -1,28 +1,27 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import Navbar from "../Navbar";
-import '../UserProfiles.css'
+import '../../UserProfiles.css';
 
-export const EspressoIng = ()=> {
+export const LatteIng = ()=> {
 
    
 
-    const [espressoIng, setEspressoIng] = useState([]);
+    const [latteIng, setLatteIng] = useState([]);
 
-    const fetchEspressoIng = ()=>{
+    const fetchLatteIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/beverages/espresso").then(res =>{
             console.log(res);
-            setEspressoIng(res.data);
+            setLatteIng(res.data);
         });
         
 
     }
 
     useEffect(()=>{
-        fetchEspressoIng();
+        fetchLatteIng();
     }, [] );
 
-    return espressoIng.map((ingredient, index) =>{
+    return LatteIng.map((ingredient, index) =>{
         return (
             <div key={index}>
                 <p>User ID: {ingredient.ingName}</p>

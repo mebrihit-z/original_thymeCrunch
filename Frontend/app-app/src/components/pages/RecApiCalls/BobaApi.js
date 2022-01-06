@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import Navbar from "../Navbar";
-import '../UserProfiles.css'
+import '../../UserProfiles.css'
 
 export const BobaIng = ()=> {
 
@@ -12,7 +11,7 @@ export const BobaIng = ()=> {
     const fetchBobaIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/beverages/boba-tea").then(res =>{
             console.log(res);
-            setCurryIng(res.data);
+            setBobaIng(res.data);
         });
         
 

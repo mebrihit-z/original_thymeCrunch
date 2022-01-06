@@ -13,7 +13,7 @@ import './Cards.css';
 function DinnerCards() {
     return (
         <div className='cards'>
-            <h1>Recipes</h1>
+            <h1>Dinner</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__item">

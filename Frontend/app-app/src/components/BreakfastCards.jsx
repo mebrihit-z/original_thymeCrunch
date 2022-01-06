@@ -13,7 +13,7 @@ import './Cards.css';
 function BreakfastCards() {
     return (
         <div className='cards'>
-            <h1>Recipes</h1>
+            <h1>Breakfast</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__item">
@@ -29,15 +29,8 @@ function BreakfastCards() {
                         label= "Toast"
                         path="/toast"
                         />
-                         <CardItem 
-                        src='images/dinner.jpg'
-                        text="Beat the clock with a speedy dinner"
-                        label= "Dinner"
-                        path="/dinner"
-                        />
                         <CardItem 
-                        src='images/granola.jpg
-                        '
+                        src='images/granola.jpg'
                         text="Wholesome Whole Food Oat Granola"
                         label= "Granola"
                         path="/granola"

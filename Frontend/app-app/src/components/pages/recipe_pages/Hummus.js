@@ -1,14 +1,18 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import Navbar from "../Navbar";
-import '../UserProfiles.css'
+import Navbar from "../../Navbar";
+import '../../UserProfiles.css';
+import { HummusIng } from '../RecApiCalls/HummusApi';
 
 function Hummus (){
+    return(
     <>
     <Navbar/>
-    <HummusApi/>
+    <HummusIng/>
     </>
+    )
         
 
     
-}export default Hummus;
+}
+export default Hummus;

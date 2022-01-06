@@ -2,16 +2,17 @@ import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
 import Navbar from "../../Navbar";
 import '../../UserProfiles.css';
-import  { PadThaiIng } from '../RecApiCalls/PadThaiApi';
+import  { LatteIng } from '../RecApiCalls/LatteApi';
 
-function PadThai(){
+function Latte (){
     return(
     <>
     <Navbar/>
-    <PadThaiIng/>
-    </>
+    <LatteIng/>
+    </> 
     )
-        
 
+   
 }
-export default PadThai;
+
+export default Latte;

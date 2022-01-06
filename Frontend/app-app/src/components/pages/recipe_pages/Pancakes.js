@@ -1,14 +1,20 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import Navbar from "../Navbar";
-import '../UserProfiles.css'
+import Navbar from "../../Navbar";
+import '../../UserProfiles.css';
+import {PancakesIng} from '../RecApiCalls/PancakesApi';
+
 
 function Pancakes (){
+    return(
     <>
     <Navbar/>
-    <PancakesApi/>
+
+    <PancakesIng/>
     </>
+    )
         
 
    
 }
+export default Pancakes;

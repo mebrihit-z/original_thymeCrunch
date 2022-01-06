@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import Navbar from "../Navbar";
-import '../UserProfiles.css'
+import '../../UserProfiles.css';
 
 export const PancakesIng = ()=> {
 
    
 
-    const [pancakesIng, setCPancakesIng] = useState([]);
+    const [pancakesIng, setPancakesIng] = useState([]);
 
     const fetchPancakesIng = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/meals/breakfast/pancakes").then(res =>{

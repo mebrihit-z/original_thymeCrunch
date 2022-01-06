@@ -18,6 +18,8 @@ import Logout from './components/pages/Logout';
 import Recipes from './components/pages/Recipes';
 import SignUp from './components/pages/SignUp';
 import Beverages from './components/pages/meals/Beverages';
+import Pancakes from './components/pages/recipe_pages/Pancakes';
+import Granola from './components/pages/recipe_pages/Granola';
 
 function App() {
   return (
@@ -31,16 +33,18 @@ function App() {
         {/* THESE NEED TO BE DEFINED WITH API CALLS AND LOGIC */}
         {/* <Route path ="/profile/{id]" element={<Profile/>}/> */}
         <Route path ="/login" element={<Login/>}/>
-        <Route path ="/recipes" element={<Recipes/>}/>
         <Route path ="/update" element={<UpdateProfile/>}/>
-        <Route path ="/dessert" element={<Desserts/>}/>
-        <Route path ="/snacks" element={<Snacks/>}/>
+        <Route path ="/sign-up" element={<SignUp/>}/>
+        <Route path ="/logout" element={<Logout/>}/>
+        <Route path ="/recipes" element={<Recipes/>}/>
         <Route path ="/breakfast" element={<Breakfast/>}/>
         <Route path ="/lunch" element={<Lunch/>}/>
         <Route path ="/dinner" element={<Dinner/>}/>
         <Route path ="/beverages" element={<Beverages/>}/>
-        <Route path ="/sign-up" element={<SignUp/>}/>
-        <Route path ="/logout" element={<Logout/>}/>
+        <Route path ="/dessert" element={<Desserts/>}/>
+        <Route path ="/snacks" element={<Snacks/>}/>
+       
+        
 
       </Routes>
     </Router>

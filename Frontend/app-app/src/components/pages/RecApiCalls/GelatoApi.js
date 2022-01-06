@@ -1,12 +1,11 @@
-
+import axios from "axios";
+import React, {useState, useEffect, useCallback}from "react"
+import '../../UserProfiles.css';
 
 export const GelatoIng = ()=> {
 
    
-    import axios from "axios";
-    import React, {useState, useEffect, useCallback}from "react"
-    import Navbar from "../Navbar";
-    import '../UserProfiles.css'
+  
 
     
     const [gelatoIng, setGelatoIng] = useState([]);

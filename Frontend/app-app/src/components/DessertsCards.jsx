@@ -13,12 +13,12 @@ import './Cards.css';
 function DessertsCards() {
     return (
         <div className='cards'>
-            <h1>Recipes</h1>
+            <h1>Desserts</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__item">
                          <CardItem 
-                        src='images/gelato.jpg'
+                        src='/Frontend/app-app/src/components/images/gelato.jpg'
                         text="Black Forest Gelato with Ganache"
                         label= "Gelato"
                         path="/gelato"

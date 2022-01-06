@@ -1,14 +1,18 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import Navbar from "../Navbar";
-import '../UserProfiles.css'
+import Navbar from "../../Navbar";
+import '../../UserProfiles.css';
+import  { GelatoIng } from '../RecApiCalls/GelatoApi';
 
 function Gelato (){
+    return(
     <>
     <Navbar/>
-    <GelatoApi/>
+    <GelatoIng/>
     </>
+    )
         
 
     
-}export default Gelato;
+}
+export default Gelato;

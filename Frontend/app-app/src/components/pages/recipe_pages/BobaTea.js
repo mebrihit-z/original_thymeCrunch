@@ -1,13 +1,16 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import Navbar from "../Navbar";
-import '../UserProfiles.css'
+import Navbar from "../../Navbar";
+import '../../UserProfiles.css';
+import {BobaIng}from '../RecApiCalls/BobaApi';
 
 function BobaTea (){
+    return(
     <>
     <Navbar/>
-    <BobaTeaApi/>
+    <BobaIng/>
     </>
+    )
         
 
     

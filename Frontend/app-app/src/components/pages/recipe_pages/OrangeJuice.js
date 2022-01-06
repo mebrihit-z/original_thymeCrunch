@@ -2,16 +2,17 @@ import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
 import Navbar from "../../Navbar";
 import '../../UserProfiles.css';
-import  { PadThaiIng } from '../RecApiCalls/PadThaiApi';
+import { OrangeJuiceIng } from '../RecApiCalls/OjApi';
 
-function PadThai(){
+function OrangeJuice (){
     return(
     <>
     <Navbar/>
-    <PadThaiIng/>
+    <OrangeJuiceIng/>
     </>
     )
         
 
+    
 }
-export default PadThai;
+export default OrangeJuice;
