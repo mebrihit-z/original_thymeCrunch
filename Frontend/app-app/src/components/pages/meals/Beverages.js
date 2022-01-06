@@ -1,17 +1,20 @@
 import React from 'react'
 import Navbar from '../../Navbar';
+import BeveragesCards from '../../BeveragesCards';
 
 function Beverages() {
     return (
         <>
         <Navbar/>
 
+        <BeveragesCards/>
+
         <div>
             
-           Express Espresso 
-           We Want Try Your Orange Juice 
-           Bubbly Boba Tea
-           Summery Fruit Punch
+           
+           
+           
+           
 
         </div>
         </>

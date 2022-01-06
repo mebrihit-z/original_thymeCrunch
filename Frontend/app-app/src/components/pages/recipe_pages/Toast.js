@@ -7,6 +7,7 @@ function Toast (){
     <>
     <Navbar/>
     <ToastApi/>
+    <ButtonVideo/>
     </>
         
 

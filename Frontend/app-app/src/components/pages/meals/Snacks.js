@@ -1,13 +1,17 @@
 import React from 'react'
 import Navbar from '../../Navbar'
+import SnacksCards from '../../SnacksCards';
+
+
 function Snacks() {
     return (
         <>
         <Navbar/>
+        <SnacksCards/>
         <div>
-            Sweet and Simple Celery Boats
-            Hungry for Hummus
-            Fresh Fruit Stars
+            
+            
+            
 
         </div>
         </>

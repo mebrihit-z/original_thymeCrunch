@@ -1,15 +1,17 @@
-import React from 'react'
-import Navbar from '../../Navbar'
-
+import React from 'react';
+import Navbar from '../../Navbar';
+import BreakfastCards from '../../BreakfastCards';
 function Breakfast() {
     return (
         <>
         <Navbar/>
 
+        <BreakfastCards/>
+
         <div>
-           Fluffy Buttermilk Pancakes
-           Aboslutely Avocado Toast
-           Wholesome Whole Food Oat Granola
+          
+           
+           
         </div>
         </>
     )
