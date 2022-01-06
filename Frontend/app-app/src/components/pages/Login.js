@@ -98,11 +98,11 @@ export default function Login() {
                  <div className="form">
                  <div className="first-input">
                     <p>Username</p>
-                    <input type="text" placeholder="Enter your username" className="username" onChange={e => setUsername(e.target.value)}/>
+                    <input id="loginput" type="text" placeholder="Enter your username" className="username" onChange={e => setUsername(e.target.value)}/>
                   </div>
                   <div className="second-input">
                     <p>Password</p>
-                    <input type="password" placeholder="Enter your password" className="password" onChange={e => setPassword(e.target.value)}/>
+                    <input id="loginput" type="password" placeholder="Enter your password" className="password" onChange={e => setPassword(e.target.value)}/>
                   </div>
                  </div>
                   <div className="login-button1">

@@ -7,42 +7,98 @@
  *********************************************************************************/
  #main-re{
   /* margin-left: 30px;  */
+  /* background-image: url('images/greenBack.jpg'); */
  }
- #h1{
-   margin-top: 40px;
+ /* #h1{
+   margin-top: 20px;
    margin-bottom: 40px;
    font-size: 65px;
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- }
- #submain{
+   font-family: 'Moon Dance', cursive; 
+   /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+/* } */
+ /* .ui_search{
+   margin-bottom:40px ;
+   white-space: 300px;
+   height: 50px;
+
+ } */
+ /* .ui_icon_input{
+   border-top: 30px;
+ } */
+ #submain1{
    width: 560px;
    height: 400px;
-   background-image: url('images/book.jpg'); 
+   background-image: url('images/newBrak2.jpg'); 
    background-size: contain;
    position: relative;
    text-align: center;
  }
+ #submain2{
+  width: 560px;
+  height: 400px;
+  background-image: url('images/lunch.jpg'); 
+  background-size: contain;
+  position: relative;
+  text-align: center;
+}
+#submain3{
+  width: 560px;
+  height: 400px;
+  background-image: url('images/newDinner.jpg'); 
+  background-size: contain;
+  position: relative;
+  text-align: center;
+}
+#submain4{
+  width: 560px;
+  height: 400px;
+  background-image: url('images/newDess9.jpg'); 
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  position: relative;
+  text-align: center;
+}
+#submain5{
+  width: 560px;
+  height: 400px;
+  background-image: url('images/newSn1.jpg'); 
+  background-size: contain;
+  position: relative;
+  text-align: center;
+}
+#submain6{
+  width: 560px;
+  height: 400px;
+  background-image: url('images/newBev.jpg'); 
+  background-size: contain;
+  position: relative;
+  text-align: center;
+}
  #bottom{
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color:bisque;
-  font-size: 25px;
+  background-color:white;
+  color: black;
+  font-family: 'Moon Dance', cursive; 
+  font-size: 40px;
  }
  #pdiv{
    margin-top:10px ;
    margin-bottom: 40px;
-   margin-left: 100px;
-   background-color:aqua;
+   /* margin-left: 100px; */
+   background-color:white;
    
  }
-P{
-  font-size: 25px;
+#h2p{
+  font-family: 'Moon Dance', cursive; 
+  font-size: 40px;
+  font-weight: 700;
 }
  #bigDiv1{
    float:left;
    margin-left: 120px;
-   margin-right: 100px;
+   margin-right: 100px;  
  }
  #bigDiv2{
   float:left;
@@ -68,8 +124,9 @@ P{
 }
 
 .hov:hover{
-  transform: scale(2.2);
-  z-index: 99;
+  transition:0.6s ease-in-out;
+  transform: scale(1.2);
+  /* z-index: 99; */
 }
 
 

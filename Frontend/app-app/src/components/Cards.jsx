@@ -13,75 +13,80 @@ import './Cards.css';
 function Card() {
     return (
         <div className='cards'>
-            <h1 id="h1">Recipes</h1>
+            {/* <h1 id="h1">Recipes</h1>
+            <div className='ui_search'>
+                <div className='ui_icon_input'>
+                    <input type="text" placeholder='Search a Recipe' className='prompt'/>
+                    <i className='search_icon'></i>
+                </div>
+            </div> */}
             <div id="main-re">
-
                 <div id="bigDiv1">
                     <a className="hov" href="/breakfast">
-                        <div id="submain">
+                        <div id="submain1">
                             <div id="bottom">Breakfast</div>
                         </div>
                     </a>
                     
                     <div id="pdiv">
-                    <p>Start your day with a healthy breakfast</p>
+                    <h2 id="h2p">Start your day with a healthy breakfast</h2>
                     </div>
                 </div>
 
                 <div id="bigDiv2">
                     <a className="hover" href="/lunch">
-                        <div id="submain">
+                        <div id="submain2">
                             <div id="bottom">Lunch</div>
                         </div>
                     </a>
                     
                     <div id="pdiv">
-                    <p>Power through with a delicious lunch</p>
+                    <h2 id="h2p">Power through with a delicious lunch</h2>
                     </div>
                 </div>
 
                 <div id="bigDiv3">
                     <a className="hover" href="/dinner">
-                    <div id="submain">
+                    <div id="submain3">
                         <div id="bottom">Dinner</div>
                     </div>
                     </a>
                     <div id="pdiv">
-                    <p>Beat the clock with a speedy dinner</p>
+                    <h2 id="h2p">Beat the clock with a speedy dinner</h2>
                     </div>
                 </div>
 
                 <div id="bigDiv4">
                     <a className="hover" href="/desserts">
-                        <div id="submain">
+                        <div id="submain4">
                             <div id="bottom">Desserts</div>
                         </div>
                     </a>
                     <div id="pdiv">
-                    <p>Indulge your sweet tooth with yummy treats desserts</p>
+                    <h2 id="h2p">Indulge your sweet tooth with yummy treats desserts</h2>
                     </div>
                 </div>
 
                 <div id="bigDiv5">
                     <a className="hover" href="/snacks">
-                        <div id="submain">
+                        <div id="submain5">
                             <div id="bottom">Snacks</div>
                         </div>
                     </a>
                     
                     <div id="pdiv">
-                    <p id="pdiv">Refresh with a pick-me-up snacks</p>
+                    <h2 id="h2p">Refresh with a pick-me-up snacks</h2>
                     </div>
                 </div>
 
                 <div id="bigDiv6">
                     <a className="hover" href="/beverage">
-                        <div id="submain">
+                        <div id="submain6">
                             <div id="bottom">Beverage</div>
                         </div>
                     </a>
                     <div id="pdiv">
-                    <p>Refresh your self with some beverage</p>
+                    <h2 id="h2p">Refresh your self with some beverage</h2>
                     </div>
                 </div>
 

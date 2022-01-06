@@ -26,23 +26,23 @@ export default function SignUp() {
                  <div className="form">
                  <div className="first-input">
                     <p>First Name</p>
-                    <input type="text" placeholder="Enter your first name" className="firstname"/>
+                    <input id="signupinput" type="text" placeholder="Enter your first name" className="firstname"/>
                   </div>
                   <div className="second-input">
                     <p>Last Name</p>
-                    <input type="text" placeholder="Enter your last name" className="lastname"/>
+                    <input id="signupinput" type="text" placeholder="Enter your last name" className="lastname"/>
                   </div>
                   <div className="third-input">
                     <p>Email</p>
-                    <input type="text" placeholder="Enter your email" className="email"/>
+                    <input id="signupinput" type="text" placeholder="Enter your email" className="email"/>
                   </div>
                   <div className="forth-input">
                     <p>Username</p>
-                    <input type="password" placeholder="Enter your username" className="username"/>
+                    <input id="signupinput" type="password" placeholder="Enter your username" className="username"/>
                   </div>
                   <div className="fith-input">
                     <p>Password</p>
-                    <input type="password" placeholder="Enter your last name" className="password"/>
+                    <input id="signupinput" type="password" placeholder="Enter your last name" className="password"/>
                   </div>
                  </div>
                   <div className="login-button2">
