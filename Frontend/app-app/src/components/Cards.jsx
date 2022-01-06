@@ -13,10 +13,90 @@ import './Cards.css';
 function Card() {
     return (
         <div className='cards'>
-            <h1>Recipes</h1>
-            <div className="cards__container">
+            {/* <h1 id="h1">Recipes</h1>
+            <div className='ui_search'>
+                <div className='ui_icon_input'>
+                    <input type="text" placeholder='Search a Recipe' className='prompt'/>
+                    <i className='search_icon'></i>
+                </div>
+            </div> */}
+            <div id="main-re">
+                <div id="bigDiv1">
+                    <a className="hov" href="/breakfast">
+                        <div id="submain1">
+                            <div id="bottom">Breakfast</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Start your day with a healthy breakfast</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv2">
+                    <a className="hover" href="/lunch">
+                        <div id="submain2">
+                            <div id="bottom">Lunch</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Power through with a delicious lunch</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv3">
+                    <a className="hover" href="/dinner">
+                    <div id="submain3">
+                        <div id="bottom">Dinner</div>
+                    </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Beat the clock with a speedy dinner</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv4">
+                    <a className="hover" href="/desserts">
+                        <div id="submain4">
+                            <div id="bottom">Desserts</div>
+                        </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Indulge your sweet tooth with yummy treats desserts</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv5">
+                    <a className="hover" href="/snacks">
+                        <div id="submain5">
+                            <div id="bottom">Snacks</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Refresh with a pick-me-up snacks</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv6">
+                    <a className="hover" href="/beverage">
+                        <div id="submain6">
+                            <div id="bottom">Beverage</div>
+                        </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Refresh your self with some beverage</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            {/* <div className="cards__container">
                 <div className="cards__wrapper">
-                    <ul className="cards__item">
+                    <div className="cards__item">
+                        <div></div>  
                          <CardItem 
                         src='images/breakfast-2.jpg'
                         text="Start your day with a healthy breakfast"
@@ -32,28 +112,28 @@ function Card() {
                          <CardItem 
                         src='images/dinner.jpg'
                         text="Beat the clock with a speedy dinner"
-                        label= "Dinner"
+                        // label= "Dinner"
                         path="/dinner"
                         />
-                    </ul>
-                    <ul className="cards__item">
+                    </div>
+                    <div className="cards__item">
                         <CardItem 
                         src='/Frontend/app-app/public/images/breakfast-2.jpg
                         '
-                        text="Indulge your sweet tooth with yummy treats"
-                        label= "Desserts"
+                        text="Indulge your sweet tooth with yummy treats desserts"
+                        // label= "Desserts"
                         path="/desserts"
                         />
                         
                          <CardItem 
                         src='images/snack.jpg'
-                        text="Refresh with a pick-me-up"
-                        label= "Snacks"
+                        text="Refresh with a pick-me-up snacks"
+                        // label= "Snacks"
                         path="/snacks"
                         />
-                    </ul>
+                    </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

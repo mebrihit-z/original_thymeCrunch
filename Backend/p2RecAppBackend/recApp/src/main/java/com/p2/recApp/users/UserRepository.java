@@ -23,6 +23,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	
 	Optional<User> findByEmail(String email);
 	Optional<User> findById(Integer userID);
+<<<<<<< HEAD
 	//Optional<User> addUser(
 	//		String firstname,
 	//		String lastname,
@@ -30,14 +31,31 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	//		String username,
 	//		String password);
 //	
+=======
+//	Optional<User> addUser(
+//			String firstname,
+//			String lastname,
+//			String emial,
+//			String username,
+//			String password);
+	
+>>>>>>> a2bfb5135a489547e946a83fb2d0601b49d9442c
 //	Optional<User> updateUser(
 //			String firstname,
 //			String lastname,
 //			String emial,
 //			String username,
 //			String password,
+<<<<<<< HEAD
 //			String profile_pic,
 //			String fav_rec);
+=======
+//			String profile_pic, 
+//			String fav_rec);
+	Optional<User> findByUsername(String username);
+	Optional<User> findByPassword(String password);
+	Optional<User> findByUserID(Integer userID);
+>>>>>>> a2bfb5135a489547e946a83fb2d0601b49d9442c
 
 	
 	//might need to change

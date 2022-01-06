@@ -16,6 +16,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 //import org.springframework.security.core.GrantedAuthority;
 //import org.springframework.security.core.authority.SimpleGrantedAuthority;
 //import org.springframework.security.core.userdetails.UserDetails;
@@ -36,12 +38,11 @@ import lombok.ToString;
  *********************************************************************************************/
 //this is lombok, it generates getters and setters with annotations
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
 @Entity
 @Table(name="users")
 public class User /*implements UserDetails*/{
@@ -76,9 +77,13 @@ public class User /*implements UserDetails*/{
 	private String email;
 	
 	@Column(name="username")
+	
+	@JsonProperty("username")
 	private String username;
 	
 	@Column(name="password")
+	
+	@JsonProperty("password")
 	private String password;
 	
 	//s3 key
@@ -96,6 +101,8 @@ public class User /*implements UserDetails*/{
 	@Enumerated(EnumType.STRING)
 	@Column(name="user_role")
 	private UserRole userRole;
+	
+	
 	
 	//constructor with everything but ID
 	public User(String firstname, 
@@ -207,10 +214,35 @@ public class User /*implements UserDetails*/{
 	public User(String firstname, String lastname, String email, String username, String password, UserRole user) {
 		
 	}
+	
 
 	public void setUserProfileImageLink(String filename) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	public User(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	
+	
 }

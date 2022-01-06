@@ -41,6 +41,10 @@ public class UserService {
 	
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> a2bfb5135a489547e946a83fb2d0601b49d9442c
 	
 	
 	@Autowired
@@ -54,6 +58,7 @@ public class UserService {
 		return userRepository.findAll();
 	}
 	
+<<<<<<< HEAD
 	/*
 	public void addUser(
 			String firstname,
@@ -66,6 +71,19 @@ public class UserService {
 		
 	}
 	 */
+=======
+//	public void addUser(
+//			String firstname,
+//			String lastname,
+//			String emial,
+//			String username,
+//			String password,
+//			String profile_pic,
+//			String fav_rec) {
+//		
+//	}
+
+>>>>>>> a2bfb5135a489547e946a83fb2d0601b49d9442c
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
         // 1. Check if image is not empty
         isFileEmpty(file);

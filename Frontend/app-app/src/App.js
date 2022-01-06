@@ -17,11 +17,52 @@ import Dinner from './components/pages/Dinner'
 import Logout from './components/pages/Logout';
 import Recipes from './components/pages/Recipes';
 import SignUp from './components/pages/SignUp';
-import PasswordRecovery from './components/pages/PasswordRecovery';
-
+import LoginForm from './components/LoginForm';
 
 function App() {
+
+  // const adminUser ={
+  //   email: "admin@admin.com",
+  //   password: "admin123"
+  // }
+
+  // //const LOGIN_URL = 'http://localhost:9090//users/';
+
+  // const [user, setUser] = useState({name: "", email: ""})
+  // const [error, setError] = useState("");
+ 
+  // const LoginFnc = details =>{
+  //  // console.log(details);
+  //   if(details.email == adminUser.email && details.password == adminUser.password ){
+  //    // console.log("Logged in");
+  //     setUser({
+  //       name:details.name,
+  //       email: details.email
+  //     })
+  //   }else{
+  //     //console.log("Details do not match!")
+  //     setError("Details do not match!")
+  //   }
+  // }
+  
+  // const Logout = () =>{
+  //   setUser({
+  //     name:"",
+  //     email: ""
+  //   })
+  // }
+
   return (
+    // <div className='App'>
+    //   {(user.email != "") ? (
+    //     <div div className='Welcome'>
+    //       <h2>Welcome, <span>{user.name}</span></h2>
+    //       <button onClick={Logout}>Logout</button>
+    //     </div>
+    //   ):(
+    //     <LoginForm LoginFnc={LoginFnc} error={error}/>
+    //   )}
+    // </div>
     
     <>
     <Router>
@@ -29,6 +70,8 @@ function App() {
       <Routes>
         <Route path ="/" element={<Home/>}/>
         <Route path ="users" element ={<UserProfiles/>}/>
+        <Route path ="/login" element={<Login/>}/>
+        {/* <Route path ="/profile/{id]" element={<Profile/>}/>
         {/* THESE NEED TO BE DEFINED WITH API CALLS AND LOGIC */}
         {/* <Route path ="/profile/{id]" element={<Profile/>}/> */}
         <Route path ="/login" element={<Login/>}/>
