@@ -17,6 +17,10 @@ public class EmailSenderService {
 
     @Autowired
     private JavaMailSender mailSender;
+    
+    public void sendSimpleEmail(String message) {
+    	
+    }
 
     public void sendSimpleEmail(String toEmail, String body, String subject) {
         
@@ -26,7 +30,7 @@ public class EmailSenderService {
         message.setSubject(subject);
         message.setText(body);
         mailSender.send(message);
-        System.out.println("Mail Send...");
+        System.out.println("Mail Sent");
     }
 
     public void sendEmailWithAttachment(String toEmail,

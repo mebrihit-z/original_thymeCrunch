@@ -37,18 +37,11 @@ import lombok.AllArgsConstructor;
  *********************************************************************************************/
 
 @Service
-<<<<<<< HEAD
+
 public class UserService {
 	
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
-<<<<<<< HEAD
-=======
-	
->>>>>>> a2bfb5135a489547e946a83fb2d0601b49d9442c
-	
-	
-=======
 
 
 public class UserService/* implements UserDetailsService*/ {
@@ -107,7 +100,7 @@ public class UserService/* implements UserDetailsService*/ {
 		return "user updated!";
 	}
 
->>>>>>> 6af88aa9f3e18c1fb0d8616db6e20e30a58bb992
+
 	@Autowired
 	public UserService(UserRepository userRepository, FileStore fileStore) {
 		this.fileStore = fileStore;
@@ -119,8 +112,7 @@ public class UserService/* implements UserDetailsService*/ {
 		return userRepository.findAll();
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	/*
 	public void addUser(
 			String firstname,
@@ -133,7 +125,7 @@ public class UserService/* implements UserDetailsService*/ {
 		
 	}
 	 */
-=======
+
 //	public void addUser(
 //			String firstname,
 //			String lastname,
@@ -145,10 +137,9 @@ public class UserService/* implements UserDetailsService*/ {
 //		
 //	}
 
->>>>>>> a2bfb5135a489547e946a83fb2d0601b49d9442c
-=======
 
->>>>>>> 6af88aa9f3e18c1fb0d8616db6e20e30a58bb992
+
+
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
         // 1. Check if image is not empty
         isFileEmpty(file);
@@ -227,4 +218,20 @@ public class UserService/* implements UserDetailsService*/ {
 		    }
 	
 
+}
+public List<User> getUserProfiles() {
+	
+	return null;
+}
+public void uploadUserProfzImage(Integer userID, MultipartFile file) {
+	
+}
+public byte[] downloadUserProfileImage(Integer userID) {
+	// TODO Auto-generated method stub
+	return null;
+}
+public void uploadUserProfileImage(Integer userID, MultipartFile file) {
+	// TODO Auto-generated method stub
+	
+}
 }

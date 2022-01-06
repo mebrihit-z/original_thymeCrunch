@@ -1,4 +1,4 @@
-spackage com.p2.recApp.ingredients;
+package com.p2.recApp.ingredients;
 
 import java.util.List;
 import java.util.Optional;
