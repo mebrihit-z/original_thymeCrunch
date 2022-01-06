@@ -9,7 +9,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(148, 212, 172);
+  /* background-image: url("./components/images/pexels-farhad-hossain-7358946.jpg");  */
+  background-image: url("./components/images/pexels-anna-nekrashevich-7214933.jpg"); 
+  background-size: cover;
+  /* background-color: rgb(148, 212, 172); */
   /* background-color: rgb(245, 216, 239); */
   text-align: center;
 }

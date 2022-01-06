@@ -3,8 +3,9 @@
   display: flex; 
   padding-top: 90px;
   padding-bottom: 90px;
-  background-image: url("./images/reciBack.jpg"); 
-  background-size: contain;
+  /* background-image: url("./images/reciBack.jpg");  */
+  background-image: url("./images/pexels-anna-nekrashevich-7214933.jpg"); 
+  background-size: cover;
 }
 .sub-main1 {
   display: flex;
