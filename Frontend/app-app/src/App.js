@@ -18,6 +18,7 @@ import Logout from './components/pages/Logout';
 import Recipes from './components/pages/Recipes';
 import SignUp from './components/pages/SignUp';
 import LoginForm from './components/LoginForm';
+import PasswordRecovery from './components/pages/PasswordRecovery';
 
 function App() {
 
