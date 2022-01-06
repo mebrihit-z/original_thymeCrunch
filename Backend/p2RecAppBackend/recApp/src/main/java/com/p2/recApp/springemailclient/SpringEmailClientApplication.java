@@ -22,7 +22,7 @@ public class SpringEmailClientApplication {
 	public void triggerMail() throws MessagingException {
 
 		service.sendSimpleEmail("qwinkypoo@gmail.com",
-				"This is Email Body with Attachment...here is your lame password",
+				"This is Email Body....here is your lame password",
 				"This is the Email Subject.. Boooooo_H@NN@H");
 
 	}

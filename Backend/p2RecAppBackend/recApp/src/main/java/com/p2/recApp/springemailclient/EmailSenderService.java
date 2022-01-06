@@ -18,16 +18,13 @@ public class EmailSenderService {
     @Autowired
     private JavaMailSender mailSender;
 
-    public void sendSimpleEmail(String toEmail,
-                                String body,
-                                String subject) {
-        SimpleMailMessage message = new SimpleMailMessage();
-
-        message.setFrom("qwinkypoo@gmail.com");
+    public void sendSimpleEmail(String toEmail, String body, String subject) {
+        
+    	SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("noreply@thymecrunch.com");
         message.setTo(toEmail);
-        message.setText(body);
         message.setSubject(subject);
-
+        message.setText(body);
         mailSender.send(message);
         System.out.println("Mail Send...");
     }
