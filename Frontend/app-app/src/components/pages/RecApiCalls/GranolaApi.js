@@ -9,7 +9,8 @@ export const GranolaIng = ()=> {
     const [granolaIng, setGranolaIng] = useState([]);
 
     const fetchGranolaIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/breakfast/granola").then(res =>{
+        var recipe ="granola";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setGranolaIng(res.data);
         });

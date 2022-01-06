@@ -11,7 +11,8 @@ export const GelatoIng = ()=> {
     const [gelatoIng, setGelatoIng] = useState([]);
 
     const fetchGelatoIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/desserts/gelato").then(res =>{
+        var recipe = "black_forest_gelato_with_ganache";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setGelatoIng(res.data);
         });

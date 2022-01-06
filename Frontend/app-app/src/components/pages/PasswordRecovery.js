@@ -29,20 +29,23 @@ function PasswordRecovery() {
 
 
     return (
-        <>
+        <>         
         <Navbar/>
-        <body>
+         <div class="fullpage">
             <div class="container">
                 <form onSubmit={(e) => submit(e)}>
-                    <h1 >Did you loose something?</h1>
-                    <h3>Enter your email below and we will send you your password.</h3>
-                    <label>Email:</label>
+                    <h2 id="h2">Did you lose something?</h2>
+                    <br/>
+                    <h3 id="h2">Enter your email below and we will send you your password.</h3>
+                    <br/>
+                    <label id="h2">Email:</label>
                     <input onChange={(e)=>handle(e)} id="email" value={data.email} placeholder="email" type="text" required></input>
                     <br/>
-                    <button>Submit</button>
+                    <br/>
+                    <button class="button" id="h2">Submit</button>
                 </form>
             </div>
-        </body>
+        </div>
         </>
     )
 }

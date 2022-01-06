@@ -109,7 +109,7 @@ export default function Login() {
                     <button id="button1" onClick={submit}>Login</button>
                   </div>
                   <p className="link">
-                    <a className="loga" href="#">Forgot Password ?</a> Or <a className="loga" href="/sign-up">Sign Up</a>
+                    <a className="loga" href="/passwordrecovery">Forgot Password ?</a> Or <a className="loga" href="/sign-up">Sign Up</a>
                   </p>
                   </div>
               </div>

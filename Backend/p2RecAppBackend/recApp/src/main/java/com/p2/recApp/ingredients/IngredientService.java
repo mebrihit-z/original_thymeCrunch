@@ -67,7 +67,7 @@ public class IngredientService {
 		return ingredientRepository;
 	}
 
-	public Optional<Ingredient> getByRec() {
+	public List<Ingredient> getByRec(String recipe) {
 		return ingredientRepository.findByRecipe(recipe);
 	}
 	public Optional<Ingredient> getByMealType(){

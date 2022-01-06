@@ -9,7 +9,8 @@ export const BentoIng = ()=> {
     const [bentoIng, setBentoIng] = useState([]);
 
     const fetchBentoIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/lunch/bento").then(res =>{
+        var recipe = "bento";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setBentoIng(res.data);
         });

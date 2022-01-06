@@ -10,7 +10,8 @@ export const PadThaiIng = ()=> {
     const [padThaiIng, setPadThaiIng] = useState([]);
 
     const fetchPadThaiIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/dinner/pad-thai").then(res =>{
+        var recipe ="pad_thai";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setPadThaiIng(res.data);
         });

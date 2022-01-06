@@ -53,6 +53,12 @@ public class Ingredient  {
 		this.mealType = mealType;
 	}
 
+	public Ingredient() {
+		super();
+	}
+
+	
+
 	public Integer getIngID() {
 		return ingID;
 	}

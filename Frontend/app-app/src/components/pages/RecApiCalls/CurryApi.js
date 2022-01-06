@@ -9,7 +9,8 @@ export const CurryIng = ()=> {
     const [curryIng, setCurryIng] = useState([]);
 
     const fetchCurryIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/lunch/curry").then(res =>{
+        var recipe = "curry";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setCurryIng(res.data);
         });

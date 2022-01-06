@@ -10,7 +10,8 @@ export const PavlovaIng = ()=> {
     const [pavlovaIng, setPavlovaIng] = useState([]);
 
     const fetchPavlovaIng = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/meals/dessert/pavlova").then(res =>{
+        var recipe = "pasta";
+        axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setPavlovaIng(res.data);
         });
