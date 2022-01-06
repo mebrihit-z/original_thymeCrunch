@@ -63,7 +63,7 @@ function Card() {
                         </div>
                     </a>
                     <div id="pdiv">
-                    <h2 id="h2p">Indulge your sweet tooth with yummy treats desserts</h2>
+                    <h2 id="h2p">Indulge your sweet tooth with yummy desserts</h2>
                     </div>
                 </div>
 

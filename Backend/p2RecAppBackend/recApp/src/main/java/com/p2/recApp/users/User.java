@@ -40,8 +40,8 @@ import lombok.ToString;
 
 //@Getter
 //@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 @ToString
 @Entity
 @Table(name="users")
@@ -187,6 +187,8 @@ public class User /*implements UserDetails*/{
 		return Objects.hash(email, enabled, fav_rec, firstname, lastname, locked, password, profile_pic, userID,
 				userRole, username);
 	}
+	
+	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -240,6 +242,68 @@ public class User /*implements UserDetails*/{
 	}
 
 	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getEmail() {
+		
+		return this.email;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getFav_rec() {
+		return fav_rec;
+	}
+
+	public void setFav_rec(String fav_rec) {
+		this.fav_rec = fav_rec;
+	}
+
+	public Boolean getLocked() {
+		return locked;
+	}
+
+	public void setLocked(Boolean locked) {
+		this.locked = locked;
+	}
+
+	public Boolean getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public UserRole getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(UserRole userRole) {
+		this.userRole = userRole;
+	}
+
+	public User(String firstname, String lastname, String email, String username, String password) {
+//		super();
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.username = username;
 		this.password = password;
 	}
 

@@ -7,7 +7,37 @@ import VideoSection from '../VideoSection';
 import Cards from '../Cards'
 import Navbar from '../Navbar';
 
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Recipes from './Recipes';
+import { useNavigate} from 'react-router-dom';
+
 export default function SignUp() {
+    const [ufirstname, setFristname] = useState('');
+    const [ulastname, setLastname] = useState('');
+    const [uemail, setEmail] = useState('');
+    const [uuname, setUsername] = useState('');
+    const [uupassword, setPassword] = useState('');
+    
+    const [uData, setUData] = useState("")
+    const navigate = useNavigate()
+
+
+  function submit2(){
+     const a = ufirstname
+     const b = ulastname
+     const c = uemail
+     const d = uuname
+     const e = uupassword
+      axios.post(`http://localhost:9090/users/signup/${a}/${b}/${c}/${d}/${e}`)
+        .then(response =>{
+          if(response.data ==="ok" ) { navigate("/recipes");}
+
+        })
+        .catch(err => {
+            console.log("Error occured", err);
+        })
+  }
     return(
         <>
           <Navbar/>
@@ -26,37 +56,34 @@ export default function SignUp() {
                  <div className="form">
                  <div className="first-input">
                     <p>First Name</p>
-                    <input id="signupinput" type="text" placeholder="Enter your first name" className="firstname"/>
+                    <input id="signupinput" type="text" placeholder="Enter your first name" className="firstname" onChange={e => setFristname(e.target.value)}/>
                   </div>
                   <div className="second-input">
                     <p>Last Name</p>
-                    <input id="signupinput" type="text" placeholder="Enter your last name" className="lastname"/>
+                    <input id="signupinput" type="text" placeholder="Enter your last name" className="lastname" onChange={e => setLastname(e.target.value)}/>
                   </div>
                   <div className="third-input">
                     <p>Email</p>
-                    <input id="signupinput" type="text" placeholder="Enter your email" className="email"/>
+                    <input id="signupinput" type="text" placeholder="Enter your email" className="email" onChange={e => setEmail(e.target.value)}/>
                   </div>
                   <div className="forth-input">
                     <p>Username</p>
-                    <input id="signupinput" type="password" placeholder="Enter your username" className="username"/>
+                    <input id="signupinput" type="password" placeholder="Enter your username" className="username" onChange={e => setUsername(e.target.value)}/>
                   </div>
                   <div className="fith-input">
                     <p>Password</p>
-                    <input id="signupinput" type="password" placeholder="Enter your last name" className="password"/>
+                    <input id="signupinput" type="password" placeholder="Enter your last name" className="password" onChange={e => setPassword(e.target.value)}/>
                   </div>
                  </div>
                   <div className="login-button2">
-                    <button id="button2">Sign Up</button>
+                    <button id="button2" onClick={submit2}>Sign Up</button>
                   </div>
                   </div>
               </div>
             </div>
             
           </div>
-         
         </>
-
-
       );
 }
 

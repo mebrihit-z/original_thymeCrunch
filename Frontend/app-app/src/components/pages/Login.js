@@ -14,8 +14,6 @@ import { useNavigate} from 'react-router-dom';
 
 
 export default function Login() {
-     //const user_url = "http://localhost:9090/login/${a}/${b}"
-   // const user_url = "http://localhost:9090/users/login/"
     const [uname, setUsername] = useState('');
     const [upassword, setPassword] = useState('');
     
@@ -26,12 +24,7 @@ export default function Login() {
   function submit(){
      const a = uname
      const  b = upassword
-    // axios.post(user_url+"login",{
       axios.post(`http://localhost:9090/users/login/${a}/${b}`)
-    //   {
-    //     // "username": uname,
-    //     // "password": upassword
-    // })
         .then(response =>{
           if(response.data ==="ok" ) { navigate("/recipes");}
 
@@ -39,46 +32,9 @@ export default function Login() {
         .catch(err => {
             console.log("Error occured", err);
         })
-        // });
+       
 
   }
-  // function home(){
-  //   ReactDOM.render(
-  //     <React.StrictMode>
-  //       <Recipes/>
-  //     </React.StrictMode>,
-  //     document.getElementById('main')
-  //   );
-  // }
-
-//  function submitted(data){
-//     if(data=="ok"){
-//       <Recipes/>
-//     }else{
-//       console.log("The value is nor correct")
-//     }
-
-//   }
-
-  // useEffect(() => {
-  //     axios.post(user_url).then(res => {
-  //       const loginStatus = res.data;
-  //       console.log(loginStatus)
-  //         setLogin(loginStatus);
-          
-  //     if(loginStatus? "ok": "no"){
-  //       console.log("wrong Username or Password")
-  //     }else{
-  //       console.log("wrong Username or Password")
-  //     }
-  //     });
-  //   }, []);
-
-
-    // <input type="text" placeholder="Email" onChange={e => setEmail(e.target.value)}></input><br/>
-    //         <input type="password" placeholder="Password" onChange={e => setPswd(e.target.value)}></input><br/>
-    //         <button id="loginSubmit" onClick={submit}>Submit</button><br/>
-
     return(
         <>
           <Navbar/>
@@ -87,7 +43,6 @@ export default function Login() {
               <div>
                 <div className="imgs">
                   <div className="container-image">
-                    {/* {<img src={profile} alt="profile" className="profile"/>} */}
                     <img src="images/profile.jpg"alt="profile" className="profile"/>
                   </div>
                 </div>

@@ -87,13 +87,15 @@
    margin-top:10px ;
    margin-bottom: 40px;
    /* margin-left: 100px; */
-   background-color:white;
+   background-color:rgb(180, 177, 177)
+   ;
    
  }
 #h2p{
-  font-family: 'Moon Dance', cursive; 
-  font-size: 40px;
-  font-weight: 700;
+  /* font-family: 'Moon Dance', cursive;  */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  /* font-weight: 700; */
 }
  #bigDiv1{
    float:left;

@@ -3,7 +3,7 @@
     display: flex; 
     padding-top: 90px;
     padding-bottom: 90px;
-    background-image: url("./images/signup4.jpg"); 
+    background-image: url("./images/newRec.jpg"); 
     background-size: contain;
   }
   .sub-main2 {
@@ -58,7 +58,7 @@
     width: 180px;
     height: 45px;
     border-radius: 60px;
-    background-color: #1c8adb;
+    background-color:gray;
     color: white;
     font-size: 25px;
     border: none;

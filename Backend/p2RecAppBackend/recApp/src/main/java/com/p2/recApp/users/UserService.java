@@ -65,15 +65,7 @@ public class UserService/* implements UserDetailsService*/ {
 		if(userExists) {
 			throw new IllegalStateException("email taken");
 		}
-
-		//	String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
-
-		//	user.setPassword(encodedPassword);
-
 		userRepository.save(user);
-
-		//TODO: send confirmation token 
-
 		return "";
 	}
 
