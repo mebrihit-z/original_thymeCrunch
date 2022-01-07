@@ -84,49 +84,6 @@ function Card() {
                 </div>
 
             </div>
-
-
-            {/* <div className="cards__container">
-                <div className="cards__wrapper">
-                    <div className="cards__item">
-                        <div></div>  
-                         <CardItem 
-                        src='images/breakfast-2.jpg'
-                        text="Start your day with a healthy breakfast"
-                        label= "Breakfast"
-                        path="/breakfast"
-                        />
-                         <CardItem 
-                        src='images/lunch.jpg'
-                        text="Power through with a delicious lunch"
-                        label= "Lunch"
-                        path="/lunch"
-                        />
-                         <CardItem 
-                        src='images/dinner.jpg'
-                        text="Beat the clock with a speedy dinner"
-                        // label= "Dinner"
-                        path="/dinner"
-                        />
-                    </div>
-                    <div className="cards__item">
-                        <CardItem 
-                        src='/Frontend/app-app/public/images/breakfast-2.jpg
-                        '
-                        text="Indulge your sweet tooth with yummy treats desserts"
-                        // label= "Desserts"
-                        path="/desserts"
-                        />
-                        
-                         <CardItem 
-                        src='images/snack.jpg'
-                        text="Refresh with a pick-me-up snacks"
-                        // label= "Snacks"
-                        path="/snacks"
-                        />
-                    </div>
-                </div>
-            </div> */}
         </div>
     )
 }

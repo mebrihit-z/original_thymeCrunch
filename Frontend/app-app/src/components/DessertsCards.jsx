@@ -1,7 +1,7 @@
 import React from 'react';
 import CardItem from './CardItem';
 import './Cards.css';
-
+import './DessertsCards.css';
 /**********************************Works Cited************************************
  * Title: React Website Tutorial - Beginner React JS Project Fully Responsive
  * Author: Brian Design 
@@ -12,34 +12,108 @@ import './Cards.css';
 
 function DessertsCards() {
     return (
+
         <div className='cards'>
-            <h1>Desserts</h1>
-            <div className="cards__container">
-                <div className="cards__wrapper">
-                    <ul className="cards__item">
-                         <CardItem 
-                        src='/Frontend/app-app/src/components/images/gelato.jpg'
-                        text="Black Forest Gelato with Ganache"
-                        label= "Gelato"
-                        path="/gelato"
-                        />
-                         <CardItem 
-                        src='images/lemon_tart.jpg'
-                        text="Lemon Tart"
-                        label= "Lemon Tart"
-                        path="/lemon-tart"
-                        />
-                         <CardItem 
-                        src='images/pavlova.jpg'
-                        text= "Pretty Pavlova"
-                        label= "Pavlova"
-                        path="/pavlova"
-                        />
-                    </ul>
-                   
+            <div id="main-re">
+                <div id="bigDiv1">
+                    <a className="hov" href="/breakfast">
+                        <div id="submain14">
+                            <div id="bottom">Gelato</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Black Forest Gelato with Ganache</h2>
+                    </div>
                 </div>
+
+                <div id="bigDiv2">
+                    <a className="hover" href="/lunch">
+                        <div id="submain24">
+                            <div id="bottom">Lemon Tart</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Lemon Tart</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv3">
+                    <a className="hover" href="/dinner">
+                    <div id="submain34">
+                        <div id="bottom">Pavlova</div>
+                    </div>
+                    </a>
+                    <div id="pdiv1">
+                    <h2 id="h2p">Pretty Pavlova</h2>
+                    </div>
+                </div>
+
+                {/* <div id="bigDiv4">
+                    <a className="hover" href="/desserts">
+                        <div id="submain44">
+                            <div id="bottom">Desserts</div>
+                        </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Indulge your sweet tooth with yummy desserts</h2>
+                    </div>
+                </div> */}
+
+                {/* <div id="bigDiv5">
+                    <a className="hover" href="/snacks">
+                        <div id="submain54">
+                            <div id="bottom">Snacks</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Refresh with a pick-me-up snacks</h2>
+                    </div>
+                </div> */}
+
+                {/* <div id="bigDiv6">
+                    <a className="hover" href="/beverages">
+                        <div id="submain64">
+                            <div id="bottom">Beverage</div>
+                        </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Refresh your self with some beverage</h2>
+                    </div>
+                </div> */}
+
             </div>
         </div>
+        // <div className='cards'>
+        //     <h1>Desserts</h1>
+        //     <div className="cards__container">
+        //         <div className="cards__wrapper">
+        //             <ul className="cards__item">
+        //                  <CardItem 
+        //                 src='/Frontend/app-app/src/components/images/gelato.jpg'
+        //                 text="Black Forest Gelato with Ganache"
+        //                 label= "Gelato"
+        //                 path="/gelato"
+        //                 />
+        //                  <CardItem 
+        //                 src='images/lemon_tart.jpg'
+        //                 text="Lemon Tart"
+        //                 label= "Lemon Tart"
+        //                 path="/lemon-tart"
+        //                 />
+        //                  <CardItem 
+        //                 src='images/pavlova.jpg'
+        //                 text= "Pretty Pavlova"
+        //                 label= "Pavlova"
+        //                 path="/pavlova"
+        //                 />
+        //             </ul>
+                   
+        //         </div>
+        //     </div>
+        // </div>
     )
 }
 

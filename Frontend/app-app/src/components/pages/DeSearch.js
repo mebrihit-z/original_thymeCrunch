@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate} from 'react-router-dom';
 
-export default function Search() {
+export default function DeSearch() {
 
     const [recipes, setRecipes] = useState('');
 
@@ -29,12 +29,12 @@ export default function Search() {
   }
      return (
          <>
-         <h1 id="h1">Recipes</h1>
+         <h1 id="h1">Dinner</h1>
             <div className='ui_search'>
                 <div className='ui_icon_input'>
                     {/* <i class="fa fa-search" aria-hidden="true"></i> */}
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder='Search a Recipe' className='prompt' onChange={e => setRecipes(e.target.value)} />
+                    <input type="text" placeholder='Search a Dinner' className='prompt' onChange={e => setRecipes(e.target.value)} />
                     <button id="serbutton"onClick={submit0}>Login</button>
                 </div>
             </div> 

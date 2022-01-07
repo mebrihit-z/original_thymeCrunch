@@ -1,6 +1,6 @@
     import React from 'react';
 import CardItem from './CardItem';
-import './Cards.css';
+import './LunchCards.css';
 
 /**********************************Works Cited************************************
  * Title: React Website Tutorial - Beginner React JS Project Fully Responsive
@@ -17,41 +17,115 @@ import './Cards.css';
 
 function LunchCards() {
     return (
+
         <div className='cards'>
-            <h1>Lunch</h1>
-            <div className="cards__container">
-                <div className="cards__wrapper">
-                    <ul className="cards__item">
-                         <CardItem 
-                        src='images/bento.jpg'
-                        text=" Katsu Pork Bento Box"
-                        label= "Bento"
-                        path="/bento"
-                        />
-                         <CardItem 
-                        src='images/salad.jpg'
-                        text=" Grilled  Salad Chicken with Raspberry Vinegrette "
-                        label= "Salad"
-                        path="/salad"
-                        />
-                         <CardItem 
-                        src='images/katsu.jpg'
-                        text="Katsu Pork Bento Box"
-                        label= "Bento"
-                        path="/bento"
-                        />
-                        <CardItem 
-                        src='images/curry.jpg'
-                        text="Yellow Curry"
-                        label= "Curry"
-                        path="/curry"
-                        />
-                        
-                       
-                    </ul>
+            <div id="main-re">
+                <div id="bigDiv1">
+                    <a className="hov" href="/breakfast">
+                        <div id="submain12">
+                            <div id="bottom">Bento</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Katsu Pork Bento Box</h2>
+                    </div>
                 </div>
+
+                <div id="bigDiv2">
+                    <a className="hover" href="/lunch">
+                        <div id="submain22">
+                            <div id="bottom">Salad</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Grilled  Salad Chicken with Raspberry Vinegrette</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv3">
+                    <a className="hover" href="/dinner">
+                    <div id="submain32">
+                        <div id="bottom">Bento</div>
+                    </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Katsu Pork Bento Box</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv4">
+                    <a className="hover" href="/desserts">
+                        <div id="submain42">
+                            <div id="bottom">Curry</div>
+                        </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Yellow Curry</h2>
+                    </div>
+                </div>
+
+                {/* <div id="bigDiv5">
+                    <a className="hover" href="/snacks">
+                        <div id="submain5">
+                            <div id="bottom">Snacks</div>
+                        </div>
+                    </a>
+                    
+                    <div id="pdiv">
+                    <h2 id="h2p">Yellow Curry</h2>
+                    </div>
+                </div>
+
+                <div id="bigDiv6">
+                    <a className="hover" href="/beverages">
+                        <div id="submain6">
+                            <div id="bottom">Beverage</div>
+                        </div>
+                    </a>
+                    <div id="pdiv">
+                    <h2 id="h2p">Refresh your self with some beverage</h2>
+                    </div>
+                </div> */}
+
             </div>
         </div>
+        // <div className='cards'>
+        //     <h1>Lunch</h1>
+        //     <div className="cards__container">
+        //         <div className="cards__wrapper">
+        //             <ul className="cards__item">
+        //                  <CardItem 
+        //                 src='images/bento.jpg'
+        //                 text=" Katsu Pork Bento Box"
+        //                 label= "Bento"
+        //                 path="/bento"
+        //                 />
+        //                  <CardItem 
+        //                 src='images/salad.jpg'
+        //                 text=" Grilled  Salad Chicken with Raspberry Vinegrette "
+        //                 label= "Salad"
+        //                 path="/salad"
+        //                 />
+        //                  <CardItem 
+        //                 src='images/katsu.jpg'
+        //                 text="Katsu Pork Bento Box"
+        //                 label= "Bento"
+        //                 path="/bento"
+        //                 />
+        //                 <CardItem 
+        //                 src='images/curry.jpg'
+        //                 text="Yellow Curry"
+        //                 label= "Curry"
+        //                 path="/curry"
+        //                 />
+                        
+                       
+        //             </ul>
+        //         </div>
+        //     </div>
+        // </div>
     )
 }
 

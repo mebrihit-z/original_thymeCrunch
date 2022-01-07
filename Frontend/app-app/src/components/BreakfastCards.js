@@ -1,5 +1,7 @@
 import React from 'react';
 import CardItem from './CardItem';
+
+import './BreakfastCards.css';
 // import './Cards.css';
 // import Search from './Search';
 
@@ -19,7 +21,7 @@ function BreakfastCards() {
             <div id="main-re">
                 <div id="bigDiv1">
                     <a className="hov" href="/breakfast">
-                        <div id="submain1">
+                        <div id="submain11">
                             <div id="bottom">Pancakes</div>
                         </div>
                     </a>
@@ -31,7 +33,7 @@ function BreakfastCards() {
 
                 <div id="bigDiv2">
                     <a className="hover" href="/lunch">
-                        <div id="submain2">
+                        <div id="submain21">
                             <div id="bottom">Toast</div>
                         </div>
                     </a>
@@ -43,11 +45,11 @@ function BreakfastCards() {
 
                 <div id="bigDiv3">
                     <a className="hover" href="/dinner">
-                    <div id="submain3">
+                    <div id="submain31">
                         <div id="bottom">Oat</div>
                     </div>
                     </a>
-                    <div id="pdiv">
+                    <div id="pdiv1">
                     <h2 id="h2p">Wholesome Whole Food Oat Granola</h2>
                     </div>
                 </div>
