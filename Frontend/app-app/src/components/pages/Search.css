@@ -32,3 +32,11 @@
     padding-left:10px ;
 
   }
+  #serbutton{
+    border: none;
+    outline: none;
+    color: white;
+    width: 300px;
+    height: 25px;
+    background-color: white;
+  }
