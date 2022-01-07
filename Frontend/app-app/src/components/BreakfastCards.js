@@ -1,7 +1,9 @@
 import React from 'react';
 import CardItem from './CardItem';
-import './Cards.css';
+// import './Cards.css';
+// import Search from './Search';
 
+// import Search from '../components/pages/Search';
 /**********************************Works Cited************************************
  * Title: React Website Tutorial - Beginner React JS Project Fully Responsive
  * Author: Brian Design 
@@ -10,46 +12,47 @@ import './Cards.css';
  * Availability: https://youtu.be/I2UBjN5ER4s
  *********************************************************************************/
 
-function Card() {
+function BreakfastCards() {
     return (
+        
         <div className='cards'>
             <div id="main-re">
                 <div id="bigDiv1">
                     <a className="hov" href="/breakfast">
                         <div id="submain1">
-                            <div id="bottom">Breakfast</div>
+                            <div id="bottom">Pancakes</div>
                         </div>
                     </a>
                     
                     <div id="pdiv">
-                    <h2 id="h2p">Start your day with a healthy breakfast</h2>
+                    <h2 id="h2p">Fluffy Buttermilk Pancakes</h2>
                     </div>
                 </div>
 
                 <div id="bigDiv2">
                     <a className="hover" href="/lunch">
                         <div id="submain2">
-                            <div id="bottom">Lunch</div>
+                            <div id="bottom">Toast</div>
                         </div>
                     </a>
                     
                     <div id="pdiv">
-                    <h2 id="h2p">Power through with a delicious lunch</h2>
+                    <h2 id="h2p">Aboslutely Avocado Toast</h2>
                     </div>
                 </div>
 
                 <div id="bigDiv3">
                     <a className="hover" href="/dinner">
                     <div id="submain3">
-                        <div id="bottom">Dinner</div>
+                        <div id="bottom">Oat</div>
                     </div>
                     </a>
                     <div id="pdiv">
-                    <h2 id="h2p">Beat the clock with a speedy dinner</h2>
+                    <h2 id="h2p">Wholesome Whole Food Oat Granola</h2>
                     </div>
                 </div>
 
-                <div id="bigDiv4">
+                {/* <div id="bigDiv4">
                     <a className="hover" href="/desserts">
                         <div id="submain4">
                             <div id="bottom">Desserts</div>
@@ -58,9 +61,9 @@ function Card() {
                     <div id="pdiv">
                     <h2 id="h2p">Indulge your sweet tooth with yummy desserts</h2>
                     </div>
-                </div>
+                </div> */}
 
-                <div id="bigDiv5">
+                {/* <div id="bigDiv5">
                     <a className="hover" href="/snacks">
                         <div id="submain5">
                             <div id="bottom">Snacks</div>
@@ -73,7 +76,7 @@ function Card() {
                 </div>
 
                 <div id="bigDiv6">
-                    <a className="hover" href="/beverages">
+                    <a className="hover" href="/beverage">
                         <div id="submain6">
                             <div id="bottom">Beverage</div>
                         </div>
@@ -81,54 +84,41 @@ function Card() {
                     <div id="pdiv">
                     <h2 id="h2p">Refresh your self with some beverage</h2>
                     </div>
-                </div>
+                </div> */}
 
             </div>
-
-
-            {/* <div className="cards__container">
-                <div className="cards__wrapper">
-                    <div className="cards__item">
-                        <div></div>  
-                         <CardItem 
-                        src='images/breakfast-2.jpg'
-                        text="Start your day with a healthy breakfast"
-                        label= "Breakfast"
-                        path="/breakfast"
-                        />
-                         <CardItem 
-                        src='images/lunch.jpg'
-                        text="Power through with a delicious lunch"
-                        label= "Lunch"
-                        path="/lunch"
-                        />
-                         <CardItem 
-                        src='images/dinner.jpg'
-                        text="Beat the clock with a speedy dinner"
-                        // label= "Dinner"
-                        path="/dinner"
-                        />
-                    </div>
-                    <div className="cards__item">
-                        <CardItem 
-                        src='/Frontend/app-app/public/images/breakfast-2.jpg
-                        '
-                        text="Indulge your sweet tooth with yummy treats desserts"
-                        // label= "Desserts"
-                        path="/desserts"
-                        />
-                        
-                         <CardItem 
-                        src='images/snack.jpg'
-                        text="Refresh with a pick-me-up snacks"
-                        // label= "Snacks"
-                        path="/snacks"
-                        />
-                    </div>
-                </div>
-            </div> */}
         </div>
+
+        // <div className='cards'>
+        //     <h1>Breakfast</h1>
+        //     <div className="cards__container">
+        //         <div className="cards__wrapper">
+        //             <ul className="cards__item">
+        //                  <CardItem 
+        //                 src='images/pancakes.jpg'
+        //                 text=" Fluffy Buttermilk Pancakes"
+        //                 label= "Pancakes"
+        //                 path="/pancakes"
+        //                 />
+        //                  <CardItem 
+        //                 src='images/toast.jpg'
+        //                 text="Aboslutely Avocado Toast"
+        //                 label= "Toast"
+        //                 path="/toast"
+        //                 />
+        //                 <CardItem 
+        //                 src='images/granola.jpg'
+        //                 text="Wholesome Whole Food Oat Granola"
+        //                 label= "Granola"
+        //                 path="/granola"
+        //                 />
+                        
+                        
+        //             </ul>
+        //         </div>
+        //     </div>
+        // </div>
     )
 }
 
-export default Card
+export default BreakfastCards;
