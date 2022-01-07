@@ -71,17 +71,19 @@ public class UserService/* implements UserDetailsService*/ {
 	public String updateUser(User user) {
 		
 		boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
+		
+		System.out.println("userExists:*********************************" + userExists);
 
 		if(!userExists) {
 			throw new IllegalStateException("user doesn't exist");
 		}
 		
-		String username = this.username;
-		String password = this.password;
-		String email = this.email;
-		String firstname = this.firstname;
-		String lastname = this.lastname;
-		String profile_pic = this.profile_pic;
+		String username = user.getUsername();
+		String password = user.getPassword();
+		String email = user.getEmail();
+		String firstname = user.getFirstname();
+		String lastname = user.getLastname();
+		//String profile_pic = this.profile_pic;
 		
 		user.setUsername(username);
 		user.setPassword(password);
@@ -91,7 +93,7 @@ public class UserService/* implements UserDetailsService*/ {
 		
 		userRepository.save(user);
 		
-		return "user updated!";
+		return "updated";
 	}
 
 	@Autowired

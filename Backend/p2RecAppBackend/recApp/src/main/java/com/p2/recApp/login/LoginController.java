@@ -91,5 +91,24 @@ public class LoginController {
         
         return "ok";
 	}
+	
+	@PostMapping("/users/UpdateProfile/{firstname}/{lastname}/{email}/{username}/{password}")
+	//@MessageMapping("/users/signup")
+    public String UpdateProfile(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String email, @PathVariable String username, @PathVariable String password) {
+		
+		User user = new User(firstname, lastname, email, username, password);
+		System.out.println("Update_User:____________" + user);
+		
+		String update = userService.updateUser(user);
+		System.out.println("update:____________" + update);
+
+//		if(update.equals("updated")) {
+//			return "ok";
+//		}
+		System.out.println("User:____________" + user);
+		System.out.println(" username ***********: "+ user.getUsername());
+              
+        return "ok";
+	}
 		
 }
