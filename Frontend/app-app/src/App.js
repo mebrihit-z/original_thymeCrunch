@@ -8,6 +8,7 @@ import Login from './components/pages/Login';
 import Logout from './components/pages/Logout';
 import SignUp from './components/pages/SignUp';
 import UpdateProfile from './components/pages/UpdateProfile';
+import PasswordRecovery from './components/pages/PasswordRecovery';
 
 //MealTypes
 import Desserts from './components/pages/meals/Desserts';
@@ -92,6 +93,7 @@ function App() {
         <Route path ="/boba-tea" element={<BobaTea/>}/>
         <Route path ="/orange-juice" element={<OrangeJuice/>}/>
         <Route path ="/punch" element={<Punch/>}/>
+        <Route path ="/passwordrecovery" element={<PasswordRecovery/>}/>
       </Routes>
     </Router>
     </>
