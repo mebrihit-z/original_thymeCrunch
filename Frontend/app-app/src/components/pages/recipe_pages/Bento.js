@@ -11,7 +11,8 @@ function Bento (){
 
     <>
     <Navbar/>
-    <img src="images/katsu.jpg"/>
+    {/* <img src="images/katsu.jpg"/> */}
+    {/* <img src="/images"/> */}
     <BentoIng/>
     </>
     )

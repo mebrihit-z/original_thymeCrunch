@@ -12,20 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/email")
 public class EmailController {
 
-	private EmailSenderService emailSenderService;
-	@Autowired
-	public EmailController(EmailSenderService emailSenderService) {
-		this.emailSenderService = emailSenderService;
-	}
+    private EmailSenderService emailSenderService;
+    @Autowired
+    public EmailController(EmailSenderService emailSenderService) {
+        this.emailSenderService = emailSenderService;
+    }
 
-	@PostMapping("/email-sent") 
-	public String EmailInfo() {
-		emailSenderService.sendSimpleEmail("qwinkypoo@gmail.com",
-				"[insert user password]",
-				"Lost Password");
-
-		return "redirect:/login";
-	}
-}	
-
-
+    @PostMapping("/email-sent") 
+    public String EmailInfo() {
+        emailSenderService.sendSimpleEmail("qwinkypoo@gmail.com",
+                "We are very sorry for this inconvience but don't worry, we got you!\n\nHere is your password: password\n\nThank you,\nThymeCrunch Tech Team",
+                "Lost Password");
+        return "redirect:/login";
+    }
+}
