@@ -25,7 +25,7 @@ import '../../UserProfiles.css';
     return lemonTartIng.map((ingredient, index) =>{
         return (
             <div key={index}>
-                <p>User ID: {ingredient.ingName}</p>
+                <h3>Ingredient: {ingredient.ingName}</h3>
                
             </div>
         )

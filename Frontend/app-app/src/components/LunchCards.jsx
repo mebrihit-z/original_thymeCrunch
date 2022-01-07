@@ -21,7 +21,7 @@ function LunchCards() {
         <div className='cards'>
             <div id="main-re">
                 <div id="bigDiv1">
-                    <a className="hov" href="/breakfast">
+                    <a className="hov" href="bento">
                         <div id="submain12">
                             <div id="bottom">Bento</div>
                         </div>
@@ -33,7 +33,7 @@ function LunchCards() {
                 </div>
 
                 <div id="bigDiv2">
-                    <a className="hover" href="/lunch">
+                    <a className="hover" href="/salad">
                         <div id="submain22">
                             <div id="bottom">Salad</div>
                         </div>
@@ -44,19 +44,8 @@ function LunchCards() {
                     </div>
                 </div>
 
-                <div id="bigDiv3">
-                    <a className="hover" href="/dinner">
-                    <div id="submain32">
-                        <div id="bottom">Bento</div>
-                    </div>
-                    </a>
-                    <div id="pdiv">
-                    <h2 id="h2p">Katsu Pork Bento Box</h2>
-                    </div>
-                </div>
-
                 <div id="bigDiv4">
-                    <a className="hover" href="/desserts">
+                    <a className="hover" href="/curry">
                         <div id="submain42">
                             <div id="bottom">Curry</div>
                         </div>

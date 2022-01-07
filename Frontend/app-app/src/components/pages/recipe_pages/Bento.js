@@ -3,6 +3,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../../UserProfiles.css';
 import { BentoIng } from '../RecApiCalls/BentoApi';
+import { RecipeButton } from "../../RecipeButton";
 
 function Bento (){
 

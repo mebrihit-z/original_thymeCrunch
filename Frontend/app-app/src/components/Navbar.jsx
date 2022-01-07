@@ -38,10 +38,10 @@ export function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                 
-                {/* this is for a logo to return home, but this breaks the program atm */}
-                 {/* <link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                
+                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
                   ThymeCrunch  
-                </link> */}
+                </Link>
                 
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? "fas fa-times" : "fas fa-bars"}/>
@@ -70,6 +70,11 @@ export function Navbar() {
                     <li className='nav-item'>
                         <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
                            Logout
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/update' className='nav-links' onClick={closeMobileMenu}>
+                            Update 
                         </Link>
                     </li>
                 </ul>

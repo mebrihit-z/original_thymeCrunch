@@ -17,7 +17,7 @@ function BeveragesCards() {
         <div className='cards'>
             <div id="main-re">
                 <div id="bigDiv1">
-                    <a className="hov" href="/breakfast">
+                    <a className="hov" href="/latte">
                         <div id="submain16">
                             <div id="bottom">Latte</div>
                         </div>
@@ -29,7 +29,7 @@ function BeveragesCards() {
                 </div>
 
                 <div id="bigDiv2">
-                    <a className="hover" href="/lunch">
+                    <a className="hover" href="/orange-juice">
                         <div id="submain26">
                             <div id="bottom">Orange Juice</div>
                         </div>
@@ -41,7 +41,7 @@ function BeveragesCards() {
                 </div>
 
                 <div id="bigDiv3">
-                    <a className="hover" href="/dinner">
+                    <a className="hover" href="/boba">
                     <div id="submain36">
                         <div id="bottom">Boba Tea</div>
                     </div>
@@ -52,7 +52,7 @@ function BeveragesCards() {
                 </div>
 
                 <div id="bigDiv4">
-                    <a className="hover" href="/desserts">
+                    <a className="hover" href="/punch">
                         <div id="submain46">
                             <div id="bottom">Punch</div>
                         </div>

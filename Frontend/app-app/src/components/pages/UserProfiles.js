@@ -32,12 +32,16 @@ export const UserProfiles = ()=> {
                 ):null}
                <br/>
                <br/>
-                <h1>{user.firstname} {user.lastname}</h1>
+              
+               <h1>{user.firstname} {user.lastname}</h1>
+               <div id="userdiv">
                 <p>User ID: {user.userID}</p>
                 <p>Email: {user.email}</p>
                 <p>Favorite Recipe: {user.fav_rec}</p>
                 <Dropzone {...user}/>
+                </div>
                 <br/>
+               
             </div>
         )
     }); 

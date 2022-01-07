@@ -307,6 +307,15 @@ public class User /*implements UserDetails*/{
 		this.password = password;
 	}
 
+	public User() {
+		super();
+	}
+
+	public void setEmail(String email2) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 }
