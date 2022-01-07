@@ -1,11 +1,10 @@
 package com.p2.recApp.users;
 
+
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 /*************************************Works Cited*********************************************
@@ -17,20 +16,18 @@ import org.springframework.transaction.annotation.Transactional;
  *********************************************************************************************/
 //tutorial calls this AppUserRespository AND AppUserService
 @Repository
-@Transactional()
+@Transactional(readOnly= true)
 public interface UserRepository extends JpaRepository<User, Integer>{
-	
-	
+
+	List<User> findAll();
 	Optional<User> findByEmail(String email);
 	Optional<User> findById(Integer userID);
+
+	Optional<User> findByUsername(String username);
+	Optional<User> findByPassword(String password);
+	Optional<User> findByUserID(Integer userID);
+
 	
-//	Optional<User> addUser(
-//			String firstname,
-//			String lastname,
-//			String emial,
-//			String username,
-//			String password);
-//	
 	
 
 }

@@ -21,9 +21,8 @@ public class EmailController {
 	@PostMapping("/email-sent") 
 	public String EmailInfo() {
 		emailSenderService.sendSimpleEmail("qwinkypoo@gmail.com",
-				"This is Email Body....here is your lame password",
-				"This is the Email Subject.. Boooooo_H@NN@H");
-
+				"[insert user password]",
+				"Lost Password");
 		return "redirect:/login";
 	}
 }	

@@ -1,6 +1,5 @@
 package com.p2.recApp.users;
 
-import java.time.LocalDateTime;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -38,24 +37,12 @@ import lombok.AllArgsConstructor;
 
 @Service
 
-public class UserService {
-	
-	private final FileStore fileStore;
-	private final UserRepository userRepository;
-
 
 public class UserService/* implements UserDetailsService*/ {
 
-
-
+	
 	private final FileStore fileStore;
 	private final UserRepository userRepository;
-	private String username;
-	private String password;
-	private String email;
-	private String firstname;
-	private String lastname;
-	private String profile_pic;
 	
 	
 	public String signUpUser(User user) {
@@ -65,41 +52,9 @@ public class UserService/* implements UserDetailsService*/ {
 		if(userExists) {
 			throw new IllegalStateException("email taken");
 		}
-
-		
 		userRepository.save(user);
-
-		
-
-		return "user added!";
+		return "";
 	}
-	
-	public String updateUser(User user) {
-		
-		boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
-
-		if(!userExists) {
-			throw new IllegalStateException("user doesn't exist");
-		}
-		
-		String username = this.username;
-		String password = this.password;
-		String email = this.email;
-		String firstname = this.firstname;
-		String lastname = this.lastname;
-		String profile_pic = this.profile_pic;
-		
-		user.setUsername(username);
-		user.setPassword(password);
-		user.setEmail(email);
-		user.setFirstname(firstname);
-		user.setLastname(lastname);
-		
-		userRepository.save(user);
-		
-		return "user updated!";
-	}
-
 
 	@Autowired
 	public UserService(UserRepository userRepository, FileStore fileStore) {
@@ -111,34 +66,6 @@ public class UserService/* implements UserDetailsService*/ {
 
 		return userRepository.findAll();
 	}
-	
-
-	/*
-	public void addUser(
-			String firstname,
-			String lastname,
-			String emial,
-			String username,
-			String password,
-			String profile_pic,
-			String fav_rec) {
-		
-	}
-	 */
-
-//	public void addUser(
-//			String firstname,
-//			String lastname,
-//			String emial,
-//			String username,
-//			String password,
-//			String profile_pic,
-//			String fav_rec) {
-//		
-//	}
-
-
-
 
 	void uploadUserProfileImage(Integer userID, MultipartFile file) {
         // 1. Check if image is not empty
@@ -148,25 +75,17 @@ public class UserService/* implements UserDetailsService*/ {
 
         // 3. The user exists in our database
         User user = getUserProfileOrThrow(userID);
-        
+
         // 4. Grab some metadata from file if any
         Map<String, String> metadata = extractMetadata(file);
 
         // 5. Store the image in s3 and update database (userProfileImageLink) with s3 image link
         String path = String.format("%s/%s", BucketName.PROFILE_IMAGE.getBucketName(), user.getUserID());
         String filename = String.format("%s-%s", file.getOriginalFilename(), UUID.randomUUID());
-        
+
         try {
-        	
             fileStore.save(path, filename, Optional.of(metadata), file.getInputStream());
             user.setProfile_pic(filename);
-            userRepository.save(user);
-            
-           System.out.println(filename);
-           System.out.println(path);
-          ;
-          System.out.println(user.getProfile_pic());
-          
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
@@ -179,9 +98,7 @@ public class UserService/* implements UserDetailsService*/ {
 	        String path = String.format("%s/%s",
 	                BucketName.PROFILE_IMAGE.getBucketName(),
 	                user.getUserID());
-	        System.out.println(user);
-	        System.out.println(path);
-	        System.out.println(user.getProfile_pic());
+
 	        return user.getProfile_pic()
 	                .map(key -> fileStore.download(path, key))
 	                .orElse(new byte[0]);
@@ -200,6 +117,9 @@ public class UserService/* implements UserDetailsService*/ {
 		  private User getUserProfileOrThrow(Integer userID) {
 		        return userRepository
 		                .findById(userID)
+		                .stream()
+		                .filter(userProfile -> userProfile.getUserID().equals(userID))
+		                .findFirst()
 		                .orElseThrow(() -> new IllegalStateException(String.format("User profile %s not found", userID)));
 		    }
 		  private void isImage(MultipartFile file) {
@@ -216,22 +136,8 @@ public class UserService/* implements UserDetailsService*/ {
 		            throw new IllegalStateException("Cannot upload empty file [ " + file.getSize() + "]");
 		        }
 		    }
+
+
 	
 
-}
-public List<User> getUserProfiles() {
-	
-	return null;
-}
-public void uploadUserProfzImage(Integer userID, MultipartFile file) {
-	
-}
-public byte[] downloadUserProfileImage(Integer userID) {
-	// TODO Auto-generated method stub
-	return null;
-}
-public void uploadUserProfileImage(Integer userID, MultipartFile file) {
-	// TODO Auto-generated method stub
-	
-}
 }
