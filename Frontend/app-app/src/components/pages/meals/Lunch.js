@@ -1,8 +1,9 @@
 import React from 'react';
 import Navbar from '../../Navbar';
 import '../../../App.css'
-import LunchCards from '../../LunchCards';
-import LuSearch from '../LuSearch';
+import LunchCards from '../../cards/LunchCards';
+import LuSearch from '../UtilPages/Search/LuSearch';
+import { RecipeButton } from '../../buttons/RecipeButton';
 
 function Lunch() {
     return (
@@ -10,6 +11,7 @@ function Lunch() {
         <Navbar/>
         <LuSearch/>
         <LunchCards/>
+        <RecipeButton/>
         </>
     )
 }

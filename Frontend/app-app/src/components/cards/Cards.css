@@ -28,7 +28,7 @@
  #submain1{
    width: 560px;
    height: 400px;
-   background-image: url('images/newBrak2.jpg'); 
+   background-image: url('../images/newBrak2.jpg'); 
    background-size:cover;
    position: relative;
    text-align: center;
@@ -36,7 +36,7 @@
  #submain2{
   width: 560px;
   height: 400px;
-  background-image: url('images/lunch.jpg'); 
+  background-image: url('../images/lunch.jpg'); 
   background-size: contain;
   position: relative;
   text-align: center;
@@ -44,7 +44,7 @@
 #submain3{
   width: 560px;
   height: 400px;
-  background-image: url('images/newDinner.jpg'); 
+  background-image: url('../images/newDinner.jpg'); 
   background-size: contain;
   position: relative;
   text-align: center;
@@ -52,7 +52,7 @@
 #submain4{
   width: 560px;
   height: 400px;
-  background-image: url('images/newDess9.jpg'); 
+  background-image: url('../images/newDess9.jpg'); 
   /* background-repeat: no-repeat; */
   background-size: contain;
   position: relative;
@@ -61,7 +61,7 @@
 #submain5{
   width: 560px;
   height: 400px;
-  background-image: url('images/newSn1.jpg'); 
+  background-image: url('../images/newSn1.jpg'); 
   background-size: contain;
   position: relative;
   text-align: center;
@@ -69,7 +69,7 @@
 #submain6{
   width: 560px;
   height: 400px;
-  background-image: url('images/newBev.jpg'); 
+  background-image: url('../images/newBev.jpg'); 
   background-size: contain;
   position: relative;
   text-align: center;

@@ -2,13 +2,13 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 //Utilities
-import Users from '././components/Users';
-import Home  from './components/pages/Home';
-import Login from './components/pages/Login';
-import Logout from './components/pages/Logout';
-import SignUp from './components/pages/SignUp';
-import UpdateProfile from './components/pages/UpdateProfile';
-import PasswordRecovery from './components/pages/PasswordRecovery';
+import Users from '././components/pages/UtilPages/Profile/Users';
+import Home  from './components/pages/UtilPages/Home/Home';
+import Login from './components/pages/UtilPages/Login/Login';
+import Logout from './components/pages/UtilPages/Logout/Logout';
+import SignUp from './components/pages/UtilPages/SignUp/SignUp';
+import UpdateProfile from './components/pages/UtilPages/Profile/UpdateProfile';
+import PasswordRecovery from './components/pages/UtilPages/Pass/PasswordRecovery';
 
 //MealTypes
 import Desserts from './components/pages/meals/Desserts';
@@ -19,7 +19,7 @@ import Dinner from './components/pages/meals/Dinner';
 import Beverages from './components/pages/meals/Beverages';
 
 //Recipies
-import Recipes from './components/pages/Recipes';
+import Recipes from './components/pages/UtilPages/Recipe/Recipes';
 
 /*breakfast*/
 import Pancakes from './components/pages/recipe_pages/Pancakes';

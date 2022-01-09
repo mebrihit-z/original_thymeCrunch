@@ -25,60 +25,51 @@
    /* .ui_icon_input{
      border-top: 30px;
    } */
-   #submain14{
+   #submain12{
      width: 560px;
      height: 400px;
-     background-image: url('images/gelato.jpg'); 
+     background-image: url('../images/bento3.jpg'); 
      background-size:cover;
      position: relative;
      text-align: center;
    }
-   #submain24{
+   #submain22{
     width: 560px;
     height: 400px;
-    background-image: url('images/lemon_tart.jpg'); 
+    background-image: url('../images/salad.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain34{
+  #submain32{
     width: 560px;
     height: 400px;
-    background-image: url('images/pavlova.jpg'); 
+    background-image: url('../images/katsu.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;
-    margin-left: 360px;
   }
-  #pdiv1{
-    margin-top:10px ;
-    margin-bottom: 40px;
-    /* margin-left: 100px; */
-    background-color:rgb(180, 177, 177)
-    ;
-    margin-left: 360px;
-  }
-  #submain44{
+  #submain42{
     width: 560px;
     height: 400px;
-    background-image: url('images/newDess9.jpg'); 
+    background-image: url('../images/curry.jpg'); 
     /* background-repeat: no-repeat; */
     background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain54{
+  #submain52{
     width: 560px;
     height: 400px;
-    background-image: url('images/newSn1.jpg'); 
+    background-image: url('../images/newSn1.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain64{
+  #submain62{
     width: 560px;
     height: 400px;
-    background-image: url('images/newBev.jpg'); 
+    background-image: url('../images/newBev.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;

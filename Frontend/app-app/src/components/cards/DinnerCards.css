@@ -25,54 +25,64 @@
    /* .ui_icon_input{
      border-top: 30px;
    } */
-   #submain16{
+   #submain13{
      width: 560px;
      height: 400px;
-     background-image: url('images/latte.jpg'); 
+     background-image: url('../images/hamburger.jpg'); 
      background-size:cover;
      position: relative;
      text-align: center;
    }
-   #submain26{
+   #submain23{
     width: 560px;
     height: 400px;
-    background-image: url('images/orange_juice.jpg'); 
-    background-size: contain;
+    background-image: url('../images/pasta.jpg'); 
+    background-size:cover;
     position: relative;
     text-align: center;
   }
-  #submain36{
+  #submain33{
     width: 560px;
     height: 400px;
-    background-image: url('images/boba.jpg'); 
-    background-size: contain;
+    background-image: url('../images/pad_thai.jpg'); 
+    background-size:cover;
     position: relative;
     text-align: center;
+    margin-left: 360px;
   }
-  #submain46{
+  #submain43{
     width: 560px;
     height: 400px;
-    background-image: url('images/punch.jpg'); 
+    background-image: url('../images/newDess9.jpg'); 
     /* background-repeat: no-repeat; */
-    background-size: contain;
+    background-size:cover;
     position: relative;
     text-align: center;
   }
-  #submain56{
+  #submain53{
     width: 560px;
     height: 400px;
-    background-image: url('images/newSn1.jpg'); 
-    background-size: contain;
+    background-image: url('../images/newSn1.jpg'); 
+    background-size:cover;
     position: relative;
     text-align: center;
   }
-  #submain66{
+  #submain63{
     width: 560px;
     height: 400px;
-    background-image: url('images/newBev.jpg'); 
-    background-size: contain;
+    background-image: url('../images/newBev.jpg'); 
+    background-size:cover;
     position: relative;
     text-align: center;
+    margin-left: 360px;
+  }
+  #pdiv1{
+    margin-top:10px ;
+    margin-bottom: 40px;
+    /* margin-left: 100px; */
+    background-color:rgb(180, 177, 177)
+    ;
+    margin-left: 360px;
   }
    #bottom{
     padding-left: 10px;

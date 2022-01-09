@@ -25,60 +25,51 @@
    /* .ui_icon_input{
      border-top: 30px;
    } */
-   #submain15{
+   #submain16{
      width: 560px;
      height: 400px;
-     background-image: url('images/celery.jpg'); 
+     background-image: url('../images/latte.jpg'); 
      background-size:cover;
      position: relative;
      text-align: center;
    }
-   #submain25{
+   #submain26{
     width: 560px;
     height: 400px;
-    background-image: url('images/hummus.jpg'); 
-    background-size: cover;
+    background-image: url('../images/orange_juice.jpg'); 
+    background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain35{
+  #submain36{
     width: 560px;
     height: 400px;
-    background-image: url('images/fruit.jpg'); 
-    background-size: cover;
+    background-image: url('../images/boba.jpg'); 
+    background-size: contain;
     position: relative;
     text-align: center;
-    margin-left: 360px;
   }
-  #pdiv1{
-    margin-top:10px ;
-    margin-bottom: 40px;
-    /* margin-left: 100px; */
-    background-color:rgb(180, 177, 177)
-    ;
-    margin-left: 360px;
-  }
-  #submain45{
+  #submain46{
     width: 560px;
     height: 400px;
-    background-image: url('images/newDess9.jpg'); 
+    background-image: url('../images/punch.jpg'); 
     /* background-repeat: no-repeat; */
     background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain55{
+  #submain56{
     width: 560px;
     height: 400px;
-    background-image: url('images/newSn1.jpg'); 
+    background-image: url('../images/newSn1.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain65{
+  #submain66{
     width: 560px;
     height: 400px;
-    background-image: url('images/newBev.jpg'); 
+    background-image: url('../images/newBev.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;

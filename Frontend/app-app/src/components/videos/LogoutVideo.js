@@ -1,30 +1,30 @@
 import React from 'react';
-import { Button } from './Button';
-import './VideoSection.css';
-import '../App.css';
+import {ButtonVideo} from '../buttons/ButtonVideo'
+import '../pages/UtilPages/Logout/Logout.css';
+import '../../App.css';
 
-function VideoSection() {
+function LogoutVideo() {
     return (
         <div>
-            <video src="videos/video.mp4" autoPlay loop muted></video>
+            <video src="videos/video1.mp4" autoPlay loop muted></video>
             <div id='textOverlay'>
-                <h1 id='videoH1'>ThymeCrunch</h1>
+                <h1 id='videoH1'>Happy Cooking!</h1>
                 <p id='videoP'>No thyme for complicated recipies? No Worries, We'll make it easy!</p>
                 <div className='video-btns'>
-                    <Button 
+                    <ButtonVideo 
                         className='btns' buttonStyle='btn--outline' 
                         buttonSize='btn--large'>
-                        Thyme to Cook!
-                    </Button>
-                    <Button 
+                        Return to home
+                    </ButtonVideo>
+                    <ButtonVideo 
                         className='btns' buttonStyle='btn--primary' 
                         buttonSize='btn--large'>
                         Watch a video! <i className='far fa-play-circle'/>
-                    </Button>
+                    </ButtonVideo>
                 </div>
             </div>
         </div>
     )
 }
 
-export default VideoSection
+export default LogoutVideo;

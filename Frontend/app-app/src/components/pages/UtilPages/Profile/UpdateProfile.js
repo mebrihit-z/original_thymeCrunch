@@ -1,35 +1,31 @@
 import React from 'react'
-import './SignUp.css';
+import '../SignUp/SignUp.css';
 
-import '../../App.css';
-import UserProfiles  from './UserProfiles';
-import VideoSection from '../VideoSection';
-import Cards from '../Cards'
-import Navbar from '../Navbar';
+import '../../../../App.css';
+import Navbar from '../../../Navbar';
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Recipes from './Recipes';
 import { useNavigate} from 'react-router-dom';
 
-export default function SignUp() {
-    const [ufirstname, setFristname] = useState('');
-    const [ulastname, setLastname] = useState('');
-    const [uemail, setEmail] = useState('');
-    const [uuname, setUsername] = useState('');
-    const [uupassword, setPassword] = useState('');
+export default function UpdateProfile() {
+    const [firstname, setFristname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     
     const [uData, setUData] = useState("")
     const navigate = useNavigate()
 
 
   function submit2(){
-     const a = ufirstname
-     const b = ulastname
-     const c = uemail
-     const d = uuname
-     const e = uupassword
-      axios.post(`http://localhost:9090/users/signup/${a}/${b}/${c}/${d}/${e}`)
+     const a = firstname
+     const b = lastname
+     const c = email
+     const d = username
+     const e = password
+      axios.post(`http://localhost:9090/users/UpdateProfile/${a}/${b}/${c}/${d}/${e}`)
         .then(response =>{
           if(response.data ==="ok" ) { navigate("/recipes");}
 
@@ -51,7 +47,7 @@ export default function SignUp() {
                 </div> */}
                 <div>
                   <div>
-                  <h1 id="t2">Sign Up Page</h1>
+                  <h1 id="t2">Update Profile</h1>
                   </div>
                  <div className="form">
                  <div className="first-input">
@@ -76,7 +72,7 @@ export default function SignUp() {
                   </div>
                  </div>
                   <div className="login-button2">
-                    <button id="button2" onClick={submit2}>Sign Up</button>
+                    <button id="button2" onClick={submit2}>Update</button>
                   </div>
                   </div>
               </div>

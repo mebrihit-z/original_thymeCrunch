@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
 import {useDropzone} from 'react-dropzone'
-import '../UserProfiles.css'
+import './UserProfiles.css'
 
 export const UserProfiles = ()=> {
 

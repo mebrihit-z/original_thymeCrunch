@@ -1,7 +1,7 @@
 import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
-import {Button} from './Button';
+import {Button} from './buttons/Button';
 /**********************************Works Cited************************************
  * Title: React Website Tutorial - Beginner React JS Project Fully Responsive
  * Author: Brian Design 

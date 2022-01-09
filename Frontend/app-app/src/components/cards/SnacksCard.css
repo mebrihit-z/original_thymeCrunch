@@ -6,28 +6,45 @@
  * Availability: https://youtu.be/I2UBjN5ER4s
  *********************************************************************************/
  #main-re{
+    /* margin-left: 30px;  */
+    /* background-image: url('images/greenBack.jpg'); */
    }
-   
-   #submain11{
+   /* #h1{
+     margin-top: 20px;
+     margin-bottom: 40px;
+     font-size: 65px;
+     font-family: 'Moon Dance', cursive; 
+     /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  /* } */
+   /* .ui_search{
+     margin-bottom:40px ;
+     white-space: 300px;
+     height: 50px;
+  
+   } */
+   /* .ui_icon_input{
+     border-top: 30px;
+   } */
+   #submain15{
      width: 560px;
      height: 400px;
-     background-image: url('images/pancakes.jpg'); 
-     background-size: cover;
+     background-image: url('../images/celery.jpg'); 
+     background-size:cover;
      position: relative;
      text-align: center;
    }
-   #submain21{
+   #submain25{
     width: 560px;
     height: 400px;
-    background-image: url('images/toast.jpg'); 
+    background-image: url('../images/hummus.jpg'); 
     background-size: cover;
     position: relative;
     text-align: center;
   }
-  #submain31{
+  #submain35{
     width: 560px;
     height: 400px;
-    background-image: url('images/granola.jpg'); 
+    background-image: url('../images/fruit.jpg'); 
     background-size: cover;
     position: relative;
     text-align: center;
@@ -41,27 +58,27 @@
     ;
     margin-left: 360px;
   }
-  #submain4{
+  #submain45{
     width: 560px;
     height: 400px;
-    background-image: url('images/newDess9.jpg'); 
+    background-image: url('../images/newDess9.jpg'); 
     /* background-repeat: no-repeat; */
     background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain5{
+  #submain55{
     width: 560px;
     height: 400px;
-    background-image: url('images/newSn1.jpg'); 
+    background-image: url('../images/newSn1.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;
   }
-  #submain6{
+  #submain65{
     width: 560px;
     height: 400px;
-    background-image: url('images/newBev.jpg'); 
+    background-image: url('../images/newBev.jpg'); 
     background-size: contain;
     position: relative;
     text-align: center;
