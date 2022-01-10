@@ -1,19 +1,18 @@
 import React from 'react';
 import Navbar from '../../../Navbar';
 import '../../../../App.css';
+import {ProfileConst} from './ProfileApi';
+import './UserProfiles.css'
 
-
-import UserProfiles  from './UserProfiles';
-
-import Navbar from '../../../Navbar';
 
 function Profile() {
     return (
         <>
         <Navbar/>
-        <UserProfiles/>
+
+        <ProfileConst/>
         </>
     )
 }
 
-export default Profile;
+export default Profile

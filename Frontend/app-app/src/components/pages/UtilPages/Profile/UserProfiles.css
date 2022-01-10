@@ -1,4 +1,4 @@
-img{
+/* img{
 
     margin-top: 10%;
     width: 200px;
@@ -21,4 +21,14 @@ img{
     text-align: center;
     background-color: rgb(170, 159, 159);
     width: fit-content;
+  } */
+  img{
+
+    margin-top: 10%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  
   }
+ 

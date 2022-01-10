@@ -54,7 +54,12 @@ export function Navbar() {
                     </li>
                     <li className='nav-item'>
                         <Link to='/users' className='nav-links' onClick={closeMobileMenu}>
-                            Profile
+                            All Users
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>
+                           Profile
                         </Link>
                     </li>
                     <li className='nav-item'>

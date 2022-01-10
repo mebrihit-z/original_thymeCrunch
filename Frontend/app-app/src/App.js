@@ -9,6 +9,7 @@ import Logout from './components/pages/UtilPages/Logout/Logout';
 import SignUp from './components/pages/UtilPages/SignUp/SignUp';
 import UpdateProfile from './components/pages/UtilPages/Profile/UpdateProfile';
 import PasswordRecovery from './components/pages/UtilPages/Pass/PasswordRecovery';
+import Profile from './components/pages/UtilPages/Profile/Profile';
 
 //MealTypes
 import Desserts from './components/pages/meals/Desserts';
@@ -54,6 +55,7 @@ import Punch from './components/pages/recipe_pages/Punch';
 
 
 
+
 function App() {
   return (
     
@@ -62,7 +64,8 @@ function App() {
     
       <Routes>
         <Route path ="/" element={<Home/>}/>
-        <Route path ="users" element ={<Users/>}/>
+        <Route path ="/users" element ={<Users/>}/>
+        <Route path ="/profile" element ={<Profile/>}/>
         <Route path ="/login" element={<Login/>}/>
         <Route path ="/update" element={<UpdateProfile/>}/>
         <Route path ="/sign-up" element={<SignUp/>}/>

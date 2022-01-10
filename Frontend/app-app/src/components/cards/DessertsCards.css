@@ -30,6 +30,7 @@
      height: 400px;
      background-image: url('../images/gelato.jpg'); 
      background-size:cover;
+     background-repeat: no-repeat;
      position: relative;
      text-align: center;
    }
@@ -37,7 +38,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/lemon_tart.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
   }
@@ -45,7 +47,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/pavlova.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
     margin-left: 360px;
@@ -62,8 +65,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newDess9.jpg'); 
-    /* background-repeat: no-repeat; */
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     text-align: center;
   }
@@ -71,7 +74,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newSn1.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
   }
@@ -79,7 +83,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newBev.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
   }
