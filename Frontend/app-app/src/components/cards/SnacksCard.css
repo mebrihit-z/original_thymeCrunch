@@ -24,7 +24,7 @@
    } */
    #submain15{
 
-     background-image: url('../images/celery.jpg'); 
+     background-image: url('../images/celery_boats.jpg'); 
 
 
    }
@@ -67,7 +67,7 @@
   #submain65{
     width: 560px;
     height: 400px;
-    background-image: url('../images/newBev.jpg'); 
+    background-image: url('../images/drink.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
@@ -103,7 +103,6 @@
      float:left;
      margin-left: 120px;
      margin-right: 100px;  
-     background-color: rgba(0, 0, 0, 0.11);
    }
    #bigDiv2{
     float:left;

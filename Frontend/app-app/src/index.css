@@ -17,6 +17,7 @@ body {
   background-size: cover !important;
   background-position: center;
   background-attachment: fixed;
+  background-color: rgba(235, 170, 185, 0.582);
 
   /* background-color: rgb(148, 212, 172); */
   /* background-color: rgb(245, 216, 239); */
