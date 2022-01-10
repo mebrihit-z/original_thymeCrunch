@@ -63,15 +63,11 @@ export function Navbar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
+                        <Link to='/recipes-menu' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
                         </Link>
                     </li>
-                    <li className='nav-item'>
-                        <Link to='/addRecipes' className='nav-links' onClick={closeMobileMenu}>
-                            Add Recipes
-                        </Link>
-                    </li>
+                   
                     {/* <li className='nav-item'>
                         <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login

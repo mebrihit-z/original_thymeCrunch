@@ -10,9 +10,12 @@ function Recipes() {
     return (
        <>
        <div className='recipDiv'>
+           
             <Navbar/>
             <Search/>
+            <center>
             <Cards/>
+            </center>
         </div>
        </>
     )

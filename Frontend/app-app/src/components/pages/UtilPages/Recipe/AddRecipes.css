@@ -1,28 +1,26 @@
-.main2 {
+.main22 {
     justify-content: center;
     display: flex; 
-    padding-top: 90px;
+    padding-top: 30px;
     padding-bottom: 90px;
     background-image: url("../../images/pexels-homegroundsco-5200286.jpg"); 
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
   }
-  .sub-main2 {
+  .sub-main22 {
     display: flex;
     justify-content: center;
     width: 400px;
-    height: 600px;
+    height: 720px;
     background: rgba(0,0,0,0.5);
     color:#fff;
     top:50%;
     left:50%;
-    padding-top: 30px;
+    /* padding-top: 10px; */
     border-radius: 60px; 
     /*box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);*/
   
   } 
-  #t2{
+  #t22{
     margin-top: 30px;
     margin-bottom: 40px;
     text-align: center;
@@ -68,10 +66,10 @@
     
   }
   .login-button2{
-    padding-top: 25px;
+    /* padding-top: 25px; */
     margin-left: 25px;
     margin-bottom: 10px;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     padding-bottom: 20px;
   
   }

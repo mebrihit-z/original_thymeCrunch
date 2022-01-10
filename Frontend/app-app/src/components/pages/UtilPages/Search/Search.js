@@ -33,8 +33,8 @@ export default function Search() {
             <div className='ui_search'>
                 <div className='ui_icon_input'>
                     {/* <i class="fa fa-search" aria-hidden="true"></i> */}
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder='Search a Recipe' className='prompt' onChange={e => setRecipes(e.target.value)} />
+                   <i class="fas fa-search"></i>
+                    <input type="text" placeholder='Search for a recipe' className='prompt' onChange={e => setRecipes(e.target.value)} />
                     <button id="serbutton"onClick={submit0}>Login</button>
                 </div>
             </div> 
