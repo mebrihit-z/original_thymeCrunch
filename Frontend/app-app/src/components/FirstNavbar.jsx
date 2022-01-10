@@ -10,7 +10,7 @@ import {Button} from './buttons/Button';
  * Availability: https://youtu.be/I2UBjN5ER4s
  *********************************************************************************/
 
-export function Navbar() {
+export function FirstNavbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -62,37 +62,32 @@ export function Navbar() {
                            Profile
                         </Link>
                     </li>
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
                         </Link>
-                    </li>
+                    </li> */}
                     <li className='nav-item'>
-                        <Link to='/addRecipes' className='nav-links' onClick={closeMobileMenu}>
-                            Add Recipes
-                        </Link>
-                    </li>
-                    {/* <li className='nav-item'>
                         <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login
                         </Link>
-                    </li> */}
-                    <li className='nav-item'>
+                    </li>
+                    {/* <li className='nav-item'>
                         <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
                            Logout
                         </Link>
-                    </li>
-                    {/* <li className='nav-item'>
+                    </li> */}
+                    <li className='nav-item'>
                         <Link to='/update' className='nav-links' onClick={closeMobileMenu}>
                             Update 
                         </Link>
-                    </li> */}
+                    </li>
                 </ul>
-                {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
+                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
             </div>
         </nav>
         </>
     )
 }
 
-export default Navbar
+export default FirstNavbar

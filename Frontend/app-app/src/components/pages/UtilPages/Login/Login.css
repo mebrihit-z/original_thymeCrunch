@@ -41,9 +41,11 @@
   
 }
 .profile {
+  color: grey;
   height: 100px;
   width: 100px;
   border-radius: 130px;
+  
 } 
 #t1{
   margin-top: 18px;
@@ -87,8 +89,8 @@ p{
   outline:none;
 }
 .login-button1{
-  padding-top: 25px;
-  margin-left: 30px;
+  padding-top: 10px;
+  margin-left: 20px;
 
 }
 #button1:hover{

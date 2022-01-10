@@ -25,7 +25,6 @@
  /* .ui_icon_input{
    border-top: 30px;
  } */
-
  #submain1{
    width: 560px;
    height: 400px;
@@ -34,6 +33,7 @@
    background-repeat: no-repeat;
    position: relative;
    text-align: center;
+   margin-left: 30px;
  }
  #submain2{
   width: 560px;
@@ -96,8 +96,8 @@
    margin-top:10px ;
    margin-bottom: 40px;
    /* margin-left: 100px; */
-   background-color:rgb(180, 177, 177)
-   ;
+   /* background-color:rgb(180, 177, 177)
+   ; */
    
  }
 #h2p{
@@ -106,10 +106,18 @@
   font-size: 25px;
   /* font-weight: 700; */
 }
+.cardDiv{
+  width: 620px;
+  height: 480px;
+  padding-top: 25px;
+  background-color:rgb(180, 177, 177)
+  ;
+ }
  #bigDiv1{
    float:left;
    margin-left: 120px;
-   margin-right: 100px;  
+   margin-right: 100px; 
+   margin-bottom: 30px; 
  }
  #bigDiv2{
   float:left;

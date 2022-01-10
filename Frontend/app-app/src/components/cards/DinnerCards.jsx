@@ -27,7 +27,6 @@ function DinnerCards() {
                     <h2 id="h2p">Very Gouda Hamburger</h2>
                     </div>
                 </div>
-
                 <div id="bigDiv2">
                     <a className="hover" href="/lunch">
                         <div id="submain23">
