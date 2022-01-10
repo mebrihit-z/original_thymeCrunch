@@ -9,6 +9,8 @@
   /* background-image: url("./images/pexels-ioana-motoc-4346328.jpg"); 
   background-size: cover; */
   background-size: cover !important;
+  background-attachment: fixed;
+  height: 100vh;
 }
 .sub-main1 {
   display: flex;
