@@ -5,40 +5,21 @@
  * Code Version: React
  * Availability: https://youtu.be/I2UBjN5ER4s
  *********************************************************************************/
- #main-re{
-   }
-   
+
    #submain11{
-     width: 560px;
-     height: 400px;
      background-image: url('../images/pancakes.jpg'); 
-     background-size: cover;
-     position: relative;
-     text-align: center;
    }
    #submain21{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/toast.jpg'); 
-    background-size: cover;
-    position: relative;
-    text-align: center;
   }
   #submain31{
-    width: 560px;
-    height: 400px;
-    background-image: url('../images/granola.jpg'); 
-    background-size: cover;
-    position: relative;
-    text-align: center;
-    margin-left: 360px;
+    background-image: url('../images/granola.jpg');
   }
   #pdiv1{
     margin-top:10px ;
     margin-bottom: 40px;
     /* margin-left: 100px; */
-    background-color:rgb(180, 177, 177)
-    ;
+    background-color:rgb(180, 177, 177);
     margin-left: 360px;
   }
   #submain4{

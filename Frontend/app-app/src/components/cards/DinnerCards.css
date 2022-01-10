@@ -26,38 +26,21 @@
      border-top: 30px;
    } */
    #submain13{
-     width: 560px;
-     height: 400px;
+
      background-image: url('../images/hamburger.jpg'); 
-     background-size:cover;
-     position: relative;
-     text-align: center;
+
    }
    #submain23{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/pasta.jpg'); 
-    background-size:cover;
-    position: relative;
-    text-align: center;
+
   }
   #submain33{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/pad_thai.jpg'); 
-    background-size:cover;
-    position: relative;
-    text-align: center;
-    margin-left: 360px;
+
   }
   #submain43{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/newDess9.jpg'); 
-    /* background-repeat: no-repeat; */
-    background-size:cover;
-    position: relative;
-    text-align: center;
+
   }
   #submain53{
     width: 560px;

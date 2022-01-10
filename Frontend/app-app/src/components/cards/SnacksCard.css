@@ -5,10 +5,7 @@
  * Code Version: React
  * Availability: https://youtu.be/I2UBjN5ER4s
  *********************************************************************************/
- #main-re{
-    /* margin-left: 30px;  */
-    /* background-image: url('images/greenBack.jpg'); */
-   }
+
    /* #h1{
      margin-top: 20px;
      margin-bottom: 40px;
@@ -26,29 +23,16 @@
      border-top: 30px;
    } */
    #submain15{
-     width: 560px;
-     height: 400px;
      background-image: url('../images/celery.jpg'); 
-     background-size:cover;
-     position: relative;
-     text-align: center;
+
    }
    #submain25{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/hummus.jpg'); 
-    background-size: cover;
-    position: relative;
-    text-align: center;
+
   }
   #submain35{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/fruit.jpg'); 
-    background-size: cover;
-    position: relative;
-    text-align: center;
-    margin-left: 360px;
+ 
   }
   #pdiv1{
     margin-top:10px ;

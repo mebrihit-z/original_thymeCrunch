@@ -26,29 +26,13 @@
      border-top: 30px;
    } */
    #submain14{
-     width: 560px;
-     height: 400px;
      background-image: url('../images/gelato.jpg'); 
-     background-size:cover;
-     position: relative;
-     text-align: center;
    }
    #submain24{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/lemon_tart.jpg'); 
-    background-size: contain;
-    position: relative;
-    text-align: center;
   }
   #submain34{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/pavlova.jpg'); 
-    background-size: contain;
-    position: relative;
-    text-align: center;
-    margin-left: 360px;
   }
   #pdiv1{
     margin-top:10px ;
