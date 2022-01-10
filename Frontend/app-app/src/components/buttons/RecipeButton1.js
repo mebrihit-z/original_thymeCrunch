@@ -14,7 +14,7 @@ const STYLES = ['btn--primary', 'btn--outline'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-export const PendingRecipesButton = ({
+export const RecipeButton1 = ({
     children,
     type,
     onClick,
@@ -26,13 +26,13 @@ export const PendingRecipesButton = ({
         const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
         return(
-            <Link to="/pending" className='btn-mobile'>
+            <Link to="/recipes" className='btn-mobile'>
                 <button
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
                 >
-                Pending User Recipes
+                Our Featured Recipes
                 </button>
             </Link>
         )
