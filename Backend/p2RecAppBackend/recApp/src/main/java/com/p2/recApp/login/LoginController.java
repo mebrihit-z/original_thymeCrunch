@@ -31,6 +31,7 @@ public class LoginController {
 	//public UserService userService;
 	
 	User user;
+	String userRol="";
 	
 	@GetMapping("/users")
 	public List<User> login() {
@@ -57,6 +58,29 @@ public class LoginController {
 		
 	}
 
+	
+	//public User user;
+		//9090/users/1/test
+		@PostMapping("/users/loginWithStatus/{username}/{password}")
+		public String loginWithStatus(@PathVariable String username, @PathVariable String password) {
+			Optional<User> uname = userRepository.findByUsername(username);
+			//Optional<User> upassword = userRepository.findByPassword(password);
+			
+			User user = uname.get();
+			System.out.println(" username ***********: "+ user);
+//			if(user.getUserRol().equals("admin")) {
+//				userRol = "admin";
+//			}else {
+//				userRol = "user";		
+//			}
+			
+			if(user.getPassword().equals(password)) {
+				return "ok";
+			}else {
+				return "no";		
+			}
+			
+		}
 	//public User user;
 	//9090/users?id=1&username=test
 	@GetMapping("/users/req")
@@ -80,9 +104,13 @@ public class LoginController {
 	
 	@PostMapping("/users/signup/{firstname}/{lastname}/{email}/{username}/{password}")
 	//@MessageMapping("/users/signup")
-    public String userSignin(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String email, @PathVariable String username, @PathVariable String password) {
+    public String userSignup(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String email, @PathVariable String username, @PathVariable String password) {
 		User user = new User(firstname, lastname, email, username, password);
-		userService.signUpUser(user);
+		//UserRole userRole = "USER;
+		user.setUserRole(UserRole.USER);
+		
+		userRepository.save(user);
+		//userService.signUpUser(user);
 		System.out.println("User:____________" + user);
 		System.out.println(" username ***********: "+ user.getUsername());
 //        Optional<User> userData = userRepository.findByUsername(user.getUsername());
