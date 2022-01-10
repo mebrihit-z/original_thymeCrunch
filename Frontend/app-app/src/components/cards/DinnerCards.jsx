@@ -16,9 +16,9 @@ function DinnerCards() {
 
         <div className='cards'>
             <div id="main-re">
-                <div id="bigDiv1">
+                <div id="bigDiv1" className="bigDivAll">
                     <a className="hov" href="/breakfast">
-                        <div id="submain13">
+                        <div id="submain13" className="submainAll">
                             <div id="bottom">Hamburger</div>
                         </div>
                     </a>
@@ -27,9 +27,12 @@ function DinnerCards() {
                     <h2 id="h2p">Very Gouda Hamburger</h2>
                     </div>
                 </div>
-                <div id="bigDiv2">
+
+
+                <div id="bigDiv2" className="bigDivAll">
+
                     <a className="hover" href="/lunch">
-                        <div id="submain23">
+                        <div id="submain23" className="submainAll">
                             <div id="bottom">Pasta</div>
                         </div>
                     </a>
@@ -39,13 +42,13 @@ function DinnerCards() {
                     </div>
                 </div>
 
-                <div id="bigDiv3">
+                <div id="bigDiv3" className="bigDivAll">
                     <a className="hover" href="/dinner">
-                    <div id="submain33">
+                    <div id="submain33" className="submainAll">
                         <div id="bottom">Pad Thai</div>
                     </div>
                     </a>
-                    <div id="pdiv1">
+                    <div id="pdiv">
                     <h2 id="h2p">Pad Thai</h2>
                     </div>
                 </div>

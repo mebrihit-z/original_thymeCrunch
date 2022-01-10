@@ -26,59 +26,28 @@
      border-top: 30px;
    } */
    #submain16{
-     width: 560px;
-     height: 400px;
      background-image: url('../images/latte.jpg'); 
-     background-size:cover;
-     background-repeat: no-repeat;
-     position: relative;
-     text-align: center;
+
    }
    #submain26{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/orange_juice.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    text-align: center;
+
   }
   #submain36{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/boba.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    text-align: center;
+
   }
   #submain46{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/punch.jpg'); 
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    text-align: center;
+
   }
   #submain56{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/newSn1.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    text-align: center;
+
   }
   #submain66{
-    width: 560px;
-    height: 400px;
     background-image: url('../images/newBev.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    text-align: center;
+
   }
    #bottom{
     padding-left: 10px;

@@ -13,8 +13,11 @@ body {
 
   /* background-image: url("./components/images/pexels-anna-nekrashevich-7214933.jpg");  */
   /* background-image: url("./components/images/pexels-ioana-motoc-4346328.jpg");   */
-  background-size: cover;
-  background-color: rgba(228, 140, 144, 0.342);
+
+  background-size: cover !important;
+  background-position: center;
+  background-attachment: fixed;
+
   /* background-color: rgb(148, 212, 172); */
   /* background-color: rgb(245, 216, 239); */
   text-align: center;

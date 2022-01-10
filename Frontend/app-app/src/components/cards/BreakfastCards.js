@@ -19,9 +19,9 @@ function BreakfastCards() {
         
         <div className='cards'>
             <div id="main-re">
-                <div id="bigDiv1">
+                <div id="bigDiv1" className="bigDivAll">
                     <a className="hov" href="/breakfast">
-                        <div id="submain11">
+                        <div id="submain11" className="submainAll">
                             <div id="bottom">Pancakes</div>
                         </div>
                     </a>
@@ -31,9 +31,9 @@ function BreakfastCards() {
                     </div>
                 </div>
 
-                <div id="bigDiv2">
+                <div id="bigDiv2" className="bigDivAll">
                     <a className="hover" href="/lunch">
-                        <div id="submain21">
+                        <div id="submain21" className="submainAll">
                             <div id="bottom">Toast</div>
                         </div>
                     </a>
@@ -43,13 +43,13 @@ function BreakfastCards() {
                     </div>
                 </div>
 
-                <div id="bigDiv3">
+                <div id="bigDiv3" className="bigDivAll">
                     <a className="hover" href="/dinner">
-                    <div id="submain31">
+                    <div id="submain31" className="submainAll">
                         <div id="bottom">Oat</div>
                     </div>
                     </a>
-                    <div id="pdiv1">
+                    <div id="pdiv">
                     <h2 id="h2p">Wholesome Whole Food Oat Granola</h2>
                     </div>
                 </div>

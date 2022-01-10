@@ -5,6 +5,8 @@
     padding-bottom: 90px;
     background-image: url("../../images/pexels-homegroundsco-5200286.jpg"); 
     background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
   }
   .sub-main2 {
     display: flex;

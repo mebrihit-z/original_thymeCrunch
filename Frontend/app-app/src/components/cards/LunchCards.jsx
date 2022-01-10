@@ -20,9 +20,9 @@ function LunchCards() {
 
         <div className='cards'>
             <div id="main-re">
-                <div id="bigDiv1">
+                <div id="bigDiv1" className="bigDivAll">
                     <a className="hov" href="bento">
-                        <div id="submain12">
+                        <div id="submain12" className="submainAll">
                             <div id="bottom">Bento</div>
                         </div>
                     </a>
@@ -32,21 +32,21 @@ function LunchCards() {
                     </div>
                 </div>
 
-                <div id="bigDiv2">
+                <div id="bigDiv2" className="bigDivAll">
                     <a className="hover" href="/salad">
-                        <div id="submain22">
+                        <div id="submain22" className="submainAll">
                             <div id="bottom">Salad</div>
                         </div>
                     </a>
                     
                     <div id="pdiv">
-                    <h2 id="h2p">Grilled  Salad Chicken with Raspberry Vinegrette</h2>
+                    <h2 id="h2p">Grilled Salad Chicken<br/>with Raspberry Vinegrette</h2>
                     </div>
                 </div>
 
-                <div id="bigDiv4">
+                <div id="bigDiv4" className="bigDivAll">
                     <a className="hover" href="/curry">
-                        <div id="submain42">
+                        <div id="submain42" className="submainAll">
                             <div id="bottom">Curry</div>
                         </div>
                     </a>
