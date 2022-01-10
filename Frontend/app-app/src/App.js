@@ -10,7 +10,7 @@ import SignUp from './components/pages/UtilPages/SignUp/SignUp';
 import UpdateProfile from './components/pages/UtilPages/Profile/UpdateProfile';
 import PasswordRecovery from './components/pages/UtilPages/Pass/PasswordRecovery';
 import Profile from './components/pages/UtilPages/Profile/Profile';
-import AddRecipes from './components/pages/UtilPages/AddRecipes/AddRecipes';
+
 
 //MealTypes
 import Desserts from './components/pages/meals/Desserts';
@@ -22,6 +22,10 @@ import Beverages from './components/pages/meals/Beverages';
 
 //Recipies
 import Recipes from './components/pages/UtilPages/Recipe/Recipes';
+import AddRecipes from './components/pages/UtilPages/Recipe/AddRecipes';
+import UserRecipes from './components/pages/UtilPages/Recipe/UserRecipes';
+import RecipesMenu from './components/pages/UtilPages/Recipe/UserRecipesMenu';
+import PendingRecipes from './components/pages/UtilPages/Recipe/PendingRec';
 
 /*breakfast*/
 import Pancakes from './components/pages/recipe_pages/Pancakes';
@@ -68,7 +72,11 @@ function App() {
         <Route path ="/users" element ={<Users/>}/>
         <Route path ="/profile" element ={<Profile/>}/>
         <Route path ="/login" element={<Login/>}/>
-        <Route path ="/addRecipes" element={<AddRecipes/>}/>
+        <Route path ="/recipes" element={<Recipes/>}/>
+        <Route path ="/add-recipes" element={<AddRecipes/>}/>
+        <Route path ="/recipe-menu" element={<RecipesMenu/>}/>
+        <Route path ="/user-recipes" element={<UserRecipes/>}/>
+        <Route path ="/pending-recipes" element={<PendingRecipes/>}/>
         <Route path ="/update" element={<UpdateProfile/>}/>
         <Route path ="/sign-up" element={<SignUp/>}/>
         <Route path ="/logout" element={<Logout/>}/>
