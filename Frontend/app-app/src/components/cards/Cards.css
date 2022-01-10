@@ -25,54 +25,32 @@
  /* .ui_icon_input{
    border-top: 30px;
  } */
- #submain1{
-   width: 560px;
-   height: 400px;
+
+ .submainAll{
+  width: 560px;
+  height: 400px;
+  background-size: cover !important;
+  background-position: center;
+  position: relative;
+ }
+
+ #submain1{ 
    background-image: url('../images/newBrak2.jpg'); 
-   background-size:cover;
-   position: relative;
-   text-align: center;
  }
  #submain2{
-  width: 560px;
-  height: 400px;
   background-image: url('../images/lunch.jpg'); 
-  background-size: contain;
-  position: relative;
-  text-align: center;
 }
 #submain3{
-  width: 560px;
-  height: 400px;
   background-image: url('../images/newDinner.jpg'); 
-  background-size: contain;
-  position: relative;
-  text-align: center;
 }
 #submain4{
-  width: 560px;
-  height: 400px;
   background-image: url('../images/newDess9.jpg'); 
-  /* background-repeat: no-repeat; */
-  background-size: contain;
-  position: relative;
-  text-align: center;
 }
 #submain5{
-  width: 560px;
-  height: 400px;
   background-image: url('../images/newSn1.jpg'); 
-  background-size: contain;
-  position: relative;
-  text-align: center;
 }
 #submain6{
-  width: 560px;
-  height: 400px;
   background-image: url('../images/newBev.jpg'); 
-  background-size: contain;
-  position: relative;
-  text-align: center;
 }
  #bottom{
   padding-left: 10px;
@@ -84,13 +62,14 @@
   color: black;
   font-family: 'Moon Dance', cursive; 
   font-size: 40px;
+  border-radius: 0px 25px 0px 0px; /*this rounds the upper right corner*/
  }
+
  #pdiv{
    margin-top:10px ;
-   margin-bottom: 40px;
+   margin-bottom: 20px;
    /* margin-left: 100px; */
-   background-color:rgb(180, 177, 177)
-   ;
+   background-color:gray !important;
    
  }
 #h2p{
@@ -99,32 +78,14 @@
   font-size: 25px;
   /* font-weight: 700; */
 }
- #bigDiv1{
-   float:left;
-   margin-left: 120px;
-   margin-right: 100px;  
- }
- #bigDiv2{
-  float:left;
-  margin-left: 65px;
-}
-#bigDiv3{
-  float:left;
-  margin-left: 120px;
-  margin-right: 100px;
-}
-#bigDiv4{
-  float:left;
-  margin-left: 65px;
-}
-#bigDiv5{
-  float:left;
-  margin-left: 120px;
-  margin-right: 100px;
-}
-#bigDiv6{
-  float:left;
-  margin-left: 65px;
+
+.bigDivAll{
+  margin: 15px 90px !important;
+  background-color: gray;
+  border: 5px solid gray;
+  border-radius: 30px;
+  overflow: hidden; /*this rounds the corners at the top */ 
+  /*float: left;*/
 }
 
 .hov:hover{
