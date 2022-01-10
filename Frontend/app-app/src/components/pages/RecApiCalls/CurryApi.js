@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import '../../UserProfiles.css'
+import '../../pages/UtilPages/Profile/UserProfiles.css';
 
 export const CurryIng = ()=> {
 

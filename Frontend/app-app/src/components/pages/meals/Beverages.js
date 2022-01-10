@@ -1,8 +1,9 @@
 import React from 'react'
 import Navbar from '../../Navbar';
 import '../../../App.css'
-import BeveragesCards from '../../BeveragesCards';
-import BerSearch from '../BerSearch';
+import BeveragesCards from '../../cards/BeveragesCards';
+import BerSearch from '../UtilPages/Search/BerSearch';
+import { RecipeButton } from '../../buttons/RecipeButton';
 
 function Beverages() {
     return (
@@ -10,10 +11,7 @@ function Beverages() {
         <Navbar/>
         <BerSearch/>
         <BeveragesCards/>
-
-        <div>
-
-        </div>
+        <RecipeButton/>
         </>
     )
 }

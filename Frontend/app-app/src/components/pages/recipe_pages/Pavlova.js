@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
 import Navbar from "../../Navbar";
-import '../../UserProfiles.css';
+import '../UtilPages/Profile/UserProfiles.css';
 import { PavlovaIng } from '../RecApiCalls/PavolvaApi';
-import { RecipeButton } from "../../RecipeButton";
+import { RecipeButton } from "../../buttons/RecipeButton";
 
 function Pavlova (){
     return(

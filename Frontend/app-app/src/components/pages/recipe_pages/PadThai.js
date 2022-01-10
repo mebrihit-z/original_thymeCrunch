@@ -1,8 +1,8 @@
 import React from "react"
 import Navbar from "../../Navbar";
-import '../../UserProfiles.css';
+import '../UtilPages/Profile/UserProfiles.css';
 import  { PadThaiIng } from '../RecApiCalls/PadThaiApi';
-import { RecipeButton } from "../../RecipeButton";
+import { RecipeButton } from "../../buttons/RecipeButton";
 
 function PadThai(){
     return(

@@ -1,6 +1,8 @@
 package com.p2.recApp.users;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,16 +28,26 @@ import org.springframework.web.multipart.MultipartFile;
 public class UserController {
 	
 
-	
+	private UserRepository userRepository;
 	private final UserService userService;
+	
 	@Autowired
-	public UserController(UserService userService) {
+	public UserController(UserService userService, UserRepository userRepository) {
 		this.userService = userService;
+		this.userRepository = userRepository;
 	}
 	
 	@GetMapping
 	public List<User> getUserProfiles(){
 		return userService.getUserProfiles();
+		
+		//do the request body thing
+		
+	}
+	
+	@GetMapping("/{userID}")
+	public Optional<User> getUserByID(@PathVariable("userID") Integer userID){
+		return userRepository.findById(userID);
 		
 		//do the request body thing
 		

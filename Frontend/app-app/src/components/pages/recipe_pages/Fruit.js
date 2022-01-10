@@ -1,8 +1,8 @@
 import React from "react"
 import Navbar from "../../Navbar";
-import '../../UserProfiles.css';
+import '../UtilPages/Profile/UserProfiles.css';
 import { FruitIng } from '../RecApiCalls/FruitApi';
-import { RecipeButton } from "../../RecipeButton";
+import { RecipeButton } from "../../buttons/RecipeButton";
 
 function Fruit (){
     return(
