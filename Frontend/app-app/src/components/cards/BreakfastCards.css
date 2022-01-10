@@ -8,12 +8,15 @@
 
    #submain11{
      background-image: url('../images/pancakes.jpg'); 
+
    }
    #submain21{
     background-image: url('../images/toast.jpg'); 
+
   }
   #submain31{
     background-image: url('../images/granola.jpg');
+
   }
   #pdiv1{
     margin-top:10px ;
@@ -27,7 +30,8 @@
     height: 400px;
     background-image: url('../images/newDess9.jpg'); 
     /* background-repeat: no-repeat; */
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
   }
@@ -35,7 +39,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newSn1.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
   }
@@ -43,7 +48,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newBev.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
   }

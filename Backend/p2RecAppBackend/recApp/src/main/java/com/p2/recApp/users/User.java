@@ -100,6 +100,7 @@ public class User /*implements UserDetails*/{
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name="user_role")
+	//private UserRole userRole;
 	private UserRole userRole;
 	
 	
@@ -213,8 +214,13 @@ public class User /*implements UserDetails*/{
 				&& Objects.equals(username, other.username);
 	}
 
-	public User(String firstname, String lastname, String email, String username, String password, UserRole user) {
-		
+	public User(String firstname, String lastname, String email, String username, String password, UserRole userRole) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.userRole = userRole;
 	}
 	
 
@@ -314,6 +320,11 @@ public class User /*implements UserDetails*/{
 	public void setEmail(String email2) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public Object getUserRol() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

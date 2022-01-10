@@ -14,19 +14,19 @@ function Card() {
     return (
         <div className='cards'>
             <div id="main-re">
+
                 <div id="bigDiv1" className="bigDivAll">
                     <a className="hov" href="/breakfast">
                         <div id="submain1" className="submainAll">
                             <div id="bottom">Breakfast</div>
+
                         </div>
-                    </a>
-                    
-                    <div id="pdiv">
-                    <h2 id="h2p">Start your day with a healthy breakfast</h2>
                     </div>
+
                 </div>
 
                 <div id="bigDiv2" className="bigDivAll">
+
                     <a className="hover" href="/lunch">
                         <div id="submain2" className="submainAll">
                             <div id="bottom">Lunch</div>

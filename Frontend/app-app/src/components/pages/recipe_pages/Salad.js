@@ -9,7 +9,8 @@ function Salad (){
     return(
     <>
     <Navbar/>
-    <img src="images/salad.jpg"/>
+    {/* <img src="images/salad.jpg"/> */}
+    <img src="images/salad6.jpg"alt="salad" className="salad"/>
     <SaladIng/>
     <RecipeButton/>
     </>

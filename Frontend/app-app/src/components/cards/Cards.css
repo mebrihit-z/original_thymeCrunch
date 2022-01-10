@@ -36,18 +36,23 @@
 
  #submain1{ 
    background-image: url('../images/newBrak2.jpg'); 
+
  }
  #submain2{
   background-image: url('../images/lunch.jpg'); 
+
 }
 #submain3{
   background-image: url('../images/newDinner.jpg'); 
+
 }
 #submain4{
   background-image: url('../images/newDess9.jpg'); 
+
 }
 #submain5{
   background-image: url('../images/newSn1.jpg'); 
+
 }
 #submain6{
   background-image: url('../images/newBev.jpg'); 
@@ -69,7 +74,9 @@
    margin-top:10px ;
    margin-bottom: 20px;
    /* margin-left: 100px; */
+
    background-color:gray !important;
+
    
  }
 #h2p{
@@ -79,6 +86,7 @@
   /* font-weight: 700; */
 }
 
+
 .bigDivAll{
   margin: 15px 90px !important;
   background-color: gray;
@@ -86,6 +94,7 @@
   border-radius: 30px;
   overflow: hidden; /*this rounds the corners at the top */ 
   /*float: left;*/
+
 }
 
 .hov:hover{

@@ -23,16 +23,20 @@
      border-top: 30px;
    } */
    #submain15{
+
      background-image: url('../images/celery.jpg'); 
+
 
    }
    #submain25{
     background-image: url('../images/hummus.jpg'); 
 
+
+
   }
   #submain35{
     background-image: url('../images/fruit.jpg'); 
- 
+
   }
   #pdiv1{
     margin-top:10px ;
@@ -46,8 +50,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newDess9.jpg'); 
-    /* background-repeat: no-repeat; */
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     text-align: center;
   }
@@ -55,7 +59,8 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newSn1.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
   }
@@ -63,7 +68,9 @@
     width: 560px;
     height: 400px;
     background-image: url('../images/newBev.jpg'); 
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
     position: relative;
     text-align: center;
   }
@@ -96,6 +103,7 @@
      float:left;
      margin-left: 120px;
      margin-right: 100px;  
+     background-color: rgba(0, 0, 0, 0.11);
    }
    #bigDiv2{
     float:left;
