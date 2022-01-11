@@ -131,45 +131,6 @@ public class User /*implements UserDetails*/{
 
 	
 	
-	public String getFirstname() {
-		return firstname;
-	}
-
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getFav_rec() {
-		return fav_rec;
-	}
-
-	public void setFav_rec(String fav_rec) {
-		this.fav_rec = fav_rec;
-	}
-
-	public Boolean getEnabled() {
-		return enabled;
-	}
-
-	public void setEnabled(Boolean enabled) {
-		this.enabled = enabled;
-	}
 
 	public Optional<String> getProfile_pic() {
 		return Optional.ofNullable(profile_pic);
@@ -227,10 +188,6 @@ public class User /*implements UserDetails*/{
 	}
 
 	
-
-	public User() {
-		super();
-	}
 
 	public User(Integer userID, String firstname, String lastname, String email, String username, String password,
 			String profile_pic, String fav_rec, Boolean locked, Boolean enabled, UserRole userRole) {

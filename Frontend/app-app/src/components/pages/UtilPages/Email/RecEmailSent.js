@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from'axios';
-import Navbar from '../Navbar';
-import './PasswordRecovery.css';
+import { Link } from 'react-router-dom';
 
-function PasswordRecovery() {
+function RecEmailSent() {
     const url =""
     const [email, setEmail] = useState({
         email: ""
@@ -11,7 +10,7 @@ function PasswordRecovery() {
 
     const fetchEmail = ()=>{
         var recipe = ""
-        axios.post(`http://localhost:9090/api/v1/email/email-sent`).then(res =>{ //http://3.14.3.79:9090/api/v1/recipes/
+        axios.post(`http://localhost:9090/api/v1/email/recipe-email-sent`).then(res =>{ //http://3.14.3.79:9090/api/v1/recipes/
             console.log(res);
             setEmail(res.data);
         });
@@ -41,27 +40,25 @@ function PasswordRecovery() {
         console.log(newdata)
     }
 
-
     return (
-        <>         
-        <Navbar/>
-        <div class="fullpage">
+        
             <div class="container">
                 <form onSubmit={(e) => submit(e)}>
-                    <h2 id="h2">Did you lose something?</h2>
+                    <h2 id="h2">We are glad you like this recipe!</h2>
                     <br/>
-                    <h3 id="h2">Enter your email below and we will send you your password.</h3>
+                    <h3 id="h2">Enter your email below and we will send you your recipe.</h3>
                     <br/>
                     <label id="h2">Email:</label>
                     <input onChange={(e)=>handle(e)} id="email" value={email.email} placeholder="email" type="text" required></input>
                     <br/>
                     <br/>
+                    <Link to="/recipes" className='btn-mobile'>
                     <button class="button" id="h2">Submit</button>
+                    </Link>
                 </form>
             </div>
-        </div>
-        </>
+       
     )
 }
 
-export default PasswordRecovery
+export default RecEmailSent
