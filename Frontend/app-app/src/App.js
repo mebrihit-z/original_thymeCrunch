@@ -2,13 +2,15 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 //Utilities
-import Users from './components/Users';
-import Home  from './components/pages/Home';
-import Login from './components/pages/Login';
-import Logout from './components/pages/Logout';
-import SignUp from './components/pages/SignUp';
-import UpdateProfile from './components/pages/UpdateProfile';
-import PasswordRecovery from './components/pages/PasswordRecovery';
+import Users from '././components/pages/UtilPages/Profile/Users';
+import Home  from './components/pages/UtilPages/Home/Home';
+import Login from './components/pages/UtilPages/Login/Login';
+import Logout from './components/pages/UtilPages/Logout/Logout';
+import SignUp from './components/pages/UtilPages/SignUp/SignUp';
+import UpdateProfile from './components/pages/UtilPages/Profile/UpdateProfile';
+import PasswordRecovery from './components/pages/UtilPages/Pass/PasswordRecovery';
+import Profile from './components/pages/UtilPages/Profile/Profile';
+
 
 //MealTypes
 import Desserts from './components/pages/meals/Desserts';
@@ -19,7 +21,11 @@ import Dinner from './components/pages/meals/Dinner';
 import Beverages from './components/pages/meals/Beverages';
 
 //Recipies
-import Recipes from './components/pages/Recipes';
+import Recipes from './components/pages/UtilPages/Recipe/Recipes';
+import AddRecipes from './components/pages/UtilPages/Recipe/AddRecipes';
+import UserRecipes from './components/pages/UtilPages/Recipe/UserRecipes';
+import RecipesMenu from './components/pages/UtilPages/Recipe/UserRecipesMenu';
+import PendingRecipes from './components/pages/UtilPages/Recipe/PendingRec';
 
 /*breakfast*/
 import Pancakes from './components/pages/recipe_pages/Pancakes';
@@ -63,8 +69,14 @@ function App() {
     
       <Routes>
         <Route path ="/" element={<Home/>}/>
-        <Route path ="users" element ={<Users/>}/>
+        <Route path ="/users" element ={<Users/>}/>
+        <Route path ="/profile" element ={<Profile/>}/>
         <Route path ="/login" element={<Login/>}/>
+        <Route path ="/recipes" element={<Recipes/>}/>
+        <Route path ="/add-recipes" element={<AddRecipes/>}/>
+        <Route path ="/recipes-menu" element={<RecipesMenu/>}/>
+        <Route path ="/user-recipes" element={<UserRecipes/>}/>
+        <Route path ="/pending-recipes" element={<PendingRecipes/>}/>
         <Route path ="/update" element={<UpdateProfile/>}/>
         <Route path ="/sign-up" element={<SignUp/>}/>
         <Route path ="/logout" element={<Logout/>}/>
@@ -73,7 +85,7 @@ function App() {
         <Route path ="/lunch" element={<Lunch/>}/>
         <Route path ="/dinner" element={<Dinner/>}/>
         <Route path ="/beverages" element={<Beverages/>}/>
-        <Route path ="/dessert" element={<Desserts/>}/>
+        <Route path ="/desserts" element={<Desserts/>}/>
         <Route path ="/snacks" element={<Snacks/>}/>
         <Route path ="/pancakes" element={<Pancakes/>}/>
         <Route path ="/granola" element={<Granola/>}/>
@@ -95,12 +107,6 @@ function App() {
         <Route path ="/orange-juice" element={<OrangeJuice/>}/>
         <Route path ="/punch" element={<Punch/>}/>
         <Route path ="/passwordrecovery" element={<PasswordRecovery/>}/>
-
-        
-
-       
-        
-
       </Routes>
     </Router>
     </>

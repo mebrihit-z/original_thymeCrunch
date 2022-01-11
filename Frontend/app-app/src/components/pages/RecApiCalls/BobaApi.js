@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, {useState, useEffect, useCallback}from "react"
-import '../../UserProfiles.css'
+import '../../pages/UtilPages/Profile/UserProfiles.css';
 
 export const BobaIng = ()=> {
 
@@ -25,7 +25,7 @@ export const BobaIng = ()=> {
     return bobaIng.map((ingredient, index) =>{
         return (
             <div key={index}>
-                <p>User ID: {ingredient.ingName}</p>
+                <h3>Ingredient: {ingredient.ingName}</h3>
                
             </div>
         )

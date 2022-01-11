@@ -1,24 +1,17 @@
 import React from 'react';
 import Navbar from '../../Navbar';
 import '../../../App.css';
-import DinnerCards from '../../DinnerCards';
-/**********************************Works Cited******************************************************
- * <a href='https://www.freepik.com/photos/food'>Food photo created by jcomp - www.freepik.com</a>
- * 
- ***************************************************************************************************/
-
+import DinnerCards from '../../cards/DinnerCards';
+import DeSearch from '../UtilPages/Search/DeSearch';
+import { RecipeButton } from '../../buttons/RecipeButton';
 
 function Dinner() {
     return (
         <>
         <Navbar/>
+        <DeSearch/>
         <DinnerCards/>
-
-        <div>
-            
-            
-            
-        </div>
+        <RecipeButton/>
         </>
     )
 }

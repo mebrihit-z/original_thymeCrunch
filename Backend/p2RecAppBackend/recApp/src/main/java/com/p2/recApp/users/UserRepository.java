@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
  *********************************************************************************************/
 //tutorial calls this AppUserRespository AND AppUserService
 @Repository
-@Transactional(readOnly= true)
+@Transactional(/*readOnly= true*/)
 public interface UserRepository extends JpaRepository<User, Integer>{
 
 	List<User> findAll();

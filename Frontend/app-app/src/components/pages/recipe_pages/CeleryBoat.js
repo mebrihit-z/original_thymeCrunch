@@ -1,14 +1,17 @@
 import React from "react"
 import Navbar from "../../Navbar";
-import '../../UserProfiles.css';
+import '../UtilPages/Profile/UserProfiles.css';
 import {CeleryIng} from '../RecApiCalls/CeleryApi';
+import { RecipeButton } from "../../buttons/RecipeButton";
 
 function CeleryBoat (){
     return(
     <>
-    <img src='images/celery.jpg'/>
+    
     <Navbar/>
+    <img src="images/celery.jpg"/>
     <CeleryIng/>
+    <RecipeButton/>
     </>
     )
         

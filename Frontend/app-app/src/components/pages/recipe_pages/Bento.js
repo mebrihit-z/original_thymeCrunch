@@ -1,8 +1,9 @@
 import axios from "axios";
 import React from "react"
 import Navbar from "../../Navbar";
-import '../../UserProfiles.css';
+import '../UtilPages/Profile/UserProfiles.css';
 import { BentoIng } from '../RecApiCalls/BentoApi';
+import { RecipeButton } from "../../buttons/RecipeButton";
 
 function Bento (){
 
@@ -10,7 +11,10 @@ function Bento (){
 
     <>
     <Navbar/>
+    {/* <img src="images/katsu.jpg"/> */}
+    {/* <img src="/images"/> */}
     <BentoIng/>
+    <RecipeButton/>
     </>
     )
         

@@ -22,7 +22,8 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 //@RequestMapping("/api")
 @CrossOrigin("*")
 public class LoginController {
-	//@Autowired
+	@Autowired
+	private UserService userService;
 //	private PostRepository postRepository;
 	@Autowired
 	public UserRepository userRepository;
@@ -30,6 +31,7 @@ public class LoginController {
 	//public UserService userService;
 	
 	User user;
+	String userRol="";
 	
 	@GetMapping("/users")
 	public List<User> login() {
@@ -56,6 +58,29 @@ public class LoginController {
 		
 	}
 
+	
+	//public User user;
+		//9090/users/1/test
+		@PostMapping("/users/loginWithStatus/{username}/{password}")
+		public String loginWithStatus(@PathVariable String username, @PathVariable String password) {
+			Optional<User> uname = userRepository.findByUsername(username);
+			//Optional<User> upassword = userRepository.findByPassword(password);
+			
+			User user = uname.get();
+			System.out.println(" username ***********: "+ user);
+//			if(user.getUserRol().equals("admin")) {
+//				userRol = "admin";
+//			}else {
+//				userRol = "user";		
+//			}
+			
+			if(user.getPassword().equals(password)) {
+				return "ok";
+			}else {
+				return "no";		
+			}
+			
+		}
 	//public User user;
 	//9090/users?id=1&username=test
 	@GetMapping("/users/req")
@@ -77,54 +102,41 @@ public class LoginController {
         return "ok";
 	}
 	
-////	//@PostMapping("/login/{username}/{password}")
-//	@PostMapping("/login")
-//	public String login3(@RequestBody User user) {
-//		//User user2 = new User("test", "test1");
-//		//System.out.println("Printing the user object: " + user.getUsername());
-//		System.out.println(user.toString());
-//		//System.out.println("Printing the user object :(2)" + user2);
+	@PostMapping("/users/signup/{firstname}/{lastname}/{email}/{username}/{password}")
+	//@MessageMapping("/users/signup")
+    public String userSignup(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String email, @PathVariable String username, @PathVariable String password) {
+		User user = new User(firstname, lastname, email, username, password);
+		//UserRole userRole = "USER;
+		user.setUserRole(UserRole.USER);
 		
+		userRepository.save(user);
+		//userService.signUpUser(user);
+		System.out.println("User:____________" + user);
+		System.out.println(" username ***********: "+ user.getUsername());
+//        Optional<User> userData = userRepository.findByUsername(user.getUsername());
+//        User _user = userData.get();
+        //System.out.println(" username ***********: "+ user.getUsername());
+        
+        return "ok";
+	}
+	
+	@PostMapping("/users/UpdateProfile/{firstname}/{lastname}/{email}/{username}/{password}")
+	//@MessageMapping("/users/signup")
+    public String UpdateProfile(@PathVariable String firstname, @PathVariable String lastname, @PathVariable String email, @PathVariable String username, @PathVariable String password) {
 		
-//		Optional<User> uname = userRepository.findByUsername(username);
-//		Optional<User> upassword = userRepository.findByPassword(password);
+		User user = new User(firstname, lastname, email, username, password);
+		System.out.println("Update_User:____________" + user);
 		
-		//System.out.println("username:" + uname + " password: " + upassword);
-		
-	//	return "success";
-		
+		String update = userService.updateUser(user);
+		System.out.println("update:____________" + update);
 
-//		
-//		if((user.getPassword().equals(up)) && (user.getUsername().equals(un))) {
-//		return "ok";
-//		}else {
-//			return "no";
+//		if(update.equals("updated")) {
+//			return "ok";
 //		}
-	//}
-	
-	
-//	@PostMapping("/jpa/users/{username}/{username}/posts")
-//	public ResponseEntity<Object> createPost(@PathVariable String username, @PathVariable String password,  @RequestBody Post post) {
-//		
-//		Optional<User> uname = userRepository.findByUsername(username);
-//		Optional<User> upassword = userRepository.findByPassword(password);
-//		
-//		if(!uname.isPresent()) {
-//			throw new UserNotFoundException("id-" + id);
-//		}
-//
-//		User user = uname.get();
-//		
-//		//post.setUser(user);
-//		
-//		postRepository.save(post);
-//		
-////		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(post.getId())
-////				.toUri();
-//
-//		return ResponseEntity.created(location).build();
-//
-//	}
-	
-
+		System.out.println("User:____________" + user);
+		System.out.println(" username ***********: "+ user.getUsername());
+              
+        return "ok";
+	}
+		
 }
