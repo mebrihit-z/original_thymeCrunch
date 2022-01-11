@@ -9,7 +9,7 @@ export const ToastIng = ()=> {
     const [toastIng, setToastIng] = useState([]);
 
     const fetchToastIng = ()=>{
-        var recipe = "toast";
+        var recipe = "avocado_toast";
         axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setToastIng(res.data);
@@ -22,14 +22,12 @@ export const ToastIng = ()=> {
         fetchToastIng();
     }, [] );
 
-    return(
-   
-       <>
-     <div key={toastIng.ingID}>
-               <h3>Ingredient: {toastIng.ingName}</h3>
+    return toastIng.map((ingredient, index) =>{
+        return (
+            <div key={index}>
+                <h3>Ingredient: {ingredient.ingName}</h3>
                
-     </div>
-     </>  
-   
-    )
+            </div>
+        )
+    }); 
 }

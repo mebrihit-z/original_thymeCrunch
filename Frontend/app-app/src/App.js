@@ -101,7 +101,7 @@ function App() {
         <Route path ="/lemon-tart" element={<LemonTart/>}/>
         <Route path ="/gelato" element={<Gelato/>}/>
         <Route path ="/pavlova" element={<Pavlova/>}/>
-        <Route path ="/latte" element={<Latte/>}/>
+        <Route path ="/latte"   element={<Latte/>}/>
         <Route path ="/boba-tea" element={<BobaTea/>}/>
         <Route path ="/orange-juice" element={<OrangeJuice/>}/>
         <Route path ="/punch" element={<Punch/>}/>

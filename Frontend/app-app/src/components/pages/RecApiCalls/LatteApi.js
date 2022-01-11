@@ -22,7 +22,7 @@ export const LatteIng = ()=> {
         fetchLatteIng();
     }, [] );
 
-    return LatteIng.map((ingredient, index) =>{
+    return latteIng.map((ingredient, index) =>{
         return (
             <div key={index}>
                <h3>Ingredient: {ingredient.ingName}</h3>
