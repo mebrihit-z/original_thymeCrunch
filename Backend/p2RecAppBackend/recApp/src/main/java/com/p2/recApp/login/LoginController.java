@@ -51,11 +51,24 @@ public class LoginController {
 		System.out.println(" username ***********: "+ user);
 		
 		if(user.getPassword().equals(password)) {
-			return "ok";
+			UserRole role = user.getUserRole();
+			if(role.equals(UserRole.ADMIN)){
+				return "ADMIN";
+			}else {
+				return "ok";
+			}
+			
 		}else {
 			return "no";		
 		}
 		
+		
+//		if(user.getPassword().equals(password)) {
+//			return "ok";
+//		}else {
+//			return "no";		
+//		}
+//		
 	}
 
 	

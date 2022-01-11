@@ -321,12 +321,6 @@ public class User /*implements UserDetails*/{
 		// TODO Auto-generated method stub
 		
 	}
-
-	public Object getUserRol() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	
 	
 }

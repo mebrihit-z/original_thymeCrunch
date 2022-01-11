@@ -21,6 +21,7 @@ export default function Login() {
       axios.post(`http://localhost:9090/users/login/${a}/${b}`)
         .then(response =>{
           if(response.data ==="ok" ) { navigate("/recipes");}
+          if(response.data ==="ADMIN" ) { navigate("/adminrecipes");}
 
         })
         .catch(err => {
