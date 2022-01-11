@@ -41,12 +41,13 @@ console.log(userProfile);
           <br/>
           <br/>
            <h1>{userProfile.firstname} {userProfile.lastname}</h1>
+           <div id="userdiv">
            <p>User ID: {userProfile.userID}</p>
            <p>Email: {userProfile.username}</p>
            <p>Email: {userProfile.email}</p>
            <p>Favorite Recipe: {userProfile.fav_rec}</p>
            <Dropzone {...userProfile}/>
-
+           </div>
            <br/>
            
        </div>
