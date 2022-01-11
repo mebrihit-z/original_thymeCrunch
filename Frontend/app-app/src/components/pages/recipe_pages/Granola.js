@@ -3,6 +3,7 @@ import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import {GranolaIng} from '../RecApiCalls/GranolaApi';
 import { RecipeButton } from "../../buttons/RecipeButton";
+import { EmailButton } from "../../buttons/EmailRecipe";
 
 function Granola (){
     return(
@@ -11,6 +12,7 @@ function Granola (){
     <img src="images/granola.jpg"/>
     <GranolaIng/>
     <RecipeButton/>
+    <EmailButton/>
     </>
     )
         

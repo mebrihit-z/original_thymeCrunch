@@ -3,6 +3,7 @@ import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { HamburgerIng } from '../RecApiCalls/HamburgerApi';
 import { RecipeButton } from "../../buttons/RecipeButton";
+import { EmailButton } from "../../buttons/EmailRecipe";
 
 function Hamburger (){
     return(
@@ -11,6 +12,7 @@ function Hamburger (){
     <img src="images/hamburger.jpg"/>
     <HamburgerIng/>
     <RecipeButton/>
+    <EmailButton/>
     </>
     )
         

@@ -3,6 +3,7 @@ import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { PunchIng } from '../RecApiCalls/PunchApi';
 import { RecipeButton } from "../../buttons/RecipeButton";
+import { EmailButton } from "../../buttons/EmailRecipe";
 
 function Punch (){
     return(
@@ -11,6 +12,7 @@ function Punch (){
     <img src="images/punch.jpg"/>
     <PunchIng/>
     <RecipeButton/>
+    <EmailButton/>
     </>
     )
         

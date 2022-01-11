@@ -62,7 +62,7 @@ export default function SignUp() {
      const e = uupassword
       axios.post(`http://localhost:9090/users/signup/${a}/${b}/${c}/${d}/${e}`)
         .then(response =>{
-          if(response.data ==="ok" ) { navigate("/recipes");}
+          if(response.data ==="ok" ) { navigate("/signup-email-sent");}
 
         })
         .catch(err => {

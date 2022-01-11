@@ -3,6 +3,7 @@ import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { PastaIng } from '../RecApiCalls/PastaApi';
 import { RecipeButton } from "../../buttons/RecipeButton";
+import { EmailButton } from "../../buttons/EmailRecipe";
 
 function Pasta (){
     return(
@@ -11,6 +12,7 @@ function Pasta (){
     <img src="images/pasta.jpg"/>
     <PastaIng/>
     <RecipeButton/>
+    <EmailButton/>
     </>
     )
         

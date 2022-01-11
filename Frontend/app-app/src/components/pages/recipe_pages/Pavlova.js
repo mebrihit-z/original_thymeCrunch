@@ -4,6 +4,7 @@ import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { PavlovaIng } from '../RecApiCalls/PavolvaApi';
 import { RecipeButton } from "../../buttons/RecipeButton";
+import { EmailButton } from "../../buttons/EmailRecipe";
 
 function Pavlova (){
     return(
@@ -13,6 +14,7 @@ function Pavlova (){
 
     <PavlovaIng/>
     <RecipeButton/>
+    <EmailButton/>
     </>
     )
         

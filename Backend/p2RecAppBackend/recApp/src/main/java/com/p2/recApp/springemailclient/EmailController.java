@@ -29,7 +29,7 @@ public class EmailController {
 	@PostMapping("/recipe-email-sent") 
 	public String RecipeEmailInfo() {
 		emailSenderService.sendRecipeEmail("qwinkypoo@gmail.com",
-				"recipe",
+				"Recipe Succesfully sent!\n\nThank you,\nThymeCrunch Tech Team",
 				"Congrats happy eating!");
 		return "redirect:/login";
 	}
@@ -38,7 +38,7 @@ public class EmailController {
 	public String SignUpEmailInfo() {
 		emailSenderService.sendSignUpEmail("qwinkypoo@gmail.com",
 				"We are very excited to have you be apart of the Thyme crunch experience and cant wait for you to experience all of the wonder things we have to offer, \nThymeCrunch Tech Team",
-				"Lost Password");
+				"Congrats!!");
 		return "redirect:/login";
 	}
 }	
