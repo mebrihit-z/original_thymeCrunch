@@ -18,7 +18,8 @@
     border-radius: 0px 20px 0px 0px;
     color:aliceblue;
     font-style: italic;
-    font-family:cursive;
+    font-family:'Moon Dance', cursive;
+    font-size:300%;
   }
   h3{
     position: center;
@@ -29,7 +30,7 @@
     margin-left: 30%;
     text-align: center;
     background-color: rgba(2, 66, 41, 0.568);
-    width: fit-content;
+    width: 610px;
     border-radius: 0px 25px 0px 0px;
   }
   #bgDiv{

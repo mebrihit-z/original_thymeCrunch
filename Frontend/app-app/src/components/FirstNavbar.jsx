@@ -93,9 +93,9 @@ export function FirstNavbar() {
                     <div class="dropdown">
                     <button class="dropbtn">Recipes</button>
                     <div class="dropdown-content">
-                        <a href="#">Recipe</a>
-                        <a href="#">User Recipes</a>
-                        <a href="#">Add Recipes</a>
+                        <a href="/recipes">Recipe</a>
+                        <a href="/user-recipes">User Recipes</a>
+                        <a href="add-recipes">Add Recipes</a>
                     </div>
                     </div>
                      {/* added html */}

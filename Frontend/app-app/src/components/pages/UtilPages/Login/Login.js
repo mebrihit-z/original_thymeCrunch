@@ -20,7 +20,10 @@ export default function Login() {
      const  b = upassword
       axios.post(`http://localhost:9090/users/login/${a}/${b}`)
         .then(response =>{
-          if(response.data ==="ok" ) { navigate("/recipes-menu");}
+          if(response.data ==="ok" ) { navigate("/recipes");}
+
+          // response.data =="USER"{navigate("/recipes");}
+          // response.data =="ADMIN"{navigate("/admin-recipes");}
 
         })
         .catch(err => {

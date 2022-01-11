@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../buttons/Button';
 import './VideoSection.css';
 import '../../App.css';
+import { Link } from 'react-router-dom';
 
 function VideoSection() {
     return (
@@ -16,11 +17,7 @@ function VideoSection() {
                         buttonSize='btn--large'>
                         Thyme to Cook!
                     </Button>
-                    <Button 
-                        className='btns' buttonStyle='btn--primary' 
-                        buttonSize='btn--large'>
-                        Watch a video! <i className='far fa-play-circle'/>
-                    </Button>
+                   
                 </div>
             </div>
         </div>
