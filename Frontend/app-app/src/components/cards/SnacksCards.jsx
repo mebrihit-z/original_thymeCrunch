@@ -17,7 +17,7 @@ function SnacksCard() {
         <div className='cards'>
             <div id="main-re">
                 <div id="bigDiv1" className="bigDivAll">
-                    <a className="hov" href="/celery">
+                    <a className="hov" href="/celery-boats">
                         <div id="submain15" className="submainAll">
                             <div id="bottom">Celery Boats</div>
                         </div>

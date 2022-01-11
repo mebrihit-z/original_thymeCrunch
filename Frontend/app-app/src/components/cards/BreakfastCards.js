@@ -20,7 +20,7 @@ function BreakfastCards() {
         <div className='cards'>
             <div id="main-re">
                 <div id="bigDiv1" className="bigDivAll">
-                    <a className="hov" href="/breakfast">
+                    <a className="hov" href="/pancakes">
                         <div id="submain11" className="submainAll">
                             <div id="bottom">Pancakes</div>
                         </div>
@@ -32,7 +32,7 @@ function BreakfastCards() {
                 </div>
 
                 <div id="bigDiv2" className="bigDivAll">
-                    <a className="hover" href="/lunch">
+                    <a className="hover" href="/toast">
                         <div id="submain21" className="submainAll">
                             <div id="bottom">Toast</div>
                         </div>
@@ -44,7 +44,7 @@ function BreakfastCards() {
                 </div>
 
                 <div id="bigDiv3" className="bigDivAll">
-                    <a className="hover" href="/dinner">
+                    <a className="hover" href="/granola">
                     <div id="submain31" className="submainAll">
                         <div id="bottom">Oat</div>
                     </div>
