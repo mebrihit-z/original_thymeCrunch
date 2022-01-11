@@ -57,7 +57,6 @@ function RecEmailSent() {
                     </Link>
                 </form>
             </div>
-       
     )
 }
 
