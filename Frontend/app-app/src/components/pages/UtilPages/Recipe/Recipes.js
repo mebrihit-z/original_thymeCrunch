@@ -12,10 +12,12 @@ function Recipes() {
        <div className='recipDiv'>
            
             <Navbar/>
+            
             <Search/>
             <center>
             <Cards/>
             </center>
+
         </div>
        </>
     )

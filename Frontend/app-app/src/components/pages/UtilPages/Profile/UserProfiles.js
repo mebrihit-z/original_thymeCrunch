@@ -24,7 +24,7 @@ export const UserProfiles = ()=> {
 
     return userProfiles.map((user, index) =>{
         return (
-            <div key={index}>
+            <div  key={index}>
                 {user.userID ? (
                     <img 
                         src={`http://localhost:9090/api/v1/users/${user.userID}/image/download`}
@@ -69,7 +69,7 @@ export const UserProfiles = ()=> {
                 ).catch(err =>{
                          console.log(err);
                           })
-
+                          setTimeout(function() {(window.location.reload(true))}, 1500);   
 
         }, [])
         const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
@@ -80,7 +80,7 @@ export const UserProfiles = ()=> {
             {
               isDragActive ?
                 <p>Drop the image here ...</p> :
-                <p>Drag 'n' drop a profile picture here, or click to select a profile picture</p>
+                <p>✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ </p>
             }
           </div>
         )

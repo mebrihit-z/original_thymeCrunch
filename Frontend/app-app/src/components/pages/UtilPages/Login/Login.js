@@ -22,6 +22,9 @@ export default function Login() {
         .then(response =>{
           if(response.data ==="ok" ) { navigate("/recipes");}
 
+          // response.data =="USER"{navigate("/recipes");}
+          // response.data =="ADMIN"{navigate("/admin-recipes");}
+
         })
         .catch(err => {
             console.log("Error occured", err);

@@ -9,7 +9,7 @@ export const BobaIng = ()=> {
     const [bobaIng, setBobaIng] = useState([]);
 
     const fetchBobaIng = ()=>{
-        var recipe = "boba";
+        var recipe = "boba_tea";
         axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setBobaIng(res.data);

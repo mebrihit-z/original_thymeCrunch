@@ -11,7 +11,6 @@ function RecipesMenu() {
     return (
        <>
        <div className='recipDiv' >
-           
             <Navbar/>
             <RecipeButton1/>
             <UserRecipesButton/>

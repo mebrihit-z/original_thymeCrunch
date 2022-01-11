@@ -9,7 +9,7 @@ function CeleryBoat (){
     <>
     
     <Navbar/>
-    <img src="images/celery.jpg"/>
+    <img src="images/celery_boats.jpg"/>
     <CeleryIng/>
     <RecipeButton/>
     </>

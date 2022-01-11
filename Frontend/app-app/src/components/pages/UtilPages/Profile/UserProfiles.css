@@ -6,22 +6,36 @@
     object-fit: cover;
     border-radius: 50%;
   
-  }
+  } */
 
   h1{
-    position: center;
-    margin: left 30%;
+   
+    margin-left: 30%;
+    background-color: rgba(3, 49, 41, 0.808);
+    width: fit-content;
+    float:none;
+    text-align: center;
+    border-radius: 0px 20px 0px 0px;
+    color:aliceblue;
+    font-style: italic;
+    font-family:'Moon Dance', cursive;
+    font-size:300%;
   }
   h3{
     position: center;
     margin: left 30%;
   } 
   #userdiv{
+    float:none;
     margin-left: 30%;
     text-align: center;
-    background-color: rgb(170, 159, 159);
-    width: fit-content;
-  } */
+    background-color: rgba(2, 66, 41, 0.568);
+    width: 610px;
+    border-radius: 0px 25px 0px 0px;
+  }
+  #bgDiv{
+    background-color: rgb(30, 75, 57);
+  }
   img{
 
     margin-top: 10%;

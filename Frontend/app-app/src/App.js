@@ -25,7 +25,6 @@ import Beverages from './components/pages/meals/Beverages';
 import Recipes from './components/pages/UtilPages/Recipe/Recipes';
 import AddRecipes from './components/pages/UtilPages/Recipe/AddRecipes';
 import UserRecipes from './components/pages/UtilPages/Recipe/UserRecipes';
-import RecipesMenu from './components/pages/UtilPages/Recipe/UserRecipesMenu';
 import PendingRecipes from './components/pages/UtilPages/Recipe/PendingRec';
 
 /*breakfast*/
@@ -58,6 +57,7 @@ import Latte from './components/pages/recipe_pages/Latte';
 import BobaTea from './components/pages/recipe_pages/BobaTea';
 import OrangeJuice from './components/pages/recipe_pages/OrangeJuice';
 import Punch from './components/pages/recipe_pages/Punch';
+// import {CSSTransition} from 'react-transition-group';
 
 
 
@@ -75,7 +75,6 @@ function App() {
         <Route path ="/login" element={<Login/>}/>
         <Route path ="/recipes" element={<Recipes/>}/>
         <Route path ="/add-recipes" element={<AddRecipes/>}/>
-        <Route path ="/recipes-menu" element={<RecipesMenu/>}/>
         <Route path ="/user-recipes" element={<UserRecipes/>}/>
         <Route path ="/pending-recipes" element={<PendingRecipes/>}/>
         <Route path ="/update" element={<UpdateProfile/>}/>
@@ -103,7 +102,7 @@ function App() {
         <Route path ="/lemon-tart" element={<LemonTart/>}/>
         <Route path ="/gelato" element={<Gelato/>}/>
         <Route path ="/pavlova" element={<Pavlova/>}/>
-        <Route path ="/latte" element={<Latte/>}/>
+        <Route path ="/latte"   element={<Latte/>}/>
         <Route path ="/boba-tea" element={<BobaTea/>}/>
         <Route path ="/orange-juice" element={<OrangeJuice/>}/>
         <Route path ="/punch" element={<Punch/>}/>

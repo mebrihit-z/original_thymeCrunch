@@ -2,6 +2,11 @@ import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
 import {Button} from './buttons/Button';
+import AddRecipes from './pages/UtilPages/Recipe/AddRecipes';
+import PendingRecipes from './pages/UtilPages/Recipe/PendingRec';
+import RecipesMenu from './pages/UtilPages/Recipe/UserRecipesMenu';
+import UserRecipes from './pages/UtilPages/Recipe/UserRecipes';
+
 /**********************************Works Cited************************************
  * Title: React Website Tutorial - Beginner React JS Project Fully Responsive
  * Author: Brian Design 
@@ -57,34 +62,33 @@ export function Navbar() {
                             All Users
                         </Link>
                     </li>
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>
                            Profile
                         </Link>
-                    </li>
+                    </li> */}
                     <li className='nav-item'>
-                        <Link to='/recipes-menu' className='nav-links' onClick={closeMobileMenu}>
+                        <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
                         </Link>
                     </li>
-                   
                     {/* <li className='nav-item'>
                         <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login
                         </Link>
                     </li> */}
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
                            Logout
                         </Link>
-                    </li>
+                    </li> */}
                     {/* <li className='nav-item'>
                         <Link to='/update' className='nav-links' onClick={closeMobileMenu}>
                             Update 
                         </Link>
                     </li> */}
                 </ul>
-                {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
+                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
             </div>
         </nav>
         </>
