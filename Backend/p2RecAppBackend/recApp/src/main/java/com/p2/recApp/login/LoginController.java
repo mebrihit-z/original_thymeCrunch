@@ -47,6 +47,7 @@ public class LoginController {
 		//Optional<User> upassword = userRepository.findByPassword(password);
 		
 		User user = uname.get();
+		String name = user.getFirstname();
 		
 		System.out.println(" username ***********: "+ user);
 		
@@ -55,7 +56,8 @@ public class LoginController {
 			if(role.equals(UserRole.ADMIN)){
 				return "ADMIN";
 			}else {
-				return "ok";
+//				return "ok";
+				return name;
 			}
 			
 		}else {

@@ -1,7 +1,7 @@
 import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 import './FirstNavbar.css';
-import {Button} from './buttons/Button';
+import {Button1} from './buttons/Button1';
 import{AddRecipes} from './pages/UtilPages/Recipe/AddRecipes'
 import{PendingRec} from './pages/UtilPages/Recipe/PendingRec'
 import{UserRecipes} from './pages/UtilPages/Recipe/UserRecipes'
@@ -67,38 +67,12 @@ export function FirstNavbar() {
                            Profile
                         </Link>
                     </li> */}
-                    {/* <li className='nav-item'>
+                    <li className='nav-item'>
                         <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
                         </Link>
-                    </li> */}
-                    {/* added html */}
-                    {/* <form id='firstForm'>
-                        <select name='Recipes' value='Recipes' className='recipesForm'>
-                            <option value='Recipes' className='recipesForm1' href='#'>Recipe
-                                <a href="#">Recipe</a>
-                                </option>
-                            <option value='AddRecipes' className='recipesForm1'>Featured Recipes
-                            </option>
-                            <option value='PendingRecipes' className='recipesForm1'>Add Recipe
-                            </option> 
-                            <option value='RecipesMenu' className='recipesForm1'>Pending User Recipes
-                            </option> 
-                            <option value='RecipesMenu' className='recipesForm1'>User Recipes
-                            </option>
-                        </select>
-                    </form> */}
-
-                     {/* added html */}
-                    <div class="dropdown">
-                    <button class="dropbtn">Recipes</button>
-                    <div class="dropdown-content">
-                        <a href="/recipes">Recipe</a>
-                        <a href="/user-recipes">User Recipes</a>
-                        <a href="add-recipes">Add Recipes</a>
-                    </div>
-                    </div>
-                     {/* added html */}
+                    </li>
+                    
                     <li className='nav-item'>
                         <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login
@@ -115,7 +89,7 @@ export function FirstNavbar() {
                         </Link>
                     </li> */}
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                {button && <Button1 buttonStyle='btn--outline'>SIGN UP</Button1>}
             </div>
         </nav>
         </>

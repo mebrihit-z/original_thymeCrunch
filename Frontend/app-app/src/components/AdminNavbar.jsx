@@ -72,31 +72,15 @@ export function FirstNavbar() {
                             Recipes
                         </Link>
                     </li> */}
-                    {/* added html */}
-                    {/* <form id='firstForm'>
-                        <select name='Recipes' value='Recipes' className='recipesForm'>
-                            <option value='Recipes' className='recipesForm1' href='#'>Recipe
-                                <a href="#">Recipe</a>
-                                </option>
-                            <option value='AddRecipes' className='recipesForm1'>Featured Recipes
-                            </option>
-                            <option value='PendingRecipes' className='recipesForm1'>Add Recipe
-                            </option> 
-                            <option value='RecipesMenu' className='recipesForm1'>Pending User Recipes
-                            </option> 
-                            <option value='RecipesMenu' className='recipesForm1'>User Recipes
-                            </option>
-                        </select>
-                    </form> */}
 
-                     {/* added html */}
-                    <div class="dropdown">
+                   
+                     <div class="dropdown">
                     <button class="dropbtn">Recipes</button>
                     <div class="dropdown-content">
-                        <a href="#">Recipe</a>
-                        <a href="#">User Recipes</a>
-                        <a href="#">Add Recipes</a>
-                        <a href="#">Pending Recipes</a>
+                        <a href="/recipes">Recipe</a>
+                        <a href="/user-recipes">User Recipes</a>
+                        <a href="add-recipes">Add Recipes</a>
+                        <a href="pending-recipes">Pending Recipes</a>
                     </div>
                     </div>
                      {/* added html */}

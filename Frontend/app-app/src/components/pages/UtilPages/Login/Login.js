@@ -1,7 +1,7 @@
 import React from 'react'
 import './Login.css';
 import '../../../../App.css';
-import Navbar from '../../../Navbar';
+import FirstNavbar from '../../../FirstNavbar';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate} from 'react-router-dom';
@@ -20,8 +20,15 @@ export default function Login() {
      const  b = upassword
       axios.post(`http://localhost:9090/users/login/${a}/${b}`)
         .then(response =>{
-          if(response.data ==="ok" ) { navigate("/recipes");}
-          if(response.data ==="ADMIN" ) { navigate("/adminrecipes");}
+          if(response.data ==="ADMIN" ) { 
+            navigate("/adminrecipes");
+          }else{
+            const newName = response.data;
+            sessionStorage.setItem('name', newName);
+            navigate("/recipes")
+          }
+          // if(response.data ==="ok" ) { navigate("/recipes");}
+         
 
           // response.data =="USER"{navigate("/recipes");}
           // response.data =="ADMIN"{navigate("/admin-recipes");}
@@ -35,7 +42,7 @@ export default function Login() {
   }
     return(
         <>
-          <Navbar/>
+          <FirstNavbar/>
           <div className="main1">
             <div className="sub-main1">
               <div>

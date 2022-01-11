@@ -4,7 +4,7 @@ import './SignUp.css';
 import '../../../../App.css';
 
 
-import Navbar from '../../../Navbar';
+import FirstNavbar from '../../../FirstNavbar';
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -39,15 +39,10 @@ export default function SignUp() {
   }
     return(
         <>
-          <Navbar/>
+          <FirstNavbar/>
           <div className="main2">
             <div className="sub-main2">
               <div>
-                {/* <div className="imgs">
-                  <div className="container-image">
-                    <img src="images/profile.jpg"alt="profile" className="profile"/>
-                  </div>
-                </div> */}
                 <div>
                   <div>
                   <h1 id="t2">Sign Up Page</h1>
@@ -67,7 +62,7 @@ export default function SignUp() {
                   </div>
                   <div className="forth-input">
                     <p>Username</p>
-                    <input id="signupinput" type="password" placeholder="Enter your username" className="username" onChange={e => setUsername(e.target.value)}/>
+                    <input id="signupinput" type="text" placeholder="Enter your username" className="username" onChange={e => setUsername(e.target.value)}/>
                   </div>
                   <div className="fith-input">
                     <p>Password</p>
