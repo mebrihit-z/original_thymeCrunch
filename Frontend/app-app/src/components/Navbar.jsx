@@ -37,16 +37,23 @@ export function Navbar() {
 
     window.addEventListener('resize', showButton);
 
+    const userName = sessionStorage.getItem('name')
+    const string = '  ';
+
 
     return (
         <>
         <nav className="navbar">
             <div className="navbar-container">
-                
+               
                 
                  <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
-                  ThymeCrunch  
+                  ThymeCrunch 
                 </Link>
+                {/* <span> Hi, {userName}</span> */}
+                {/* <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                  Hi, {userName} 
+                </Link> */}
                 
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? "fas fa-times" : "fas fa-bars"}/>
@@ -67,11 +74,19 @@ export function Navbar() {
                            Profile
                         </Link>
                     </li> */}
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
                         </Link>
-                    </li>
+                    </li> */}
+                    <div class="dropdown">
+                    <button class="dropbtn">Recipes</button>
+                    <div class="dropdown-content">
+                        <a href="/recipes">Recipe</a>
+                        <a href="/user-recipes">User Recipes</a>
+                        <a href="add-recipes">Add Recipes</a>
+                    </div>
+                    </div>
                     {/* <li className='nav-item'>
                         <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login
@@ -89,6 +104,12 @@ export function Navbar() {
                     </li> */}
                 </ul>
                 {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                </Link>
+               
+                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                  Hi, {userName} 
+                </Link>
             </div>
         </nav>
         </>

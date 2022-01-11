@@ -1,7 +1,7 @@
 import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 import './FirstNavbar.css';
-import {Button1} from './buttons/Button1';
+import {Button} from './buttons/Button';
 import{AddRecipes} from './pages/UtilPages/Recipe/AddRecipes'
 import{PendingRec} from './pages/UtilPages/Recipe/PendingRec'
 import{UserRecipes} from './pages/UtilPages/Recipe/UserRecipes'
@@ -36,7 +36,7 @@ export function FirstNavbar() {
     },[]);
 
     window.addEventListener('resize', showButton);
-
+    const userName = sessionStorage.getItem('name')
 
     return (
         <>
@@ -46,6 +46,10 @@ export function FirstNavbar() {
                 
                  <Link to="/" id='ThymeCrunch'className='navbarLogo' onClick={closeMobileMenu}>
                   ThymeCrunch  
+                </Link>
+
+                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                  Hi, {userName} 
                 </Link>
                 
                 <div className="menu-icon" onClick={handleClick}>
@@ -67,12 +71,23 @@ export function FirstNavbar() {
                            Profile
                         </Link>
                     </li> */}
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
                         </Link>
-                    </li>
-                    
+                    </li> */}
+
+                   
+                     <div class="dropdown">
+                    <button class="dropbtn">Recipes</button>
+                    <div class="dropdown-content">
+                        <a href="/recipes">Recipe</a>
+                        <a href="/user-recipes">User Recipes</a>
+                        <a href="add-recipes">Add Recipes</a>
+                        <a href="pending-recipes">Pending Recipes</a>
+                    </div>
+                    </div>
+                     {/* added html */}
                     <li className='nav-item'>
                         <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login
@@ -89,7 +104,7 @@ export function FirstNavbar() {
                         </Link>
                     </li> */}
                 </ul>
-                {button && <Button1 buttonStyle='btn--outline'>SIGN UP</Button1>}
+                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
             </div>
         </nav>
         </>

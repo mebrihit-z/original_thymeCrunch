@@ -1,7 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import './SignUp.css';
 import '../../../../App.css';
+<<<<<<< HEAD
 import Navbar from '../../../Navbar';
+=======
+
+
+import FirstNavbar from '../../../FirstNavbar';
+
+import { useState, useEffect } from "react";
+>>>>>>> 67320b3914a21d2be3c8fefc57091100fee2c4f0
 import axios from "axios";
 import { useNavigate} from 'react-router-dom';
 
@@ -71,16 +79,19 @@ export default function SignUp() {
   }
     return(
         <>
-          <Navbar/>
+          <FirstNavbar/>
           <div className="main2">
             <div className="sub-main2">
               <div>
+<<<<<<< HEAD
                 {/* <div className="imgs">
                   <div className="container-image">
                     <img src="images/profile.jpg"alt="profile" className="profile"/>
                   </div>
                 </div> */}
                 <form onSubmit={(e) => signup(e)}>
+=======
+>>>>>>> 67320b3914a21d2be3c8fefc57091100fee2c4f0
                 <div>
                   <div>
                   <h1 id="t2">Sign Up Page</h1>
@@ -100,7 +111,7 @@ export default function SignUp() {
                   </div>
                   <div className="forth-input">
                     <p>Username</p>
-                    <input id="signupinput" type="password" placeholder="Enter your username" className="username" onChange={e => setUsername(e.target.value)}/>
+                    <input id="signupinput" type="text" placeholder="Enter your username" className="username" onChange={e => setUsername(e.target.value)}/>
                   </div>
                   <div className="fith-input">
                     <p>Password</p>

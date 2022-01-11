@@ -24,6 +24,7 @@ import Beverages from './components/pages/meals/Beverages';
 
 //Recipies
 import Recipes from './components/pages/UtilPages/Recipe/Recipes';
+import AdminRecipes from './components/pages/UtilPages/Recipe/AdminRecipes';
 import AddRecipes from './components/pages/UtilPages/Recipe/AddRecipes';
 import UserRecipes from './components/pages/UtilPages/Recipe/UserRecipes';
 import PendingRecipes from './components/pages/UtilPages/Recipe/PendingRec';
@@ -75,6 +76,7 @@ function App() {
         <Route path ="/profile" element ={<Profile/>}/>
         <Route path ="/login" element={<Login/>}/>
         <Route path ="/recipes" element={<Recipes/>}/>
+        <Route path ="/adminrecipes" element={<AdminRecipes/>}/>
         <Route path ="/add-recipes" element={<AddRecipes/>}/>
         <Route path ="/user-recipes" element={<UserRecipes/>}/>
         <Route path ="/pending-recipes" element={<PendingRecipes/>}/>
