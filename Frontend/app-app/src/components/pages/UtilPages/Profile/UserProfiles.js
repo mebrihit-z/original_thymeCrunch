@@ -80,7 +80,7 @@ export const UserProfiles = ()=> {
             {
               isDragActive ?
                 <p>Drop the image here ...</p> :
-                <p>Drag 'n' drop a profile picture here, or click to select a profile picture</p>
+                <p>✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ </p>
             }
           </div>
         )

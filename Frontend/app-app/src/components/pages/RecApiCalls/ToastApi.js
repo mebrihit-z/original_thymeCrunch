@@ -22,12 +22,14 @@ export const ToastIng = ()=> {
         fetchToastIng();
     }, [] );
 
-    return toastIng.map((ingredient, index) =>{
-        return (
-            <div key={index}>
-               <h3>Ingredient: {ingredient.ingName}</h3>
+    return(
+   
+       <>
+     <div key={toastIng.ingID}>
+               <h3>Ingredient: {toastIng.ingName}</h3>
                
-            </div>
-        )
-    }); 
+     </div>
+     </>  
+   
+    )
 }

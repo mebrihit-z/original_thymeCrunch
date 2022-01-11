@@ -8,7 +8,7 @@ function BobaTea (){
     return(
     <>
     <Navbar/>
-    <img src="images/boba.jpg"/>
+    <img src="images/row_boba.jpg"/>
     <BobaIng/>
     <RecipeButton/>
     </>

@@ -23,6 +23,9 @@ export default function Login() {
           if(response.data ==="ok" ) { navigate("/recipes");}
           if(response.data ==="ADMIN" ) { navigate("/adminrecipes");}
 
+          // response.data =="USER"{navigate("/recipes");}
+          // response.data =="ADMIN"{navigate("/admin-recipes");}
+
         })
         .catch(err => {
             console.log("Error occured", err);

@@ -41,7 +41,7 @@ function BeveragesCards() {
                 </div>
 
                 <div id="bigDiv3" className="bigDivAll">
-                    <a className="hover" href="/boba">
+                    <a className="hover" href="/boba-tea">
                     <div id="submain36" className="submainAll">
                         <div id="bottom">Boba Tea</div>
                     </div>

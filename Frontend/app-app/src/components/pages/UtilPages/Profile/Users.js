@@ -1,4 +1,4 @@
-import Navbar from "../../../Navbar"
+import FirstNavbar from "../../../FirstNavbar"
 import { UserProfiles } from "../Profile/UserProfiles";
 import './UserProfiles.css'
 
@@ -6,7 +6,7 @@ function Users(){
 
  return(
    <>
-    <Navbar/>
+    <FirstNavbar/>
 
     <UserProfiles/>
    </>

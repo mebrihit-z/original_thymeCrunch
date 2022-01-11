@@ -7,6 +7,7 @@ function UserRecipes(){
  return(
    <>
     <Navbar/>
+    
     <ApprovedRecipes/>
    </>
 )
