@@ -24,7 +24,6 @@ import Beverages from './components/pages/meals/Beverages';
 import Recipes from './components/pages/UtilPages/Recipe/Recipes';
 import AddRecipes from './components/pages/UtilPages/Recipe/AddRecipes';
 import UserRecipes from './components/pages/UtilPages/Recipe/UserRecipes';
-import RecipesMenu from './components/pages/UtilPages/Recipe/UserRecipesMenu';
 import PendingRecipes from './components/pages/UtilPages/Recipe/PendingRec';
 
 /*breakfast*/
@@ -75,7 +74,6 @@ function App() {
         <Route path ="/login" element={<Login/>}/>
         <Route path ="/recipes" element={<Recipes/>}/>
         <Route path ="/add-recipes" element={<AddRecipes/>}/>
-        <Route path ="/recipes-menu" element={<RecipesMenu/>}/>
         <Route path ="/user-recipes" element={<UserRecipes/>}/>
         <Route path ="/pending-recipes" element={<PendingRecipes/>}/>
         <Route path ="/update" element={<UpdateProfile/>}/>
