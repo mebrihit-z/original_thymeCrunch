@@ -32,6 +32,26 @@ public class EmailSenderService {
         mailSender.send(message);
         System.out.println("Mail Sent");
     }
+public void sendRecipeEmail(String toEmail, String body, String subject) {
+        
+    	SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("noreply@thymecrunch.com");
+        message.setTo(toEmail);
+        message.setSubject(subject);
+        message.setText(body);
+        mailSender.send(message);
+        System.out.println("Mail Sent");
+    }
+public void sendSignUpEmail(String toEmail, String body, String subject) {
+    
+	SimpleMailMessage message = new SimpleMailMessage();
+    message.setFrom("noreply@thymecrunch.com");
+    message.setTo(toEmail);
+    message.setSubject(subject);
+    message.setText(body);
+    mailSender.send(message);
+    System.out.println("Mail Sent");
+}
 
     public void sendEmailWithAttachment(String toEmail,
                                         String body,

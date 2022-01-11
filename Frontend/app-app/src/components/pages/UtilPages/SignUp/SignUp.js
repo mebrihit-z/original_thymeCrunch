@@ -1,14 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './SignUp.css';
-
 import '../../../../App.css';
-
-
 import Navbar from '../../../Navbar';
-
-import { useState, useEffect } from "react";
 import axios from "axios";
-
 import { useNavigate} from 'react-router-dom';
 
 
@@ -21,6 +15,43 @@ export default function SignUp() {
     
     const [uData, setUData] = useState("")
     const navigate = useNavigate()
+
+    const url =""
+
+    const [email] = useState('');
+
+    const fetchEmail = ()=>{
+        var recipe = ""
+        axios.post(`http://localhost:9090/api/v1/email/email-sent`).then(res =>{ //http://3.14.3.79:9090/api/v1/recipes/
+            console.log(res);
+            setEmail(res.data);
+        });
+        
+
+    }
+
+    useEffect(()=>{
+        fetchEmail();
+    }, [] );
+
+    function signup(e) {
+        e.preventDefault();
+        axios.post(url, {
+            email: email.email
+        })
+            .then(res => {
+                console.log(res.data)
+            })
+    }
+
+
+    function handle(e){
+        const newdata={...email}
+        newdata[e.target.id] = e.target.value
+        setEmail(newdata)
+        console.log(newdata)
+    }
+
 
 
   function submit2(){
