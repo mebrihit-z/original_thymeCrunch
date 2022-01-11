@@ -36,7 +36,7 @@ export function FirstNavbar() {
     },[]);
 
     window.addEventListener('resize', showButton);
-
+    const userName = sessionStorage.getItem('name')
 
     return (
         <>
@@ -44,8 +44,12 @@ export function FirstNavbar() {
             <div className="navbar-container">
                 
                 
-                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                 <Link to="/" id='ThymeCrunch'className='navbarLogo' onClick={closeMobileMenu}>
                   ThymeCrunch  
+                </Link>
+
+                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                  Hi, {userName} 
                 </Link>
                 
                 <div className="menu-icon" onClick={handleClick}>

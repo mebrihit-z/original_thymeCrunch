@@ -44,7 +44,7 @@ export function FirstNavbar() {
             <div className="navbar-container">
                 
                 
-                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                 <Link to="/" id='ThymeCrunch'className='navbarLogo' onClick={closeMobileMenu}>
                   ThymeCrunch  
                 </Link>
                 

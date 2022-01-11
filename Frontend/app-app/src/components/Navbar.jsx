@@ -38,6 +38,7 @@ export function Navbar() {
     window.addEventListener('resize', showButton);
 
     const userName = sessionStorage.getItem('name')
+    const string = '  ';
 
 
     return (
@@ -47,12 +48,9 @@ export function Navbar() {
                
                 
                  <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
-                  ThymeCrunch  
+                  ThymeCrunch 
                 </Link>
-
-                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
-                  Hi, {userName} 
-                </Link>
+                {/* <span> Hi, {userName}</span> */}
                 {/* <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
                   Hi, {userName} 
                 </Link> */}
@@ -106,6 +104,12 @@ export function Navbar() {
                     </li> */}
                 </ul>
                 {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                </Link>
+               
+                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                  Hi, {userName} 
+                </Link>
             </div>
         </nav>
         </>

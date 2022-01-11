@@ -20,11 +20,13 @@ export default function Login() {
      const  b = upassword
       axios.post(`http://localhost:9090/users/login/${a}/${b}`)
         .then(response =>{
+          const newName = response.data;
+          sessionStorage.setItem('name', newName);
           if(response.data ==="ADMIN" ) { 
             navigate("/adminrecipes");
           }else{
-            const newName = response.data;
-            sessionStorage.setItem('name', newName);
+            // const newName = response.data;
+            // sessionStorage.setItem('name', newName);
             navigate("/recipes")
           }
           // if(response.data ==="ok" ) { navigate("/recipes");}
