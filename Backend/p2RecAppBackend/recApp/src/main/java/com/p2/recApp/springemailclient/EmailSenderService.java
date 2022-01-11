@@ -33,29 +33,53 @@ public class EmailSenderService {
         System.out.println("Mail Sent");
     }
 
+    public void sendRecipeEmail(String toEmail, String body, String subject) {
+        
+    	SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("noreply@thymecrunch.com");
+        message.setTo(toEmail);
+        message.setSubject(subject);
+        message.setText(body);
+        mailSender.send(message);
+        System.out.println("Mail Sent");
+    }
+    
+    public void sendSignUpEmail(String toEmail, String body, String subject) {
+        
+    	SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("noreply@thymecrunch.com");
+        message.setTo(toEmail);
+        message.setSubject(subject);
+        message.setText(body);
+        mailSender.send(message);
+        System.out.println("Mail Sent");
+    }
+    
     public void sendEmailWithAttachment(String toEmail,
-                                        String body,
-                                        String subject,
-                                        String attachment) throws MessagingException {
+    		String body,
+    		String subject,
+    		String attachment) throws MessagingException {
 
-        MimeMessage mimeMessage = mailSender.createMimeMessage();
+    	MimeMessage mimeMessage = mailSender.createMimeMessage();
 
-        MimeMessageHelper mimeMessageHelper
-                = new MimeMessageHelper(mimeMessage, true);
+    	MimeMessageHelper mimeMessageHelper
+    	= new MimeMessageHelper(mimeMessage, true);
 
-        mimeMessageHelper.setFrom("qwinkypoo@gmail.com");
-        mimeMessageHelper.setTo(toEmail);
-        mimeMessageHelper.setText(body);
-        mimeMessageHelper.setSubject(subject);
+    	mimeMessageHelper.setFrom("qwinkypoo@gmail.com");
+    	mimeMessageHelper.setTo(toEmail);
+    	mimeMessageHelper.setText(body);
+    	mimeMessageHelper.setSubject(subject);
 
-        FileSystemResource fileSystem
-                = new FileSystemResource(new File(attachment));
+    	FileSystemResource fileSystem
+    	= new FileSystemResource(new File(attachment));
 
-        mimeMessageHelper.addAttachment(fileSystem.getFilename(),
-                fileSystem);
+    	mimeMessageHelper.addAttachment(fileSystem.getFilename(),
+    			fileSystem);
 
-        mailSender.send(mimeMessage);
-        System.out.println("Mail Send...");
+    	mailSender.send(mimeMessage);
+    	System.out.println("Mail Send...");
 
     }
+
 }
+
