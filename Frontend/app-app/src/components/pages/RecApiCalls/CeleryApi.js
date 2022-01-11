@@ -9,7 +9,7 @@ export const CeleryIng = ()=> {
     const [celeryIng, setCeleryIng] = useState([]);
 
     const fetchCeleryIng = ()=>{
-        var recipe = "celery-boats"
+        var recipe = "celery_boats"
         axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setCeleryIng(res.data);
