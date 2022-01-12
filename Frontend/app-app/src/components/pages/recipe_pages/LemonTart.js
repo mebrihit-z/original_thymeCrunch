@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { LemonTartIng } from '../RecApiCalls/LemonTartApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { DessertButton } from "../../buttons/DessertButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function LemonTart (){
@@ -20,7 +20,7 @@ function LemonTart (){
     </div>
     <LemonTartIng/>
     <br/>
-    <RecipeButton/>
+    <DessertButton/>
     <br/>
     <br/>
     <br/>

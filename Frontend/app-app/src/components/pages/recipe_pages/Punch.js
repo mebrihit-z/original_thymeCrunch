@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { PunchIng } from '../RecApiCalls/PunchApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { BeveragesButton } from "../../buttons/BeveragesButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Punch (){
@@ -19,7 +19,7 @@ function Punch (){
     </div>
     <PunchIng/>
     <br/>
-    <RecipeButton/>
+    <BeveragesButton/>
     <br/>
     <br/>
     <br/>

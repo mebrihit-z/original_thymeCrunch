@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import  { PadThaiIng } from '../RecApiCalls/PadThaiApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { DinnerButton } from "../../buttons/DinnerButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function PadThai(){
@@ -19,7 +19,7 @@ function PadThai(){
     </div>
     <PadThaiIng/>
     <br/>
-    <RecipeButton/>
+    <DinnerButton/>
     <br/>
     <br/>
     <br/>

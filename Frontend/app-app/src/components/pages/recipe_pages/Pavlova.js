@@ -3,7 +3,7 @@ import React, {useState, useEffect, useCallback}from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { PavlovaIng } from '../RecApiCalls/PavolvaApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { DessertButton } from "../../buttons/DessertButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Pavlova (){
@@ -20,7 +20,7 @@ function Pavlova (){
     </div>
     <PavlovaIng/>
     <br/>
-    <RecipeButton/>
+    <DessertButton/>
     <br/>
     <br/>
     <br/>
