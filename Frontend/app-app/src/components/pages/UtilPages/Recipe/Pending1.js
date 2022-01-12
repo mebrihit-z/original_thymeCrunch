@@ -4,12 +4,12 @@ import React, {useState, useEffect, useCallback}from "react";
 import '../Profile/UserProfiles.css';
 
 
-export const ApprovedRecipes = ()=> {
+export const PendingRecipesConst1 = ()=> {
 
     const [userRecipes, setUserRecipes] = useState([]);
 
     const fetchUserRecipes = ()=>{
-        axios.get("http://localhost:9090/api/v1/recipes/users/approved").then(res =>{ //http://3.14.3.79:9090/api/v1/users
+        axios.get("http://localhost:9090/api/v1/recipes/users/pending").then(res =>{ //http://3.14.3.79:9090/api/v1/users
             console.log(res.data);
             setUserRecipes(res.data);
         });
@@ -24,7 +24,7 @@ export const ApprovedRecipes = ()=> {
     return userRecipes.map((recipe, index) =>{
         return (
             <>
-            <h2>Hipppppppp</h2>
+            
             <div key={index}>
                 {/* {user.userID ? (
                     <img 

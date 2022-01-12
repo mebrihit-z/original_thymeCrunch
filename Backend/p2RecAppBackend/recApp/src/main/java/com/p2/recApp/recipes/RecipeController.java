@@ -71,7 +71,41 @@ public class RecipeController {
 	@GetMapping("/approved")
 	public List<Recipe> getApprovedRec(){
 		System.out.println(recipeRepository.findByStatus("approved"));
-		return recipeRepository.findByStatus("approve");
+		return recipeRepository.findByStatus("approved");
+	}
+	
+	@PostMapping("/approve-deny/{recID}/{status}")
+	public String approveRec(
+			@PathVariable("recID") Integer recID, @PathVariable("status") String status){
+		
+		Optional<Recipe>  newRecipe = recipeRepository.findById(recID);
+		System.out.println("newRecipe ********" + newRecipe);
+		Recipe recipe = newRecipe.get();
+		
+		recipeRepository.deleteById(recID);
+		if(status.equal("approve"){
+			recipe.setStatus(status);
+			recipeRepository.save(recipe);
+		}
+	
+		
+		return "ok";
+				
+	}
+	
+
+	@PostMapping("/admin-deny/{recID}")
+	public String denyRec(
+			@PathVariable("recID") Integer recID){
+		Optional<Recipe>  newRecipe = recipeRepository.findById(recID);
+		Recipe recipe = newRecipe.get();
+		
+		recipeRepository.deleteById(recID);
+		
+		recipe.setStatus("deny");
+		recipeRepository.save(recipe);
+		return "ok";
+				
 	}
 	
 	@PostMapping("/admin-approve/{recName}/{mealType}/{ing1}/{ing2}/{ing3}/{ing4}/{ing5}/{approve}")

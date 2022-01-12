@@ -69,11 +69,11 @@ export function Navbar() {
                             All Users
                         </Link>
                     </li>
-                    {/* <li className='nav-item'>
+                    <li className='nav-item'>
                         <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>
                            Profile
                         </Link>
-                    </li> */}
+                    </li>
                     {/* <li className='nav-item'>
                         <Link to='/recipes' className='nav-links' onClick={closeMobileMenu}>
                             Recipes
@@ -103,10 +103,9 @@ export function Navbar() {
                         </Link>
                     </li> */}
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
-                </Link>
-               
+                </Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
                   Hi, {userName} 
                 </Link>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, {useState, useEffect}from "react";
 // import {useDropzone} from 'react-dropzone';
-import '../Profile/UserProfiles.css';
+import './PendingRecipes.css';
 
 
 export const PendingRecipesConst = ()=> {
@@ -22,33 +22,95 @@ export const PendingRecipesConst = ()=> {
         fetchUserRecipes();
     }, [] );
 
-    const Approve=()=>{
+    // const Approve=()=>{
          
-        axios.post(`http://localhost:9090/api/v1/recipes/users/admin-approve/${recipe}`).then(res =>{ //http://3.14.3.79:9090/api/v1/users
-            console.log(res);
+    //     axios.post(`http://localhost:9090/api/v1/recipes/users/admin-approve/${recipe}`).then(res =>{ //http://3.14.3.79:9090/api/v1/users
+    //         console.log(res);
            
-        });
+    //     });
 
-    };
+    // };
 
     return userRecipes.map((recipe, index) =>{
         return (
             <div key={index}>
+                 <table className="bigTeble">
+                <thead>
+                <tr className='headerRow'>
+                    <td className='headerCol'>
+                        ID
+                    </td>
+                    <td className='headerCol'>
+                        Recipe Name
+                    </td>
+                    <td className='headerCol'>
+                        Meal Type
+                    </td>
+                    <td className='headerCol'>
+                        First Ingredient
+                    </td>
+                    <td className='headerCol'>
+                        Second Ingredient
+                    </td>
+                    <td className='headerCol'>
+                        Third Ingredient
+                    </td>
+                    <td className='headerCol'>
+                        Fourth Ingredient
+                    </td>
+                    <td className='headerCol'>
+                        Fifth Ingredient
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{recipe.recID}</td>
+                    <td className='headerCol'>
+                    <p>{recipe.recName}</p>
+                    </td>
+                    <td className='headerCol'>
+                        <p>{recipe.mealType}</p>
+                    </td>
+                    <td className='headerCol'>
+                    <p> {recipe.ing1}</p>
+                    </td>
+                    <td className='headerCol'>
+                    <p> {recipe.ing2}</p>
+                    </td>
+                    <td className='headerCol'>
+                    <p> {recipe.ing3}</p>
+                    </td>
+                    <td className='headerCol'>
+                    <p> {recipe.ing4}</p>
+                    </td>
+                    <td className='headerCol'>
+                    <p> {recipe.ing5}</p>
+                    </td>
+                </tr>
+                
+            </tbody>
+                </table>
+
+                
                 {/* {user.userID ? (
                     <img 
-                        src={`http://localhost:9090/api/v1/users/${user.userID}/image/download`} //http://3.14.3.79:9090/api/v1/users
-                    />
-                ):null} */}
+                        src={`http://localhost:9090/api/v1/users/${user.userID}/image/download`} //http://3.14.3.79:9090/api/v1/users */}
+                    {/* /> */}
+                {/* ):null} */} 
                <br/>
-               <br/>
+                <br/>
+               {/* <table>
+                   <th></th>
                 <h1>{recipe.recName}</h1>
                 <p>Recipe ID: {recipe.recID}</p>
                 <p>Ingredient 1: {recipe.ing1}</p>
                 <p>Ingredient 2: {recipe.ing2}</p>
                 <p>Ingredient 3: {recipe.ing3}</p>
                 <p>Ingredient 4: {recipe.ing4}</p>
-                <p>Ingredient 5: {recipe.ing5}</p>
-                <button type='button' onclick={setRecipe(recipe), Approve()}>Approve Recipe</button>
+                <p>Ingredient 5: {recipe.ing5}</p>  */}
+                
+                {/* <button type='button' onclick={setRecipe(recipe), Approve()}>Approve Recipe</button> */}
                 
                 {/* <Dropzone {...user}/> */}
                 <br/>

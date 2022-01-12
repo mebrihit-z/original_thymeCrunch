@@ -46,12 +46,7 @@ export function FirstNavbar() {
                 
                  <Link to="/" id='ThymeCrunch'className='navbarLogo' onClick={closeMobileMenu}>
                   ThymeCrunch  
-                </Link>
-
-                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
-                  Hi, {userName} 
-                </Link>
-                
+                </Link> 
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? "fas fa-times" : "fas fa-bars"}/>
                 </div>
@@ -104,7 +99,10 @@ export function FirstNavbar() {
                         </Link>
                     </li> */}
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                  Hi, {userName} 
+                </Link>
             </div>
         </nav>
         </>

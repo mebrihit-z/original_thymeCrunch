@@ -1,12 +1,13 @@
-import Navbar from "../../../Navbar"
+import AdminNavbar from "../../../AdminNavbar"
 import { PendingRecipesConst } from './PendingRecApi';
-import '../Profile/UserProfiles.css';
+import './PendingRecipes.css';
 
 function PendingRecipes(){
 
  return(
    <>
-    <Navbar/>
+    <AdminNavbar/>
+
     <PendingRecipesConst/>
    </>
 )
