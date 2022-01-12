@@ -1,5 +1,6 @@
 package com.p2.recApp.users;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -17,30 +18,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @Transactional(/*readOnly= true*/)
 public interface UserRepository extends JpaRepository<User, Integer>{
-	
-//	Optional<User> findByEmail(String email);
-//	Optional<User> findByUsername(String username);
-//	Optional<User> findByPassword(String password); 
-	
-//	User findById(Integer userID);
+
 	List<User> findAll();
 	Optional<User> findByEmail(String email);
 	Optional<User> findById(Integer userID);
-//	Optional<User> addUser(
-//			String firstname,
-//			String lastname,
-//			String emial,
-//			String username,
-//			String password);
-	
-//	Optional<User> updateUser(
-//			String firstname,
-//			String lastname,
-//			String emial,
-//			String username,
-//			String password,
-//			String profile_pic, 
-//			String fav_rec);
+
 	Optional<User> findByUsername(String username);
 	Optional<User> findByPassword(String password);
 	Optional<User> findByUserID(Integer userID);

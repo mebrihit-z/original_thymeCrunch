@@ -46,10 +46,13 @@ export function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                
-                
-                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
-                  ThymeCrunch 
+                <Link to= "/" className='navbarLogo'>
+                    <img id="ourlogo" src={require('.//images/thymecrunchlogowhite.jpg')}
+                    alt='logo' />
                 </Link>
+                 {/* <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
+                  ThymeCrunch 
+                </Link> */}
                 {/* <span> Hi, {userName}</span> */}
                 {/* <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
                   Hi, {userName} 

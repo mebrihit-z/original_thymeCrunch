@@ -10,6 +10,8 @@ import SignUp from './components/pages/UtilPages/SignUp/SignUp';
 import UpdateProfile from './components/pages/UtilPages/Profile/UpdateProfile';
 import PasswordRecovery from './components/pages/UtilPages/Pass/PasswordRecovery';
 import Profile from './components/pages/UtilPages/Profile/Profile';
+import RecEmailSent from './components/pages/UtilPages/Email/RecEmailSent';
+import SignUpEmailSent from './components/pages/UtilPages/Email/SignUpEmailSent';
 
 
 //MealTypes
@@ -108,6 +110,8 @@ function App() {
         <Route path ="/orange-juice" element={<OrangeJuice/>}/>
         <Route path ="/punch" element={<Punch/>}/>
         <Route path ="/passwordrecovery" element={<PasswordRecovery/>}/>
+        <Route path ="/recipe-email-sent" element={<RecEmailSent/>}/>
+        <Route path ="/signup-email-sent" element={<SignUpEmailSent/>}/>
       </Routes>
     </Router>
     </>

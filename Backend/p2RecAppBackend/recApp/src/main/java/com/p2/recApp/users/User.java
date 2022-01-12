@@ -129,25 +129,9 @@ public class User /*implements UserDetails*/{
 	        return userID;
 	    }
 
-	//this is just a basic role, could implement more in the future
-//	@Override
-//	public Collection<? extends GrantedAuthority> getAuthorities() {
-//		SimpleGrantedAuthority authority = new SimpleGrantedAuthority(userRole.name());
-//		return Collections.singletonList(authority);
-//	}
-//
-//	@Override
-//	public String getPassword() {
-//		
-//		return password;
-//	}
-//
-//	@Override
-//	public String getUsername() {
-//		
-//		return username;
-//	}
 	
+	
+
 	public Optional<String> getProfile_pic() {
 		return Optional.ofNullable(profile_pic);
 	}
@@ -156,32 +140,7 @@ public class User /*implements UserDetails*/{
 		this.profile_pic = profile_pic;
 	}
 	
-//	//this is just if the user could delete their account
-//	@Override
-//	public boolean isAccountNonExpired() {
-//		
-//		return true;
-//	}
-//
-//	
-//	@Override
-//	public boolean isAccountNonLocked() {
-//		
-//		return !locked;
-//	}
-//
-//	//another check for the account
-//	@Override
-//	public boolean isCredentialsNonExpired() {
-//		
-//		return true;
-//	}
-//
-//	@Override
-//	public boolean isEnabled() {
-//		
-//		return enabled;
-//	}
+
 
 	@Override
 	public int hashCode() {
@@ -224,9 +183,26 @@ public class User /*implements UserDetails*/{
 	}
 	
 
-	public void setUserProfileImageLink(String filename) {
-		// TODO Auto-generated method stub
-		
+	public void setUserID(Integer userID) {
+		this.userID = userID;
+	}
+
+	
+
+	public User(Integer userID, String firstname, String lastname, String email, String username, String password,
+			String profile_pic, String fav_rec, Boolean locked, Boolean enabled, UserRole userRole) {
+		super();
+		this.userID = userID;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.profile_pic = profile_pic;
+		this.fav_rec = fav_rec;
+		this.locked = locked;
+		this.enabled = enabled;
+		this.userRole = userRole;
 	}
 
 	public User(String username, String password) {
