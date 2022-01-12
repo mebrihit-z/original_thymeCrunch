@@ -1,4 +1,4 @@
-import AdminNavbar from "../../../AdminNavbar"
+import AdminNavbar2 from "../../../AdminNavbar2"
 import { PendingRecipesConst } from './PendingRecApi';
 import './PendingRecipes.css';
 import ApproveDeny from "./ApproveDeny";
@@ -8,7 +8,7 @@ function PendingRecipes(){
 
  return(
    <>
-    <AdminNavbar/>
+    <AdminNavbar2/>
     <div id="left">
     <PendingRecipesConst/>
     <div>

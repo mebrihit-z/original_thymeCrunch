@@ -72,27 +72,27 @@ export const PendingRecipesConst = ()=> {
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr className="bodyRow">
                     <td>{recipe.recID}</td>
-                    <td className='headerCol'>
+                    <td className='bodyCol'>
                     <p>{recipe.recName}</p>
                     </td>
-                    <td className='headerCol'>
+                    <td className='bodyCol'>
                         <p>{recipe.mealType}</p>
                     </td>
-                    <td className='headerCol'>
+                    <td className='bodyCol'>
                     <p> {recipe.ing1}</p>
                     </td>
-                    <td className='headerCol'>
+                    <td className='bodyCol'>
                     <p> {recipe.ing2}</p>
                     </td>
-                    <td className='headerCol'>
+                    <td className='bodyCol'>
                     <p> {recipe.ing3}</p>
                     </td>
-                    <td className='headerCol'>
+                    <td className='bodyCol'>
                     <p> {recipe.ing4}</p>
                     </td>
-                    <td className='headerCol'>
+                    <td className='bodyCol'>
                     <p> {recipe.ing5}</p>
                     </td>
                 </tr>
