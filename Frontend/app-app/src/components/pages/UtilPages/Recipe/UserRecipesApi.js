@@ -22,10 +22,11 @@ export const ApprovedRecipes = ()=> {
     }, [] );
 
     return userRecipes.map((recipe, index) =>{
+        
         return (
             <>
             
-            <div key={index}>
+            <div  key={index}>
                 {/* {user.userID ? (
                     <img 
                         src={`http://localhost:9090/api/v1/users/${user.userID}/image/download`} //http://3.14.3.79:9090/api/v1/users
@@ -33,15 +34,18 @@ export const ApprovedRecipes = ()=> {
                 ):null} */}
                <br/>
                <br/>
+               
                 <h1>{recipe.recName}</h1>
+                <div id="userdiv">
                 <p>Ingredient 1: {recipe.ing1}</p>
                 <p>Ingredient 2: {recipe.ing2}</p>
                 <p>Ingredient 3: {recipe.ing3}</p>
                 <p>Ingredient 4: {recipe.ing4}</p>
                 <p>Ingredient 5: {recipe.ing5}</p>
+                <p>✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ 　✼　 ҉ </p>
                 
                 {/* <Dropzone {...user}/> */}
-                <br/>
+                </div>
             </div>
             </>
         )

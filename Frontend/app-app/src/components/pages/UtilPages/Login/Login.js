@@ -51,7 +51,7 @@ export default function Login() {
               <div>
                 <div className="imgs">
                   <div className="container-image">
-                    <img src="images/profile.jpg"alt="profile" className="profile"/>
+                    {/* <img src="images/profile.jpg"alt="profile" className="profile"/> */}
                   </div>
                 </div>
                 <div>

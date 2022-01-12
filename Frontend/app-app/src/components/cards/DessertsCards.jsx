@@ -35,7 +35,7 @@ function DessertsCards() {
                     </a>
                     
                     <div id="pdiv">
-                    <h2 id="h2p">Lemon Tart</h2>
+                    <h2 id="h2p">Lovely Lemon Tart</h2>
                     </div>
                 </div>
 

@@ -25,6 +25,7 @@ export const BentoIng = ()=> {
     return bentoIng.map((ingredient, index) =>{
         return (
             <div key={index}>
+                
                 <h3>Ingredient: {ingredient.ingName}</h3>
                
             </div>
