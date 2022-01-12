@@ -3,11 +3,11 @@
   display: flex; 
   padding-top: 90px;
   padding-bottom: 90px;
-  /* background-image: url("./images/reciBack.jpg");  /
+  /* background-image: url("./images/reciBack.jpg");  */
 
   background-image: url("../../images/pexels-mart-production-8108051.jpg"); 
-  / background-image: url("./images/pexels-ioana-motoc-4346328.jpg"); 
-  background-size: cover; */
+  /* background-image: url("./images/pexels-ioana-motoc-4346328.jpg");  */
+  /* background-size: cover;  */
   background-size: cover !important;
   background-attachment: fixed;
   height: 100vh;
@@ -56,6 +56,7 @@
   margin-top: 18px;
   margin-bottom: 18px;
   text-align: center;
+  background-color: transparent;
 
 }
 .form{

@@ -40,7 +40,7 @@ function LunchCards() {
                     </a>
                     
                     <div id="pdiv">
-                    <h2 id="h2p">Grilled Salad Chicken<br/>with Raspberry Vinegrette</h2>
+                    <h2 id="h2p">Grilled Chicken Salad<br/>with Raspberry Vinegrette</h2>
                     </div>
                 </div>
 

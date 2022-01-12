@@ -49,7 +49,7 @@ function DinnerCards() {
                     </div>
                     </a>
                     <div id="pdiv">
-                    <h2 id="h2p">Pad Thai</h2>
+                    <h2 id="h2p">Presto Pad Thai</h2>
                     </div>
                 </div>
 
