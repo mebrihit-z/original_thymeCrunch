@@ -20,6 +20,7 @@ function Hamburger (){
     <HamburgerIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

@@ -20,6 +20,7 @@ function Pancakes (){
     <PancakesIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

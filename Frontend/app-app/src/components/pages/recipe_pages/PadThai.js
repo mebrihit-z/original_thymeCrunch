@@ -20,6 +20,7 @@ function PadThai(){
     <PadThaiIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

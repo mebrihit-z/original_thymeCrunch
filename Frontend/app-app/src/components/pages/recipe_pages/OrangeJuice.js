@@ -20,6 +20,7 @@ function OrangeJuice (){
     <OrangeJuiceIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

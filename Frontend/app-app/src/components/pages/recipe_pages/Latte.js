@@ -20,6 +20,7 @@ function Latte (){
     <LatteIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </> 
     )
 

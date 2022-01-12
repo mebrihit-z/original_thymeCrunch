@@ -13,18 +13,17 @@ function Toast () {
     <img src="images/toast.jpg"/>
     
     <h1>Aboslutely Avocado Toast</h1>
-    <disv id="userdiv">
+    <div id="userdiv">
     <p>It's a vegan, green, power machine! Charge up your morning with pumpkin seeds and flavorful basil chiffonade!</p>
     <hr/>
     </div>
     <ToastIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
-        
-
-    
+     
 }
 
 export default Toast;

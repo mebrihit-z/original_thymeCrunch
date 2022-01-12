@@ -20,6 +20,7 @@ function Gelato (){
     <GelatoIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

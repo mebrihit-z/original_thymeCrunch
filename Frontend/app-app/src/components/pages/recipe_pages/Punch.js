@@ -20,6 +20,7 @@ function Punch (){
     <PunchIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

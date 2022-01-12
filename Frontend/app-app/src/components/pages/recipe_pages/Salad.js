@@ -23,6 +23,7 @@ function Salad (){
     <SaladIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

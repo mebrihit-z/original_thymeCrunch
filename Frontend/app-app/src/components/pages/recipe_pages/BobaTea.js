@@ -20,6 +20,7 @@ function BobaTea (){
     <BobaIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

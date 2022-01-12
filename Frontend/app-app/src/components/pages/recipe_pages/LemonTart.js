@@ -21,6 +21,7 @@ function LemonTart (){
     <LemonTartIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
 

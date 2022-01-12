@@ -20,6 +20,7 @@ function Curry (){
      <CurryIng/> 
      <RecipeButton/> 
      <EmailButton/>
+     </div>
     </>
     )
     

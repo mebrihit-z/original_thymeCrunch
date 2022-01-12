@@ -24,6 +24,7 @@ function Bento (){
     <BentoIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

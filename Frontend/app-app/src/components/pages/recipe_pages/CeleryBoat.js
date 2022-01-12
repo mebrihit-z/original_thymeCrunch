@@ -22,6 +22,7 @@ function CeleryBoat (){
     <CeleryIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

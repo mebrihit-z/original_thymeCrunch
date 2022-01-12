@@ -20,6 +20,7 @@ function Hummus (){
     <HummusIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

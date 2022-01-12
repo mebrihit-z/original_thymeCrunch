@@ -20,6 +20,7 @@ function Granola (){
     <GranolaIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

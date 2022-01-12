@@ -20,6 +20,7 @@ function Pasta (){
     <PastaIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         

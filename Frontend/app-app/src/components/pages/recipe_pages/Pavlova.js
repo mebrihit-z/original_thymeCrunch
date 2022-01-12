@@ -21,6 +21,7 @@ function Pavlova (){
     <PavlovaIng/>
     <RecipeButton/>
     <EmailButton/>
+    </div>
     </>
     )
         
