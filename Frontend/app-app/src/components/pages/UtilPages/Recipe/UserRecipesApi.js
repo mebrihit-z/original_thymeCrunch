@@ -24,7 +24,7 @@ export const ApprovedRecipes = ()=> {
     return userRecipes.map((recipe, index) =>{
         return (
             <>
-            <h2>Hipppppppp</h2>
+            
             <div key={index}>
                 {/* {user.userID ? (
                     <img 
