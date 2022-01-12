@@ -40,7 +40,8 @@ export const PendingRecipesConst = ()=> {
 
     return userRecipes.map((recipe, index) =>{
         return (
-            <div key={index}>
+            <div id="pendingId"key={index}>
+                <p>Thyme to Get More Recipes!</p>
                  <table className="bigTeble">
                 <thead>
                 <tr className='headerRow'>
@@ -100,15 +101,10 @@ export const PendingRecipesConst = ()=> {
                 </table>
 
                 <div>
-                <input id="recIdPending" name="recIdPending" type="text" placeholder='recipeID' onChange={e => setRecID(e.target.value)}></input>
-                <input id="status" name="status" type="text" placeholder='approve or deny'  onChange={e => setStatus(e.target.value)}></input>
-                
-                    <button id ="statusButton"type="button" onClick={statusFun()}>Submit Status</button>
+                <input className= "pendingInput" id="recIdPending" name="recIdPending" type="text" placeholder='recipeID' onChange={e => setRecID(e.target.value)}></input>&nbsp;&nbsp;
+                <input className= "pendingInput" id="status" name="status" type="text" placeholder='approve or deny'  onChange={e => setStatus(e.target.value)}></input>
+                 <button className= "pendingInput" id ="statusButton"type="button" onClick={statusFun()}>Submit Status</button>
                 </div>
-                    
-                
-
-            <p>Thyme to Get More Recipes!</p>
             </div>
         )
     }); 

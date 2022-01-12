@@ -83,11 +83,11 @@ export function FirstNavbar() {
                     </div>
                     </div>
                      {/* added html */}
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                         <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
                            Login
                         </Link>
-                    </li>
+                    </li> */}
                     <li className='nav-item'>
                         <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
                            Logout
@@ -99,7 +99,7 @@ export function FirstNavbar() {
                         </Link>
                     </li> */}
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
                   Hi, {userName} 
                 </Link>
