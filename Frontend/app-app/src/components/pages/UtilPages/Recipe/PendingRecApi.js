@@ -6,8 +6,10 @@ import './PendingRecipes.css';
 
 export const PendingRecipesConst = ()=> {
 
+    const [recID, setRecID] = useState('');
+    const [status, setStatus] = useState('');
     const [userRecipes, setUserRecipes] = useState([]);
-    const [recipe, setRecipe] = useState([]);
+    
 
     const fetchUserRecipes = ()=>{
         axios.get("http://localhost:9090/api/v1/recipes/users/pending").then(res =>{ //http://3.14.3.79:9090/api/v1/users
@@ -22,14 +24,19 @@ export const PendingRecipesConst = ()=> {
         fetchUserRecipes();
     }, [] );
 
-    // const Approve=()=>{
-         
-    //     axios.post(`http://localhost:9090/api/v1/recipes/users/admin-approve/${recipe}`).then(res =>{ //http://3.14.3.79:9090/api/v1/users
-    //         console.log(res);
-           
-    //     });
 
-    // };
+
+    function statusFun(){
+      
+         axios.post( `http://localhost:9090/api/v1/recipes/users/approve-deny/${recID}/${status}`)
+           .then(response =>{
+              
+             })
+           .catch(err => {
+               console.log("Error occured", err);
+           })
+        }
+  
 
     return userRecipes.map((recipe, index) =>{
         return (
@@ -92,69 +99,19 @@ export const PendingRecipesConst = ()=> {
             </tbody>
                 </table>
 
+                <div>
+                <input id="recIdPending" name="recIdPending" type="text" placeholder='recipeID' onChange={e => setRecID(e.target.value)}></input>
+                <input id="status" name="status" type="text" placeholder='approve or deny'  onChange={e => setStatus(e.target.value)}></input>
                 
-                {/* {user.userID ? (
-                    <img 
-                        src={`http://localhost:9090/api/v1/users/${user.userID}/image/download`} //http://3.14.3.79:9090/api/v1/users */}
-                    {/* /> */}
-                {/* ):null} */} 
-               <br/>
-                <br/>
-               {/* <table>
-                   <th></th>
-                <h1>{recipe.recName}</h1>
-                <p>Recipe ID: {recipe.recID}</p>
-                <p>Ingredient 1: {recipe.ing1}</p>
-                <p>Ingredient 2: {recipe.ing2}</p>
-                <p>Ingredient 3: {recipe.ing3}</p>
-                <p>Ingredient 4: {recipe.ing4}</p>
-                <p>Ingredient 5: {recipe.ing5}</p>  */}
+                    <button id ="statusButton"type="button" onClick={statusFun()}>Submit Status</button>
+                </div>
+                    
                 
-                {/* <button type='button' onclick={setRecipe(recipe), Approve()}>Approve Recipe</button> */}
-                
-                {/* <Dropzone {...user}/> */}
-                <br/>
+
+        
             </div>
         )
     }); 
 
-    // function Dropzone({userID}) {
-    //     const onDrop = useCallback(acceptedFiles => {
-    //       const file = acceptedFiles[0];
-
-    //       console.log(userID);
-    //       console.log(file);
-
-    //       const formData = new FormData();
-    //       formData.append("file", file);
-
-    //       axios.post(`http://localhost:9090/api/v1/users/${userID}/image/upload`, //http://3.14.3.79:9090/api/v1/users
-    //             formData, 
-    //                 {
-    //                     headers: {
-    //                      "Content-Type": "image/*"
-    //                     }
-    //                 }  
-    //             ).then(()=>{
-    //                      console.log("file uploaded successfully")
-    //                  }
-    //             ).catch(err =>{
-    //                      console.log(err);
-    //                       })
-
-
-    //     }, [])
-    //     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
-      
-    //     return (
-    //       <div {...getRootProps()}>
-    //         <input {...getInputProps()} />
-    //         {
-    //           isDragActive ?
-    //             <p>Drop the image here ...</p> :
-    //             <p>Drag 'n' drop a profile picture here, or click to select a profile picture</p>
-    //         }
-    //       </div>
-    //     )
-    // }
+  
 }

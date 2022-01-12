@@ -39,18 +39,18 @@ public class RecipeController {
 //	}
 	
 
-	@PostMapping("/add")
-	public String addRecipe(
-
-			@RequestBody Recipe recipe) {
-
-		System.out.println("pending"+ recipe);
-		recipe.setStatus("pending");
-		System.out.println("pending"+ recipe);
-		recipeRepository.save(recipe);
-
-		 return "I did it";
-	}
+//	@PostMapping("/add")
+//	public String addRecipe(
+//
+//			@RequestBody Recipe recipe) {
+//
+//		System.out.println("pending"+ recipe);
+//		recipe.setStatus("pending");
+//		System.out.println("pending"+ recipe);
+//		recipeRepository.save(recipe);
+//
+//		 return "I did it";
+//	}
 
 	@GetMapping("/all-recipes")
 	public List<Recipe> allRecipes(){
@@ -78,98 +78,25 @@ public class RecipeController {
 	public String approveRec(
 			@PathVariable("recID") Integer recID, @PathVariable("status") String status){
 		
-		Optional<Recipe>  newRecipe = recipeRepository.findById(recID);
+		Optional<Recipe>  newRecipe = recipeRepository.findByRecID(recID);
 		System.out.println("newRecipe ********" + newRecipe);
 		Recipe recipe = newRecipe.get();
 		
-		recipeRepository.deleteById(recID);
-		if(status.equal("approve"){
-			recipe.setStatus(status);
+//		recipeRepository.deleteById(recID);
+		if(status.equals("approve") || status.equals("Approve")){
+			recipe.setStatus("approved");
 			recipeRepository.save(recipe);
-		}
-	
-		
+		}else if(status.equals("deny")|| status.equals("Deny")){
+			recipe.setStatus("denied");
+			recipeRepository.save(recipe);
+		}else {
+				return "no";}
 		return "ok";
 				
 	}
 	
 
-	@PostMapping("/admin-deny/{recID}")
-	public String denyRec(
-			@PathVariable("recID") Integer recID){
-		Optional<Recipe>  newRecipe = recipeRepository.findById(recID);
-		Recipe recipe = newRecipe.get();
-		
-		recipeRepository.deleteById(recID);
-		
-		recipe.setStatus("deny");
-		recipeRepository.save(recipe);
-		return "ok";
-				
-	}
+
 	
-	@PostMapping("/admin-approve/{recName}/{mealType}/{ing1}/{ing2}/{ing3}/{ing4}/{ing5}/{approve}")
-	public String approveRec(
-			@PathVariable String recName,
-			@PathVariable String mealType,
-			@PathVariable String ing1,
-			@PathVariable String ing2,
-			@PathVariable String ing3,
-			@PathVariable String ing4,
-			@PathVariable String ing5,
-			@PathVariable String approve){
-		
-		List<Recipe> oldRecipe = recipeRepository.findByRecName(recName);
-		System.out.println("oldRecipe ********" + oldRecipe);
-		
-		recipeRepository.deleteAll(oldRecipe);
-	
-		
-		Recipe newRecipe = new Recipe(recName, mealType, ing1, ing2, ing3, ing4, ing5, approve);
-		System.out.println("newRecipe ********" + newRecipe);
-		recipeRepository.save(newRecipe);
-		//recipeRepository.
-		
-//		Optional<Recipe> oldRecipe = recipeRepository.findByRecName(recName);
-	
-		
-//		Recipe newRecip = new Recipe();
-//		System.out.println("newRecip ********" + oldRecipe);
-//		
-		//old info
-//		Integer ID = recipe.getRecID();
-//		String name = recipe.getRecName();
-//		String meal = recipe.getMealType();
-//		String ing1 = recipe.getIng1();
-//		String ing2 = recipe.getIng2();
-//		String ing3 = recipe.getIng3();
-//		String ing4 = recipe.getIng4();
-//		String ing5 = recipe.getIng5();
-		
-//		System.out.println(recipe);
-//		//new info 
-//		newRecipe = recipe;
-//		newRecipe.setRecName(name);
-//		newRecipe.setMealType(meal);
-//		newRecipe.setIng1(ing1);
-//		newRecipe.setIng2(ing2);
-//		newRecipe.setIng3(ing3);
-//		newRecipe.setIng4(ing4);
-//		newRecipe.setIng5(ing5);
-//		newRecipe.setStatus("approved");
-//		System.out.println(recipe.getStatus(recName));
-//		
-//		//save new rec/insert into DB
-//		recipeRepo.save(newRecipe);
-//		
-//		//find and delete old entry
-//		
-//		
-//		 recipeRepo.deleteById(ID);
-//		
-//		System.out.println();
-		return "recipe successfully added!";
-		
-	}
 
 }

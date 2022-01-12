@@ -18,6 +18,13 @@
     border-color: gray;
     padding: 15px 15px;
 }
+#left{
+  position: relative;
+  
+}
+#right{
+  margin-left: 80%;
+}
 
 /* .main22 {
     justify-content: center;
