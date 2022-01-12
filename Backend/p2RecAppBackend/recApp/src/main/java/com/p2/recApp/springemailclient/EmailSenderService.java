@@ -25,7 +25,7 @@ public class EmailSenderService {
     public void sendSimpleEmail(String toEmail, String body, String subject) {
         
     	SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("noreply@thymecrunch.com");
+        message.setFrom("thymecrunchtechteam@gmail.com");
         message.setTo(toEmail);
         message.setSubject(subject);
         message.setText(body);
@@ -35,7 +35,7 @@ public class EmailSenderService {
 public void sendRecipeEmail(String toEmail, String body, String subject) {
         
     	SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("noreply@thymecrunch.com");
+        message.setFrom("thymecrunchtechteam@gmail.com");
         message.setTo(toEmail);
         message.setSubject(subject);
         message.setText(body);
@@ -45,7 +45,7 @@ public void sendRecipeEmail(String toEmail, String body, String subject) {
 public void sendSignUpEmail(String toEmail, String body, String subject) {
     
 	SimpleMailMessage message = new SimpleMailMessage();
-    message.setFrom("noreply@thymecrunch.com");
+    message.setFrom("thymecrunchtechteam@gmail.com");
     message.setTo(toEmail);
     message.setSubject(subject);
     message.setText(body);
@@ -63,7 +63,7 @@ public void sendSignUpEmail(String toEmail, String body, String subject) {
         MimeMessageHelper mimeMessageHelper
                 = new MimeMessageHelper(mimeMessage, true);
 
-        mimeMessageHelper.setFrom("qwinkypoo@gmail.com");
+        mimeMessageHelper.setFrom("thymecrunchtechteam@gmail.com");
         mimeMessageHelper.setTo(toEmail);
         mimeMessageHelper.setText(body);
         mimeMessageHelper.setSubject(subject);

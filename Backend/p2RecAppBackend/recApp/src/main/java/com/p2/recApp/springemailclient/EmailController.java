@@ -28,15 +28,15 @@ public class EmailController {
 	
 	@PostMapping("/recipe-email-sent") 
 	public String RecipeEmailInfo() {
-		emailSenderService.sendRecipeEmail("qwinkypoo@gmail.com",
+		emailSenderService.sendRecipeEmail("qwinkypo@gmail.com",
 				"Recipe Succesfully sent!\n\nThank you,\nThymeCrunch Tech Team",
-				"Congrats happy eating!");
+				"Yummmmy! Enjoy!");
 		return "redirect:/login";
 	}
 	
 	@PostMapping("/signup-email-sent") 
 	public String SignUpEmailInfo() {
-		emailSenderService.sendSignUpEmail("qwinkypoo@gmail.com",
+		emailSenderService.sendSignUpEmail("qwinkypoo@gmil.com",
 				"We are very excited to have you be apart of the Thyme crunch experience and cant wait for you to experience all of the wonder things we have to offer, \nThymeCrunch Tech Team",
 				"Congrats!!");
 		return "redirect:/login";

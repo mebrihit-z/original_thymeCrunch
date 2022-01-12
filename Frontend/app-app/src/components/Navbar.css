@@ -27,14 +27,18 @@
   }
   
   .navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-family: 'Moon Dance', cursive;
-    font-size: 300%;
+    background-size: cover;
+    background-image: url('.//images/teambackground.jpg');
+    background-position: relative;
+    width: 10%vh;
+    height: 10%vh;
+  }
+
+  #ourlogo{
+    margin-top: 2%;
+    width: 300px;
+    height: 65px;
+    
   }
   
   .fa-typo3 {
