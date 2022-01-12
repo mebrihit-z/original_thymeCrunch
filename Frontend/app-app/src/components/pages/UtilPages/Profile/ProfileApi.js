@@ -16,7 +16,7 @@ export const ProfileConst = ()=> {
     const [userProfile, setUserProfile] = useState([]);
 
     const fetchUserProfile= ()=>{
-        const username = sessionStorage.getItem('name')
+        const username = sessionStorage.getItem('username')
       
         axios.get(`http://localhost:9090/api/v1/users/${username}`).then(res =>{ //http://3.14.3.79:9090/api/v1/recipes/
             console.log(res);

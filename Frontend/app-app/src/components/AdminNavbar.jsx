@@ -88,11 +88,11 @@ export function FirstNavbar() {
                            Login
                         </Link>
                     </li>
-                    {/* <li className='nav-item'>
+                    <li className='nav-item'>
                         <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
                            Logout
                         </Link>
-                    </li> */}
+                    </li>
                     {/* <li className='nav-item'>
                         <Link to='/update' className='nav-links' onClick={closeMobileMenu}>
                             Update 

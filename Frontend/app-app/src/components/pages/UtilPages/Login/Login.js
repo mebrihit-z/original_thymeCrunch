@@ -22,6 +22,7 @@ export default function Login() {
         .then(response =>{
           const newName = response.data;
           sessionStorage.setItem('name', newName);
+          sessionStorage.setItem('username', uname);
           if(response.data ==="ADMIN" ) { 
             navigate("/adminrecipes");
           }else{

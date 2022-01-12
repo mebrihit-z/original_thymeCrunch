@@ -154,6 +154,7 @@ public class Recipe {
 		this.status = status;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Recipe [recID=" + recID + ", recName=" + recName + ", mealType=" + mealType + ", ing1=" + ing1

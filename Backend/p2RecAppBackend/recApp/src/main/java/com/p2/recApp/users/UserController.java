@@ -45,14 +45,20 @@ public class UserController {
 		
 	}
 	
-	@GetMapping("/{userID}")
-	public Optional<User> getUserByID(@PathVariable("userID") Integer userID){
-		return userRepository.findById(userID);
+//	@GetMapping("/{userID}")
+//	public Optional<User> getUserByID(@PathVariable("userID") Integer userID){
+//		return userRepository.findById(userID);
+//		
+//		//do the request body thing
+//		
+//	}
+	@GetMapping("/{username}")
+	public Optional<User> getUserByUsername(@PathVariable("username") String username){
+		return userRepository.findByUsername(username);
 		
 		//do the request body thing
 		
 	}
-	
 	//this throws an error with the conversion of json to an integer, but doesn't crash the program 
 	@PostMapping(
 			path = "{userID}/image/upload",

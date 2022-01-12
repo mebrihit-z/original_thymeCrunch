@@ -108,7 +108,7 @@ export const PendingRecipesConst = ()=> {
                     
                 
 
-        
+            <p>Thyme to Get More Recipes!</p>
             </div>
         )
     }); 
