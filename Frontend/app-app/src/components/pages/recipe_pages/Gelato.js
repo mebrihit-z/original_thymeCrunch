@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import  { GelatoIng } from '../RecApiCalls/GelatoApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { DessertButton } from "../../buttons/DessertButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Gelato (){
@@ -19,7 +19,7 @@ function Gelato (){
     </div>
     <GelatoIng/>
     <br/>
-    <RecipeButton/>
+    <DessertButton/>
     <br/>
     <br/>
     <br/>

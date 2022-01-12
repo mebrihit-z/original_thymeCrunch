@@ -3,7 +3,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { BentoIng } from '../RecApiCalls/BentoApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { LunchButton } from "../../buttons/LunchButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Bento (){
@@ -23,7 +23,7 @@ function Bento (){
     </div>
     <BentoIng/>
     <br/>
-    <RecipeButton/>
+    <LunchButton/>
     <br/>
     <br/>
     <br/>

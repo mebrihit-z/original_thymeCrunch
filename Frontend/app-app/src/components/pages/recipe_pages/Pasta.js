@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { PastaIng } from '../RecApiCalls/PastaApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { DinnerButton } from "../../buttons/DinnerButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Pasta (){
@@ -19,7 +19,7 @@ function Pasta (){
     </div>
     <PastaIng/>
     <br/>
-    <RecipeButton/>
+    <DinnerButton/>
     <br/>
     <br/>
     <br/>

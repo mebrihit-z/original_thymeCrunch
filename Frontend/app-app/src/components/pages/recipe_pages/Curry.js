@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import {CurryIng} from '../RecApiCalls/CurryApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { LunchButton } from "../../buttons/LunchButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Curry (){
@@ -14,12 +14,12 @@ function Curry (){
     
     <h1>Yellow Curry</h1>
     <div id="userdiv">
-    <p>Take-out has nothing on this quick and easy dinner. Spice up supper with our lucious and sunny yellow curry!</p>
+    <p>Take-out has nothing on this quick and easy lunch. Spice up supper with our lucious and sunny yellow curry!</p>
     <hr/>
     </div>
      <CurryIng/> 
      <br/>
-     <RecipeButton/>  
+     <LunchButton/>  
      <br/>
     <br/>
     <br/>

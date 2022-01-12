@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { HummusIng } from '../RecApiCalls/HummusApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { SnackButton } from "../../buttons/SnackButton"
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Hummus (){
@@ -19,7 +19,7 @@ function Hummus (){
     </div>
     <HummusIng/>
     <br/>
-    <RecipeButton/>
+    <SnackButton/>
     <br/>
     <br/>
     <br/>

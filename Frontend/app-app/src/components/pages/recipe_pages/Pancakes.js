@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import {PancakesIng} from '../RecApiCalls/PancakesApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { BreakfastButton } from "../../buttons/BreakfastButton";
 import '../../pages/UtilPages/Recipe/UserRecipes.css'
 
 function Pancakes (){
@@ -19,7 +19,7 @@ function Pancakes (){
     </div>
     <PancakesIng/>
     <br/>
-    <RecipeButton/>
+    <BreakfastButton/>
     <br/>
     <br/>
     <br/>
