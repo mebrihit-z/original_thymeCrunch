@@ -21,7 +21,6 @@ function ShopingList(){
                 <input id="user_input" placeholder="Add item"/>
                 </div>
                 <div id="all_items">
-
                 <ShoppingListConst/>            
                 </div>
                 <br/>
@@ -29,9 +28,7 @@ function ShopingList(){
                 <div id="Shoping-button">
                     <button id="button1">Email The List</button>
                 </div>
-       
                 </div>
-               
             </div>
             </div>
         </div>

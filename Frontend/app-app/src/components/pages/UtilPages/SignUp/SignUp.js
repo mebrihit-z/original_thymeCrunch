@@ -56,7 +56,7 @@ export default function SignUp() {
 
 
   function submit2(){
-    sessionStorage.setItem('email', uemail);
+    sessionStorage.setItem('newEmail', uemail);
      const a = ufirstname
      const b = ulastname
      const c = uemail
