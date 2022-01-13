@@ -10,6 +10,7 @@ export const BentoIng = ()=> {
 
     const fetchBentoIng = ()=>{
         var recipe = "bento";
+        sessionStorage.setItem('recipe', recipe);
         axios.get(`http://localhost:9090/api/v1/recipes/${recipe}`).then(res =>{
             console.log(res);
             setBentoIng(res.data);

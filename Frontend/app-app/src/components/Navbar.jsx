@@ -105,6 +105,12 @@ export function Navbar() {
                             Update 
                         </Link>
                     </li> */}
+
+                    <li className='nav-item'>
+                        <Link to='/shopinglist' className='nav-links' onClick={closeMobileMenu}>
+                            Shoping List 
+                        </Link>
+                    </li>
                 </ul>
                 {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
