@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.p2.recApp.ingredients.Ingredient;
 import com.p2.recApp.ingredients.IngredientService;
+import com.p2.recApp.shopinglist.ShopingList;
+import com.p2.recApp.shopinglist.ShopingListRepository;
 
 @RestController
 @CrossOrigin("*")
@@ -20,11 +22,13 @@ public class EmailController {
 	
 	private IngredientService ingredientService;
 	private EmailSenderService emailSenderService;
+	public ShopingListRepository shopingListRepository;
 	
 	@Autowired
-	public EmailController(EmailSenderService emailSenderService, IngredientService ingredientService) {
+	public EmailController(EmailSenderService emailSenderService, IngredientService ingredientService, ShopingListRepository shopingListRepository) {
 		this.ingredientService = ingredientService;
 		this.emailSenderService = emailSenderService;
+		this.shopingListRepository = shopingListRepository;
 	}
 	
 	@PostMapping("/email-sent") 
@@ -54,6 +58,25 @@ public class EmailController {
 //		return "ok";
 	}
 	
+//	public void sendRecipeEmail(String toEmail, String body, String subject) 
+	@PostMapping("/soppinglist-email-sent/{userEmail}/{username}") 
+	public String ShopingListEmailInfo( @PathVariable String userEmail, @PathVariable String username) {
+		
+		List<ShopingList> shopinglist = shopingListRepository.findByUsername(username);
+		
+		String temp = " ";
+		
+		for(ShopingList a: shopinglist) {
+			temp +=a.getIngredientName() + "\n";
+			System.out.println(a.getIngredientName());
+		}
+		
+		System.out.println("temp++++++++" + temp);
+		emailSenderService.sendRecipeEmail(userEmail, temp,
+				"Yummmmy! Enjoy!");
+		return "redirect:/login";
+//		return "ok";
+	}
 	@PostMapping("/signup-email-sent/{userEmail}") 
 	public String SignUpEmailInfo(@PathVariable String userEmail) {
 		emailSenderService.sendSignUpEmail(userEmail,
