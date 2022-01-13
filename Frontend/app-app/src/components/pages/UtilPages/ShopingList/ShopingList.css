@@ -13,6 +13,7 @@
     width: 95%;
     margin: auto;
     display: flex;
+    border-radius: 5%;
   }
   
   #groceries{
@@ -26,6 +27,7 @@
     flex-direction: column;
     background-color: white;
     box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.50);  
+    border-radius: 5%;
   }
   
   #title{
@@ -58,7 +60,10 @@
   
   #all_items{
     font-size: 1.5rem;
-    width: 75%;
+    width: 30%;
+    background-color: transparent;
+    position: relative;
+    margin-top: 5%;
   }
   
   @media(max-width:480px){
@@ -82,5 +87,5 @@
       margin-left: 10px;;
   }
   #Shoping-button{
-      margin-top:430px ;
+      margin-top:10% ;
   }

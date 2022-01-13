@@ -1,9 +1,10 @@
+import axios from "axios";
+import React, {useState, useEffect}from "react";
 import Navbar from "../../../Navbar"
 import './ShopingList.css';
+import {ShoppingListConst} from "./ShoppingIngApi";
+
 function ShopingList(){
-    // const [uname, setUsername] = useState('');
-    // const [upassword, setPassword] = useState('');
-    
    
  return(
    <>
@@ -21,15 +22,19 @@ function ShopingList(){
                 </div>
                 <div id="all_items">
 
+                <ShoppingListConst/>            
                 </div>
+                <br/>
+                <br/>
                 <div id="Shoping-button">
                     <button id="button1">Email The List</button>
                 </div>
+       
+                </div>
+               
             </div>
             </div>
         </div>
-
-    </div>
    </>
 )
  }
