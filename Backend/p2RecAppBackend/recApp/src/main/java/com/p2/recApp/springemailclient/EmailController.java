@@ -68,14 +68,12 @@ public class EmailController {
 		
 		for(ShopingList a: shopinglist) {
 			temp +=a.getIngredientName() + "\n";
-			System.out.println(a.getIngredientName());
 		}
 		
-		System.out.println("temp++++++++" + temp);
+		System.out.println("list++++++++" + temp);
 		emailSenderService.sendRecipeEmail(userEmail, temp,
 				"Yummmmy! Enjoy!");
-		return "redirect:/login";
-//		return "ok";
+		return "ok";
 	}
 	@PostMapping("/signup-email-sent/{userEmail}") 
 	public String SignUpEmailInfo(@PathVariable String userEmail) {

@@ -5,16 +5,31 @@ import './ShopingList.css';
 import {ShoppingListConst} from "./ShoppingIngApi";
 
 function ShopingList(){
+    const [userEmail, setUserEmail] = useState('');
+
+    function submitList(){
+        const a = userEmail
+        const  b = sessionStorage.getItem('username')
+         axios.post(`http://localhost:9090/api/v1/email/soppinglist-email-sent/${a}/${b}`)
+           .then(response =>{
+             const userList = response.data;
+             console.log.apply(userList)
+             
+           })
+           .catch(err => {
+               console.log("Error occured", err);
+           })
+     }
    
  return(
    <>
     <Navbar/>
     <div id="body">
         <div id="main">
-            <div class="container">
+            <div className="container">
             <div id="groceries">
                 <div id="title">
-                <h2>Grocery List</h2>
+                <h2>Shopping List</h2>
                 </div>
                 <div id="input">
                 <i id="pencil" class="fas fa-pencil-alt"></i>
@@ -26,7 +41,8 @@ function ShopingList(){
                 <br/>
                 <br/>
                 <div id="Shoping-button">
-                    <button id="button1">Email The List</button>
+                    <input  id="shoppingEmail"type='email' placeholder="Enter your email" onChange={e => setUserEmail(e.target.value)}></input>
+                    <button id="button1" onClick={submitList}>Send Email</button>
                 </div>
                 </div>
             </div>

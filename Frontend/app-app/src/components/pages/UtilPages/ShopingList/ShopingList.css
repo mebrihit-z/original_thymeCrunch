@@ -7,23 +7,25 @@
     font-family: "mumblers_demoregular";
     /* background-color: orange; */
     background-color: pink;
+    margin-left: 550px;
   }
   
   .container{
-    width: 95%;
+    width: 100%;
     margin: auto;
     display: flex;
     border-radius: 5%;
   }
   
   #groceries{
-    width: 600px;
+    width: 900px;
     min-height: 100vh;
     padding-top: 20px;
     margin:auto;
     display: flex;
     gap: 10px;
-    align-items: center;
+    /* align-items: center; */
+    padding-left: 10%;
     flex-direction: column;
     background-color: white;
     box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.50);  
@@ -63,7 +65,7 @@
     width: 30%;
     background-color: transparent;
     position: relative;
-    margin-top: 5%;
+    margin-top: 3%;
   }
   
   @media(max-width:480px){
@@ -89,4 +91,10 @@
   #Shoping-button{
       margin-top:10% ;
       margin-bottom: 10%;
+  }
+  #shoppingEmail{
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
   }

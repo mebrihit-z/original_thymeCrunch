@@ -119,7 +119,8 @@
     margin-right: 100px;
   }
   #bigDiv4{
-    float:left;
+    /* float:left; */
+    float: right;
     margin-left: 65px;
   }
   #bigDiv5{
