@@ -19,7 +19,7 @@ function LunchCards() {
     return (
 
         <div className='cards'>
-            <div id="main-re">
+            <div id="main-re00">
                 <div id="bigDiv1" className="bigDivAll">
                     <a className="hov" href="bento">
                         <div id="submain12" className="submainAll">

@@ -40,8 +40,8 @@ public class EmailController {
 	}
 	
 //	public void sendRecipeEmail(String toEmail, String body, String subject) 
-	@PostMapping("/recipe-email-sent/{userEmail}/{recipeName}") 
-	public String RecipeEmailInfo( @PathVariable String userEmail, @PathVariable String recipeName) {
+	@PostMapping("/recipe-email-sent/{email}/{recipeName}") 
+	public String RecipeEmailInfo( @PathVariable String email, @PathVariable String recipeName) {
 
 		List<Ingredient> userRecipe = ingredientService.getByRec(recipeName);
 		String temp = " ";
@@ -52,7 +52,8 @@ public class EmailController {
 		}
 		
 		System.out.println("temp++++++++" + temp);
-		emailSenderService.sendRecipeEmail(userEmail, temp,
+		System.out.println("userEmail ##################" + email);
+		emailSenderService.sendRecipeEmail(email, temp,
 				"Yummmmy! Enjoy!");
 		return "redirect:/login";
 //		return "ok";
