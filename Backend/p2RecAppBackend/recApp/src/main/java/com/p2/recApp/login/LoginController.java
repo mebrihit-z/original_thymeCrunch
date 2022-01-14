@@ -70,13 +70,6 @@ public class LoginController {
 			return "no";		
 		}
 		
-		
-//		if(user.getPassword().equals(password)) {
-//			return "ok";
-//		}else {
-//			return "no";		
-//		}
-//		
 	}
 
 	
