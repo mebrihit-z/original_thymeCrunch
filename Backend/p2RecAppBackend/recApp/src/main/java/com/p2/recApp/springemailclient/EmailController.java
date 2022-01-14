@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.p2.recApp.ingredients.Ingredient;
 import com.p2.recApp.ingredients.IngredientService;
+import com.p2.recApp.login.LoginController;
 import com.p2.recApp.shopinglist.ShopingList;
 import com.p2.recApp.shopinglist.ShopingListRepository;
 
@@ -31,12 +32,15 @@ public class EmailController {
 		this.shopingListRepository = shopingListRepository;
 	}
 	
-	@PostMapping("/email-sent") 
-	public String EmailInfo() {
-		emailSenderService.sendSimpleEmail("qwinkypoo@gmail.com",
-				"We are very sorry for this inconvience but don't worry, we got you!\n\nHere is your password: password\n\nThank you,\nThymeCrunch Tech Team",
+	@PostMapping("/email-sent/{email}") 
+	public String EmailInfo( @PathVariable String email) {
+		String password  = LoginController.userPassword;
+		String temp = "We are very sorry for this inconvience but don't worry, we got you!\n\nHere is your password: "+ password +"\n\nThank you,\nThymeCrunch Tech Team";
+		emailSenderService.sendSimpleEmail(email,
+				temp,
 				"Lost Password");
-		return "redirect:/login";
+//		return "redirect:/login";
+		return "ok";
 	}
 	
 //	public void sendRecipeEmail(String toEmail, String body, String subject) 
@@ -55,13 +59,13 @@ public class EmailController {
 		System.out.println("userEmail ##################" + email);
 		emailSenderService.sendRecipeEmail(email, temp,
 				"Yummmmy! Enjoy!");
-		return "redirect:/home";
-//		return "ok";
+//		return "redirect:/home";
+		return "ok";
 	}
 	
 //	public void sendRecipeEmail(String toEmail, String body, String subject) 
-	@PostMapping("/soppinglist-email-sent/{userEmail}/{username}") 
-	public String ShopingListEmailInfo( @PathVariable String userEmail, @PathVariable String username) {
+	@PostMapping("/shoppinglist-email-sent/{email}/{username}") 
+	public String ShopingListEmailInfo( @PathVariable String email, @PathVariable String username) {
 		
 		List<ShopingList> shopinglist = shopingListRepository.findByUsername(username);
 		
@@ -72,17 +76,21 @@ public class EmailController {
 		}
 		
 		System.out.println("list++++++++" + temp);
-		emailSenderService.sendRecipeEmail(userEmail, temp,
+		System.out.println("email++++++++" + email);
+		emailSenderService.sendRecipeEmail(email, temp,
 				"Yummmmy! Enjoy!");
+		shopingListRepository.deleteByUsername(username);
 		return "ok";
 	}
+	
+	
 	@PostMapping("/signup-email-sent/{userEmail}") 
 	public String SignUpEmailInfo(@PathVariable String userEmail) {
 		emailSenderService.sendSignUpEmail(userEmail,
 				"We are very excited to have you be apart of the Thyme crunch experience and cant wait for you to experience all of the wonder things we have to offer, \nThymeCrunch Tech Team",
 				"Congrats!!");
-		return "redirect:/login";
-//		return "ok";
+//		return "redirect:/login";
+		return "ok";
 	}
 }	
 

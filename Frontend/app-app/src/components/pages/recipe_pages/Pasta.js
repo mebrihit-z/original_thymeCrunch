@@ -1,9 +1,10 @@
 import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
-import { PastaIng } from '../RecApiCalls/PastaApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { DinnerButton } from "../../buttons/DinnerButton";
 import { EmailButton } from "../../buttons/EmailRecipe";
+import {PastaIng} from "../RecApiCalls/PastaApi";
+import { ShoppingListButton } from "../../buttons/ShoppingListButton";
 
 function Pasta (){
     return(
@@ -18,8 +19,13 @@ function Pasta (){
     <hr/>
     </div>
     <PastaIng/>
-    <RecipeButton/>
+    <DinnerButton/>
     <EmailButton/>
+    <ShoppingListButton/>
+    <br/>
+     <br/>
+     <br/>
+     <br/>
     </div>
     </>
     )

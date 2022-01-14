@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../../../Navbar';
+import FirstNavbar from '../../../FirstNavbar';
 import { Button } from '../../../buttons/Button';
 import './Logout.css';
 import '../../../../App.css';
@@ -9,9 +9,11 @@ function Logout() {
     // sessionStorage.setItem('username', uname);
     sessionStorage.removeItem('name');
     sessionStorage.removeItem('username');
+    sessionStorage.removeItem('email');
+    sessionStorage.removeItem('recipe');
     return (
        <>
-       <Navbar/>
+       <FirstNavbar/>
 
        <LogoutVideo/>
        <Button/>

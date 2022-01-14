@@ -48,7 +48,8 @@
   #input i{
     cursor: pointer;
     font-size: 2rem;
-    color: orange;
+    /* color: orange; */
+    color: black;
   }
   
   #input input{

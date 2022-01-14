@@ -2,8 +2,9 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import {BobaIng}from '../RecApiCalls/BobaApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { BeveragesButton } from "../../buttons/BeveragesButton";
 import { EmailButton } from "../../buttons/EmailRecipe";
+import { ShoppingListButton } from "../../buttons/ShoppingListButton";
 
 function BobaTea (){
     return(
@@ -18,8 +19,17 @@ function BobaTea (){
     <hr/>
     </div>
     <BobaIng/>
-    <RecipeButton/>
+    <BeveragesButton/>
     <EmailButton/>
+    <ShoppingListButton/>
+    <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
     </div>
     </>
     )

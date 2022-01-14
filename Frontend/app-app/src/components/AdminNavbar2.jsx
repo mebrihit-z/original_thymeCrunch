@@ -83,7 +83,8 @@ export function AdminNavbar2() {
                     <button class="dropbtn">Recipes</button>
                     <div class="dropdown-content">
                         <a href="/recipes">Recipe</a>
-                        <a href="/user-recipes">User Recipes</a>
+                        <a href="pending-recipes">Pending Recipes</a>
+                        {/* <a href="/user-recipes">User Recipes</a> */}
                     </div>
                     </div>
                     {/* <li className='nav-item'>
@@ -91,11 +92,11 @@ export function AdminNavbar2() {
                            Login
                         </Link>
                     </li> */}
-                    {/* <li className='nav-item'>
+                    <li className='nav-item'>
                         <Link to='/logout' className='nav-links' onClick={closeMobileMenu}>
                            Logout
                         </Link>
-                    </li> */}
+                    </li>
                     {/* <li className='nav-item'>
                         <Link to='/update' className='nav-links' onClick={closeMobileMenu}>
                             Update 

@@ -16,7 +16,7 @@ function PendingRecipes(){
     <br/>
     <br/>
     <div>
-      <h3>Thyme to get more recipes!</h3>
+      <h3 style={{marginBottom : 40}}>Thyme to get more recipes!</h3>
     </div>
       
     

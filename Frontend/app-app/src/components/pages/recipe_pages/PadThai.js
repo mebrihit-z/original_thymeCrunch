@@ -2,8 +2,9 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import  { PadThaiIng } from '../RecApiCalls/PadThaiApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { DinnerButton } from "../../buttons/DinnerButton";
 import { EmailButton } from "../../buttons/EmailRecipe";
+import { ShoppingListButton } from "../../buttons/ShoppingListButton";
 
 function PadThai(){
     return(
@@ -18,8 +19,13 @@ function PadThai(){
     <hr/>
     </div>
     <PadThaiIng/>
-    <RecipeButton/>
+    <DinnerButton/>
     <EmailButton/>
+    <ShoppingListButton/>
+    <br/>
+     <br/>
+     <br/>
+     <br/>
     </div>
     </>
     )

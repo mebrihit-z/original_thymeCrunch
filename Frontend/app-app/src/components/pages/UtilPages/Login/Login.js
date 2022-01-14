@@ -50,7 +50,7 @@ export default function Login() {
                 </div>
                 <div>
                   <div>
-                  <h1 id="t1">Login Page</h1>
+                  <h1 id="t1">User Login</h1>
                   </div>
                  <div className="form">
                  <div className="first-input">

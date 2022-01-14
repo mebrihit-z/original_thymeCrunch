@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 import { useNavigate} from 'react-router-dom';
+import swal from 'sweetalert';
 
 export default function AddRecipes() {
     const [recipesName, setRecipesName] = useState('');
@@ -35,6 +36,11 @@ export default function AddRecipes() {
       axios.post(`http://localhost:9090/api/v1/recipes/users/add/${a}/${b}/${c}/${d}/${e}/${f}/${g}`)
         .then(response =>{
           if(response.data ==="ok" ) { navigate("/recipes");}
+            swal({
+              title: "Success!",
+              text: "Recipe Added! ",
+              icon: "success",
+          });
 
         })
         .catch(err => {
@@ -49,7 +55,7 @@ export default function AddRecipes() {
               <div>
                 <div>
                   <div>
-                  <h1 id="t22">Add Recipe Page</h1>
+                  <h1 id="t22">Add Recipe</h1>
                   </div>
                  <div className="form">
                  <div className="first-input">

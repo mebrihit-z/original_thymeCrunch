@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from'axios';
 import { Link } from 'react-router-dom';
 import Navbar from "../../../Navbar";
+import swal from 'sweetalert';
 
 function RecEmailSent() {
     const url =""
@@ -13,6 +14,11 @@ function RecEmailSent() {
     const fetchEmail = ()=>{
         const recipe = sessionStorage.getItem('recipe')
         axios.post(`http://localhost:9090/api/v1/email/recipe-email-sent/${email}/${recipe}`).then(res =>{ //http://3.14.3.79:9090/api/v1/recipes/
+        swal({
+            title: "Success!",
+            text: "Checke you email! ",
+            icon: "success",
+        });
             console.log(res);
             setEmail(res.data);
         });

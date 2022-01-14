@@ -11,6 +11,7 @@ export const OrangeJuiceIng = ()=> {
     const fetchOrangeJuiceIng = ()=>{
         var recipe = "orange_juice";
         const username = sessionStorage.getItem('username');
+        sessionStorage.setItem('recipe', recipe);
         axios.get(`http://localhost:9090/api/v1/recipes/${recipe}/${username}`).then(res =>{
             console.log(res);
             setOrangeJuiceIng(res.data);

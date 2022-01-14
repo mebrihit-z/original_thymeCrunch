@@ -6,12 +6,12 @@ import {ShoppingListConst} from "./ShoppingIngApi";
 import swal from 'sweetalert';
 
 function ShopingList(){
-    const [userEmail, setUserEmail] = useState('');
+    const [email, setEmail] = useState('');
 
     function submitList(){
-        const a = userEmail
+        const a = email
         const  b = sessionStorage.getItem('username')
-         axios.post(`http://localhost:9090/api/v1/email/soppinglist-email-sent/${a}/${b}`)
+         axios.post(`http://localhost:9090/api/v1/email/shoppinglist-email-sent/${a}/${b}`)
            .then(response =>{
                 swal({
                     title: "Success!",
@@ -47,7 +47,7 @@ function ShopingList(){
                 <br/>
                 <br/>
                 <div id="Shoping-button">
-                    <input  id="shoppingEmail"type='email' placeholder="Enter your email" onChange={e => setUserEmail(e.target.value)}></input>
+                    <input  id="shoppingEmail"type='email' placeholder="Enter your email" onChange={e => setEmail(e.target.value)}></input>
                     <button id="button1" onClick={submitList}>Send Email</button>
                 </div>
                 </div>

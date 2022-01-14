@@ -12,6 +12,7 @@ export const SaladIng = ()=> {
     const fetchSaladIng = ()=>{
         var recipe ="salad";
         const username = sessionStorage.getItem('username');
+        sessionStorage.setItem('recipe', recipe);
         axios.get(`http://localhost:9090/api/v1/recipes/${recipe}/${username}`).then(res =>{
             console.log(res);
             setSaladIng(res.data);

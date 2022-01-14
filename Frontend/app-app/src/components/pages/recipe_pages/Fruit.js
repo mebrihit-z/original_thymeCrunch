@@ -2,8 +2,9 @@ import React from "react"
 import Navbar from "../../Navbar";
 import '../UtilPages/Profile/UserProfiles.css';
 import { FruitIng } from '../RecApiCalls/FruitApi';
-import { RecipeButton } from "../../buttons/RecipeButton";
+import { SnackButton } from "../../buttons/SnackButton";
 import { EmailButton } from "../../buttons/EmailRecipe";
+import { ShoppingListButton } from "../../buttons/ShoppingListButton";
 
 function Fruit (){
     return(
@@ -18,8 +19,15 @@ function Fruit (){
     <hr/>
     </div>
     <FruitIng/> 
-    <RecipeButton/>
+    <SnackButton/>
     <EmailButton/>
+    <ShoppingListButton/>
+    <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
     </div>
     </>
     )

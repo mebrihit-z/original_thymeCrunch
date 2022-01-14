@@ -11,6 +11,7 @@ export const PastaIng = ()=> {
     const fetchPastaIng = ()=>{
         var recipe ="pasta";
         const username = sessionStorage.getItem('username');
+        sessionStorage.setItem('recipe', recipe);
         axios.get(`http://localhost:9090/api/v1/recipes/${recipe}/${username}`).then(res =>{
             console.log(res);
             setPastaIng(res.data);

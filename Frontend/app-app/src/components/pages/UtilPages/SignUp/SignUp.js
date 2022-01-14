@@ -63,6 +63,7 @@ export default function SignUp() {
      const c = uemail
      const d = uuname
      const e = uupassword
+     sessionStorage.setItem('newEmail', uemail);
       axios.post(`http://localhost:9090/users/signup/${a}/${b}/${c}/${d}/${e}`)
         .then(response =>{
           if(response.data ==="ok" ) { 

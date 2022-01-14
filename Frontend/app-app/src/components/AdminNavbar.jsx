@@ -49,7 +49,7 @@ export function FirstNavbar() {
                 </Link>
 
                 <Link to="/" className='navbarLogo' onClick={closeMobileMenu}>
-                  Hi, {userName} 
+                  
                 </Link>
                 
                 <div className="menu-icon" onClick={handleClick}>
@@ -82,8 +82,8 @@ export function FirstNavbar() {
                     <button class="dropbtn">Recipes</button>
                     <div class="dropdown-content">
                         <a href="/recipes">Recipe</a>
-                        <a href="/user-recipes">User Recipes</a>
-                        <a href="add-recipes">Add Recipes</a>
+                        {/* <a href="/user-recipes">User Recipes</a> */}
+                        {/* <a href="add-recipes">Add Recipes</a> */}
                         <a href="pending-recipes">Pending Recipes</a>
                     </div>
                     </div>
